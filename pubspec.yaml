@@ -80,6 +80,13 @@ flutter:
     - family: MrDafoe
       fonts:
         - asset: assets\fonts\MrDafoe-Regular.ttf
+    - family: Pixel
+      fonts:
+        - asset: assets\fonts\PixelifySans-Regular.ttf
+        - asset: assets\fonts\PixelifySans-Medium.ttf
+          weight: 500
+        - asset: assets\fonts\PixelifySans-Bold.ttf
+          weight: 700
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
