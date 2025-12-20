@@ -13,11 +13,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
-      providers:  [
-        
-      ],
-      child: MaterialApp(
+    return MaterialApp(
         title: 'KELOMPOK 2',
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
@@ -28,8 +24,7 @@ class MyApp extends StatelessWidget {
           SplashGlobal.routeName: (_) => const SplashGlobal(),
           SplashRio.routeName: (_) => const SplashRio(),
         }
-      ),
-    );
+      );
   
   }
 }
