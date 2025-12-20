@@ -1,0 +1,42 @@
+{
+  // COLOR SNIPPET
+	"kuning lime": {
+		"prefix": "kuning",
+		"body": [
+			"Color(0xFFCCFB0F)"
+		], 
+		"description": "untuk warna kuning"
+	},
+
+	"biru": {
+		"prefix": "biru",
+		"body": [
+			"Color(0xFF473BFD)"
+		],
+		"description": "untuk warna biru"
+	},
+
+	"hitam": {
+		"prefix": "hitam",
+		"body": [
+			"Color(0xFF12130F)"
+		],
+		"description": "untuk warna hitam"
+	},
+
+	"hijau": {
+		"prefix": "hijau",
+		"body": [
+			"Color(0xFF5B9279)"
+		],
+		"description": "untuk warna hijau"
+	},
+
+	"putih": {
+		"prefix": "putih",
+		"body": [
+			"Color(0xFFEAE6E5)"
+		],
+		"description": "untuk warna putih"
+	},
+}
