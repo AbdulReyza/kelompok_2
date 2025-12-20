@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 class SplashRio extends StatefulWidget {
   static const routeName = '/splashRio';
@@ -21,10 +22,20 @@ class _SplashRioState extends State<SplashRio> {
           title: const Text(""),
           automaticallyImplyLeading: false,
         ),
-        body: const Center(
+        body: Center(
           child: SingleChildScrollView(
             child: Column(
-              children: [],
+              children: [
+                Lottie.asset(
+                  'assets/animations/Wizard.json', 
+                  width: 300,
+                  height: 300,
+                  fit: BoxFit.contain,
+                  repeat: true,
+                  reverse: false,
+                  animate: true,
+                ),
+              ],
             ),
           ),
         ),
