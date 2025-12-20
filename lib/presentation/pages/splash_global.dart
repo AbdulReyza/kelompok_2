@@ -39,7 +39,7 @@ class _SplashGlobalState extends State<SplashGlobal> {
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
           colors: [
-            Color(0xFFeb1e34),
+            Color(0xFF32529e),
             Colors.white,
           ],
         ),
@@ -54,16 +54,30 @@ class _SplashGlobalState extends State<SplashGlobal> {
         body: Center(
           child: SingleChildScrollView(
             padding: const EdgeInsets.all(10.0),
-            child: Container(
-                    height: 200,
-                    width: 200,
-                    decoration: BoxDecoration(
-                      image: 
-                      DecorationImage(
-                        image: AssetImage("assets/images/logo_global.jpeg")
-                      )
-                    ),
+            child: Column(
+              children: [
+                Container(
+                  height: 200,
+                  width: 200,
+                  decoration: BoxDecoration(
+                    image: 
+                    DecorationImage(
+                      image: AssetImage("assets/images/logo_global.jpeg")
+                    )
                   ),
+                  
+                ),
+                SizedBox(height: 30,),
+                Text(
+                  'Think Smartly & Globally',
+                  style: TextStyle(
+                    fontFamily: 'MrDafoe',
+                    fontSize: 25,
+                    color: Color(0xFF1f3e9a),
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ),

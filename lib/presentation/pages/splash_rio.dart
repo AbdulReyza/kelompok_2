@@ -14,7 +14,7 @@ class _SplashRioState extends State<SplashRio> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("riooooooo"),
-        actions: const [],
+        automaticallyImplyLeading: false,
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(10.0),
