@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-// import 'package:lottie/lottie.dart';
 
 class SplashRio extends StatefulWidget {
   static const routeName = '/splashRio';
@@ -12,21 +11,24 @@ class SplashRio extends StatefulWidget {
 class _SplashRioState extends State<SplashRio> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.red,
-      appBar: AppBar(
-        backgroundColor: Colors.red,
-        elevation: 0,
-        title: const Text("riooooooo"),
-        automaticallyImplyLeading: false,
-      ),
-      body: const Center(
-        child: Text(
-          'rio',
-          style: TextStyle(color: Colors.white),
+    return Container(
+      color: Color(0xFF473BFD),
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          title: const Text(""),
+          automaticallyImplyLeading: false,
+        ),
+        body: const Center(
+          child: SingleChildScrollView(
+            child: Column(
+              children: [],
+            ),
+          ),
         ),
       ),
     );
-
   }
 }
