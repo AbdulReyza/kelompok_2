@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kelompok_2/presentation/pages/splash_global.dart';
 import 'package:kelompok_2/presentation/pages/splash_rio.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,19 +13,23 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'KELOMPOK 2',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+    return MultiProvider(
+      providers:  [
+        
+      ],
+      child: MaterialApp(
+        title: 'KELOMPOK 2',
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        ),
+        debugShowCheckedModeBanner: false,
+        initialRoute: SplashGlobal.routeName,
+        routes: {
+          SplashGlobal.routeName: (_) => const SplashGlobal(),
+          SplashRio.routeName: (_) => const SplashRio(),
+        }
       ),
-      debugShowCheckedModeBanner: false,
-      home: const SplashGlobal(),
-      routes: {
-        '/splashRio': (context) => const SplashRio(),
-      }
     );
-
-
   
   }
 }
