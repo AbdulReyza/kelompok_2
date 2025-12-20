@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'dart:async';
+
+import 'package:kelompok_2/presentation/pages/splash_rio.dart';
 
 class SplashGlobal extends StatefulWidget {
   static const routeName = '/splashGlobal';
@@ -9,7 +12,24 @@ class SplashGlobal extends StatefulWidget {
 }
 
 class _SplashGlobalState extends State<SplashGlobal> {
+  Timer? _timer;
+
+
   @override
+  void initState() {
+    super.initState();
+    _timer = Timer(const Duration(seconds: 2), () {
+      Navigator.of(context).pushReplacementNamed(SplashRio.routeName);
+    });
+  }
+
+  @override
+  void dispose() {
+    _timer?.cancel();
+    super.dispose();
+  }
+
+
   Widget build(BuildContext context) {
     return Container(
         decoration: const BoxDecoration(
@@ -25,7 +45,6 @@ class _SplashGlobalState extends State<SplashGlobal> {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
-          // title: const Text("Dashboard"),
           backgroundColor: Colors.transparent,
           elevation: 0,
           scrolledUnderElevation: 0,
