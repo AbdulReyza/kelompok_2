@@ -82,4 +82,12 @@
 		],
 		"description": "template splash screen"
 	},
+
+	"pixel font": {
+		"prefix": "pixel",
+		"body": [
+			"fontFamily: 'Pixel',"
+		],
+		"description": "pixel font"
+	},
 }
