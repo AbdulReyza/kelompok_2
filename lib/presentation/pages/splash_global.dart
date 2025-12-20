@@ -19,7 +19,9 @@ class _SplashGlobalState extends State<SplashGlobal> {
   void initState() {
     super.initState();
     _timer = Timer(const Duration(seconds: 2), () {
-      Navigator.of(context).pushReplacementNamed(SplashRio.routeName);
+      if(mounted){
+        Navigator.of(context).pushReplacementNamed(SplashRio.routeName);
+      };
     });
   }
 
