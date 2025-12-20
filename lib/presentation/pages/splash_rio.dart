@@ -27,13 +27,32 @@ class _SplashRioState extends State<SplashRio> {
             child: Column(
               children: [
                 Lottie.asset(
-                  'assets/animations/Wizard.json', 
+                  'assets/animations/Invoice Printing.json', 
                   width: 300,
                   height: 300,
                   fit: BoxFit.contain,
                   repeat: true,
                   reverse: false,
                   animate: true,
+                ),
+                Text('THERMUL',
+                  style: TextStyle(
+                    fontFamily: 'Pixel',
+                    fontSize: 30,
+                    color: Colors.white,
+                  ),
+                ),
+                SizedBox(height: 10,),
+                Padding(
+                  padding: const EdgeInsets.only(left: 30, right: 30),
+                  child: Text('Ubah Ponsel Anda Menjadi Pusat Cetak Struk Cepat dan Handal. Siap untuk Setiap Transaksi!',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontFamily: 'Pixel',
+                      // fontSize: 30,
+                      color: Colors.white,
+                    ),
+                  ),
                 ),
               ],
             ),
