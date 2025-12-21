@@ -41,7 +41,6 @@ class _SplashRioState extends State<SplashRio> {
                   ),
                   Text('THERMUL',
                     style: TextStyle(
-                      fontFamily: 'Pixel',
                       fontWeight: FontWeight.bold,
                       fontSize: 30,
                       color: Colors.white,
@@ -53,7 +52,6 @@ class _SplashRioState extends State<SplashRio> {
                     child: Text('Ubah Ponsel Anda Menjadi Pusat Cetak Struk Cepat dan Handal. Siap untuk Setiap Transaksi!',
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        fontFamily: 'Pixel',
                         color: Colors.white,
                       ),
                     ),
