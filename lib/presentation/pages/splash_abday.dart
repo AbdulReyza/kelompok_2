@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:kelompok_2/presentation/pages/splash_arya.dart';
+
 
 
 
@@ -13,8 +15,7 @@ class SplashAbday extends StatefulWidget {
 class _SplashAbdayState extends State<SplashAbday> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: GestureDetector(
+    return GestureDetector(
     onTap: () {Navigator.pushReplacement(
           context,
           PageRouteBuilder(
@@ -29,8 +30,17 @@ class _SplashAbdayState extends State<SplashAbday> {
           ),
         );},
     child: Container(
-      color: const Color(0xFFCCFB0F),
-    child: Center(
+      color: Color(0xFF5B9279),
+        child: Scaffold(
+          backgroundColor: Colors.transparent,
+          appBar: AppBar(
+            backgroundColor: Colors.transparent,
+            elevation: 0,
+            title: const Text(""),
+            automaticallyImplyLeading: false,
+          ),
+          body: Center(
+      child: SingleChildScrollView(
   child: Column(
     mainAxisSize: MainAxisSize.min,
     children: [
@@ -64,10 +74,14 @@ class _SplashAbdayState extends State<SplashAbday> {
                   ),
     ],
   ),
+  ),
 ),
     ),
       ),
+      ),
+    
 
     );
+  
   }
 }
