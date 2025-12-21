@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:kelompok_2/presentation/pages/splash_global.dart';
+import 'package:kelompok_2/presentation/pages/splash_rio.dart';
 import 'package:lottie/lottie.dart';
 
 class SplashReyza extends StatefulWidget {
@@ -14,7 +16,19 @@ class _SplashReyzaState extends State<SplashReyza> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.pushReplacementNamed(context, '/splashRio');
+        Navigator.pushReplacement(
+          context,
+          PageRouteBuilder(
+            pageBuilder: (context, animation, secondaryAnimation) => const SplashGlobal(),
+            transitionsBuilder: (context, animation, secondaryAnimation, child) {
+              return FadeTransition(
+                opacity: animation,
+                child: child,
+              );
+            },
+            transitionDuration: const Duration(milliseconds: 800),
+          ),
+        );
       },
       child: Container(
         color: Color(0xFF5B9279),

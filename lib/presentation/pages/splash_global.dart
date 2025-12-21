@@ -19,9 +19,20 @@ class _SplashGlobalState extends State<SplashGlobal> {
   void initState() {
     super.initState();
     _timer = Timer(const Duration(seconds: 2), () {
-      if(mounted){
-        Navigator.of(context).pushReplacementNamed(SplashRio.routeName);
-      };
+      if (mounted) {
+        Navigator.of(context).pushReplacement(
+          PageRouteBuilder(
+            pageBuilder: (context, animation, secondaryAnimation) => const SplashRio(),
+            transitionsBuilder: (context, animation, secondaryAnimation, child) {
+              return FadeTransition(
+                opacity: animation,
+                child: child,
+              );
+            },
+            transitionDuration: const Duration(milliseconds: 800),
+          ),
+        );
+      }
     });
   }
 
