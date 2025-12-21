@@ -14,7 +14,7 @@ class _SplashReyzaState extends State<SplashReyza> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.pushReplacementNamed(context, '/splashReyza');
+        Navigator.pushReplacementNamed(context, '/splashRio');
       },
       child: Container(
         color: Color(0xFF5B9279),
@@ -45,6 +45,17 @@ class _SplashReyzaState extends State<SplashReyza> {
                       fontWeight: FontWeight.bold,
                       fontSize: 30,
                       color: Colors.white,
+                    ),
+                  ),
+                  SizedBox(height: 10,),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 30, right: 30),
+                    child: Text('Nikmati Kemudahan Mencetak Struk Kapan Saja, Di Mana Saja. Tanpa Ribet, Tanpa Batas!',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontFamily: 'Pixel',
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                 ]
