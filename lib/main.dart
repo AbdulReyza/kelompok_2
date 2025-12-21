@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kelompok_2/presentation/pages/splash_global.dart';
+import 'package:kelompok_2/presentation/pages/splash_reyza.dart';
 import 'package:kelompok_2/presentation/pages/splash_rio.dart';
 import 'package:provider/provider.dart';
 
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
         routes: {
           SplashGlobal.routeName: (_) => const SplashGlobal(),
           SplashRio.routeName: (_) => const SplashRio(),
+          SplashReyza.routeName: (_) => const SplashReyza(),
         }
       );
   

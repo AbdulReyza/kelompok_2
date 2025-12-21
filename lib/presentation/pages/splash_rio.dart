@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:kelompok_2/presentation/pages/splash_reyza.dart';
 
 class SplashRio extends StatefulWidget {
   static const routeName = '/splashRio';
@@ -14,7 +15,7 @@ class _SplashRioState extends State<SplashRio> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.pushReplacementNamed(context, '/splashGlobal');
+        Navigator.pushReplacementNamed(context, '/splashReyza');
       },
       child: Container(
         color: Color(0xFF473BFD),
