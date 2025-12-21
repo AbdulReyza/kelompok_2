@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kelompok_2/presentation/pages/splash_global.dart';
 import 'package:lottie/lottie.dart';
 
 class SplashRio extends StatefulWidget {
@@ -14,7 +15,19 @@ class _SplashRioState extends State<SplashRio> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.pushReplacementNamed(context, '/splashGlobal');
+        Navigator.pushReplacement(
+          context,
+          PageRouteBuilder(
+            pageBuilder: (context, animation, secondaryAnimation) => const SplashGlobal(),
+            transitionsBuilder: (context, animation, secondaryAnimation, child) {
+              return FadeTransition(
+                opacity: animation,
+                child: child,
+              );
+            },
+            transitionDuration: const Duration(milliseconds: 800),
+          ),
+        );
       },
       child: Container(
         color: Color(0xFF473BFD),
