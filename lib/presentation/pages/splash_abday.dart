@@ -6,9 +6,11 @@ class SplashAbday extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text('Splash Abday'),
-      ),
+      body: GestureDetector(
+    onTap: () {},
+    child: Center(
+      child: Text('Splash Abday'),
+    ),
     );
   }
 }
