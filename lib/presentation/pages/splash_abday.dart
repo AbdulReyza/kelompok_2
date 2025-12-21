@@ -17,6 +17,15 @@ class SplashAbday extends StatelessWidget {
   child: Column(
     mainAxisSize: MainAxisSize.min,
     children: [
+      Lottie.asset(
+        'assets/animations/Wizard.json', 
+        width: 300,
+        height: 300,
+        fit: BoxFit.contain,
+        repeat: true,
+        reverse: false,
+        animate: true,
+      ),
       Text('Splash Abday'),
     ],
   ),
