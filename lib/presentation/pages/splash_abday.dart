@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
+
 
 class SplashAbday extends StatelessWidget {
   const SplashAbday({super.key});
@@ -12,8 +14,16 @@ class SplashAbday extends StatelessWidget {
       color: const Color(0xFFCCFB0F
     ),
     child: Center(
-      child: Text('Splash Abday'),
+  child: Column(
+    mainAxisSize: MainAxisSize.min,
+    children: [
+      Text('Splash Abday'),
+    ],
+  ),
+),
     ),
+      ),
+
     );
   }
 }
