@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kelompok_2/presentation/pages/splash_rio.dart';
+import 'package:lottie/lottie.dart';
 
 class SplashArya extends StatefulWidget {
   static const routeName = '/SplashArya';
@@ -38,10 +39,20 @@ class _SplashAryaState extends State<SplashArya> {
             title: const Text(""),
             automaticallyImplyLeading: false,
           ),
-          body: const Center(
+          body: Center(
             child: SingleChildScrollView(
               child: Column(
-                children: [],
+                children: [
+                  Lottie.asset(
+                    'assets/animations/Receipt.json', 
+                    width: 300,
+                    height: 300,
+                    fit: BoxFit.contain,
+                    repeat: true,
+                    reverse: false,
+                    animate: true,
+                  ),
+                ],
               ),
             ),
           ),
