@@ -50,6 +50,10 @@ class _SplashAbdayState extends State<SplashAbday> {
                     'assets/animations/Wizard.json',
                     width: 300,
                     height: 300,
+                    fit: BoxFit.contain,
+                    repeat: true,
+                    reverse: false,
+                    animate: true,
                   ),
                   const Text(
                     'THERMUL',
