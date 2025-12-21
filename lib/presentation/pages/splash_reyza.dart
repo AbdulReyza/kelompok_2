@@ -1,24 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:kelompok_2/presentation/pages/splash_reyza.dart';
 
-class SplashRio extends StatefulWidget {
-  static const routeName = '/splashRio';
-  const SplashRio({super.key});
+class SplashReyza extends StatefulWidget {
+  static const routeName = '/splashReyza';
+  const SplashReyza({super.key});
 
   @override
-  State<SplashRio> createState() => _SplashRioState();
+  State<SplashReyza> createState() => _SplashReyzaState();
 }
 
-class _SplashRioState extends State<SplashRio> {
+class _SplashReyzaState extends State<SplashReyza> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.pushReplacementNamed(context, '/splashReyza');
+        Navigator.pushReplacementNamed(context, '/splashRio');
       },
       child: Container(
-        color: Color(0xFF473BFD),
+        color: Color(0xFF5B9279),
         child: Scaffold(
           backgroundColor: Colors.transparent,
           appBar: AppBar(
@@ -32,7 +31,7 @@ class _SplashRioState extends State<SplashRio> {
               child: Column(
                 children: [
                   Lottie.asset(
-                    'assets/animations/Invoice Printing.json', 
+                    'assets/animations/Printing.json', 
                     width: 300,
                     height: 300,
                     fit: BoxFit.contain,
@@ -51,7 +50,7 @@ class _SplashRioState extends State<SplashRio> {
                   SizedBox(height: 10,),
                   Padding(
                     padding: const EdgeInsets.only(left: 30, right: 30),
-                    child: Text('Ubah Ponsel Anda Menjadi Pusat Cetak Struk Cepat dan Handal. Siap untuk Setiap Transaksi!',
+                    child: Text('Nikmati Kemudahan Mencetak Struk Kapan Saja, Di Mana Saja. Tanpa Ribet, Tanpa Batas!',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontFamily: 'Pixel',
@@ -59,8 +58,8 @@ class _SplashRioState extends State<SplashRio> {
                       ),
                     ),
                   ),
-                ],
-              ),
+                ]
+               ),
             ),
           ),
         ),
