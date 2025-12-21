@@ -8,6 +8,9 @@ class SplashAbday extends StatelessWidget {
     return Scaffold(
       body: GestureDetector(
     onTap: () {},
+    child: Container(
+      color: const Color(0xFFCCFB0F
+    ),
     child: Center(
       child: Text('Splash Abday'),
     ),
