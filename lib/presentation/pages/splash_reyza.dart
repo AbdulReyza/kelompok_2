@@ -16,6 +16,18 @@ class _SplashReyzaState extends State<SplashReyza> {
       onTap: () {
         Navigator.pushReplacementNamed(context, '/splashReyza');
       },
+      child: Container(
+        color: Color(0xFF473BFD),
+        child: Scaffold(
+          backgroundColor: Colors.transparent,
+          appBar: AppBar(
+            backgroundColor: Colors.transparent,
+            elevation: 0,
+            title: const Text(""),
+            automaticallyImplyLeading: false,
+          ),
+        ),
+      ),
     );
   }
 }
