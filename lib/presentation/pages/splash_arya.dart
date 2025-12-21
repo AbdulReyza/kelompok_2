@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kelompok_2/presentation/pages/splash_abday.dart';
 import 'package:kelompok_2/presentation/pages/splash_rio.dart';
 import 'package:lottie/lottie.dart';
 
@@ -18,7 +19,7 @@ class _SplashAryaState extends State<SplashArya> {
         Navigator.pushReplacement(
           context,
           PageRouteBuilder(
-            pageBuilder: (context, animation, secondaryAnimation) => const SplashRio(),
+            pageBuilder: (context, animation, secondaryAnimation) => const SplashAbday(),
             transitionsBuilder: (context, animation, secondaryAnimation, child) {
               return FadeTransition(
                 opacity: animation,

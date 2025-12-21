@@ -47,7 +47,7 @@ class _SplashAbdayState extends State<SplashAbday> {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Lottie.asset(
-                    'assets/animations/Wizard.json',
+                    'assets/animations/Thermal Army.json',
                     width: 300,
                     height: 300,
                     fit: BoxFit.contain,
