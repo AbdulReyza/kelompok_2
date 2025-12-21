@@ -31,7 +31,7 @@ class _SplashReyzaState extends State<SplashReyza> {
               child: Column(
                 children: [
                   Lottie.asset(
-                    'assets/animations/Invoice Printing.json', 
+                    'assets/animations/Printing.json', 
                     width: 300,
                     height: 300,
                     fit: BoxFit.contain,
@@ -39,10 +39,18 @@ class _SplashReyzaState extends State<SplashReyza> {
                     reverse: false,
                     animate: true,
                   ),
+                  Text('THERMUL',
+                    style: TextStyle(
+                      fontFamily: 'Pixel',
+                      fontWeight: FontWeight.bold,
+                      fontSize: 30,
+                      color: Colors.white,
+                    ),
+                  ),
                 ]
-        ),
-      ),
-    ),
+               ),
+            ),
+          ),
         ),
       ),
     );
