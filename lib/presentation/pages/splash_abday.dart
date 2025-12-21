@@ -3,8 +3,6 @@ import 'package:lottie/lottie.dart';
 import 'package:kelompok_2/presentation/pages/splash_arya.dart';
 
 
-
-
 class SplashAbday extends StatefulWidget {
   static const routeName = '/splashAbday';
   const SplashAbday({super.key});
@@ -12,15 +10,19 @@ class SplashAbday extends StatefulWidget {
   @override
   State<SplashAbday> createState() => _SplashAbdayState();
 }
+
 class _SplashAbdayState extends State<SplashAbday> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-    onTap: () {Navigator.pushReplacement(
+      onTap: () {
+        Navigator.pushReplacement(
           context,
           PageRouteBuilder(
-            pageBuilder: (context, animation, secondaryAnimation) => const SplashArya(),
-            transitionsBuilder: (context, animation, secondaryAnimation, child) {
+            pageBuilder: (context, animation, secondaryAnimation) =>
+                const SplashArya(),
+            transitionsBuilder:
+                (context, animation, secondaryAnimation, child) {
               return FadeTransition(
                 opacity: animation,
                 child: child,
@@ -28,43 +30,41 @@ class _SplashAbdayState extends State<SplashAbday> {
             },
             transitionDuration: const Duration(milliseconds: 800),
           ),
-        );},
-    child: Container(
-      color: Color(0xFF5B9279),
+        );
+      },
+      child: Container(
+        color: const Color(0xFF5B9279),
         child: Scaffold(
           backgroundColor: Colors.transparent,
           appBar: AppBar(
             backgroundColor: Colors.transparent,
             elevation: 0,
-            title: const Text(""),
             automaticallyImplyLeading: false,
           ),
           body: Center(
-      child: SingleChildScrollView(
-  child: Column(
-    mainAxisSize: MainAxisSize.min,
-    children: [
-      Lottie.asset(
-        'assets/animations/Wizard.json', 
-        width: 300,
-        height: 300,
-        fit: BoxFit.contain,
-        repeat: true,
-        reverse: false,
-        animate: true,
-      ),
-      const Text('THERMUL',
-        style: TextStyle(
-          fontFamily: 'Pixel',
-          fontWeight: FontWeight.bold,
-          fontSize: 30,
-          color: Colors.white,
-        ),
-      ),
-      SizedBox(height: 10),
-      Padding(
-                    padding: const EdgeInsets.only(left: 30, right: 30),
-                    child: Text('Desain Struk Profesional. Cetak Struk Akurat. Semua dalam Genggaman dengan THERMUL.',
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Lottie.asset(
+                    'assets/animations/Wizard.json',
+                    width: 300,
+                    height: 300,
+                  ),
+                  const Text(
+                    'THERMUL',
+                    style: TextStyle(
+                      fontFamily: 'Pixel',
+                      fontWeight: FontWeight.bold,
+                      fontSize: 30,
+                      color: Colors.white,
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 30),
+                    child: Text(
+                      'Desain Struk Profesional. Cetak Struk Akurat. Semua dalam Genggaman dengan THERMUL.',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontFamily: 'Pixel',
@@ -72,16 +72,12 @@ class _SplashAbdayState extends State<SplashAbday> {
                       ),
                     ),
                   ),
-    ],
-  ),
-  ),
-),
-    ),
+                ],
+              ),
+            ),
+          ),
+        ),
       ),
-      ),
-    
-
     );
-  
   }
 }
