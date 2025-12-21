@@ -2,17 +2,34 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
 
-class SplashAbday extends StatelessWidget {
+
+class SplashAbday extends StatefulWidget {
+  static const routeName = '/splashAbday';
   const SplashAbday({super.key});
 
+  @override
+  State<SplashAbday> createState() => _SplashAbdayState();
+}
+class _SplashAbdayState extends State<SplashAbday> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: GestureDetector(
-    onTap: () {},
+    onTap: () {Navigator.pushReplacement(
+          context,
+          PageRouteBuilder(
+            pageBuilder: (context, animation, secondaryAnimation) => const SplashArya(),
+            transitionsBuilder: (context, animation, secondaryAnimation, child) {
+              return FadeTransition(
+                opacity: animation,
+                child: child,
+              );
+            },
+            transitionDuration: const Duration(milliseconds: 800),
+          ),
+        );},
     child: Container(
-      color: const Color(0xFFCCFB0F
-    ),
+      color: const Color(0xFFCCFB0F),
     child: Center(
   child: Column(
     mainAxisSize: MainAxisSize.min,
