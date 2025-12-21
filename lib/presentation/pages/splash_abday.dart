@@ -34,6 +34,17 @@ class SplashAbday extends StatelessWidget {
           color: Colors.white,
         ),
       ),
+      SizedBox(height: 10),
+      Padding(
+                    padding: const EdgeInsets.only(left: 30, right: 30),
+                    child: Text('Desain Struk Profesional. Cetak Struk Akurat. Semua dalam Genggaman dengan THERMUL.',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontFamily: 'Pixel',
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
     ],
   ),
 ),
