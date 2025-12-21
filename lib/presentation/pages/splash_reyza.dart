@@ -17,7 +17,7 @@ class _SplashReyzaState extends State<SplashReyza> {
         Navigator.pushReplacementNamed(context, '/splashReyza');
       },
       child: Container(
-        color: Color(0xFF473BFD),
+        color: Color(0xFF5B9279),
         child: Scaffold(
           backgroundColor: Colors.transparent,
           appBar: AppBar(
@@ -26,6 +26,23 @@ class _SplashReyzaState extends State<SplashReyza> {
             title: const Text(""),
             automaticallyImplyLeading: false,
           ),
+          body: Center(
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Lottie.asset(
+                    'assets/animations/Invoice Printing.json', 
+                    width: 300,
+                    height: 300,
+                    fit: BoxFit.contain,
+                    repeat: true,
+                    reverse: false,
+                    animate: true,
+                  ),
+                ]
+        ),
+      ),
+    ),
         ),
       ),
     );
