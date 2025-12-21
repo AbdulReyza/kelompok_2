@@ -52,6 +52,23 @@ class _SplashAryaState extends State<SplashArya> {
                     reverse: false,
                     animate: true,
                   ),
+                  Text('THERMUL',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 30,
+                      color: Colors.white,
+                    ),
+                  ),
+                  SizedBox(height: 10,),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 30, right: 30),
+                    child: Text('Masa Depan Cetak Struk Ada di Tangan Anda. THERMUL: Solusi Praktis untuk Bisnis Anda',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
