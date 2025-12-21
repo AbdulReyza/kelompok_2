@@ -1,18 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:kelompok_2/presentation/pages/splash_arya.dart';
-import 'package:kelompok_2/presentation/pages/splash_global.dart';
 import 'package:kelompok_2/presentation/pages/splash_rio.dart';
 import 'package:lottie/lottie.dart';
 
-class SplashReyza extends StatefulWidget {
-  static const routeName = '/splashReyza';
-  const SplashReyza({super.key});
+class SplashArya extends StatefulWidget {
+  static const routeName = '/SplashArya';
+  const SplashArya({super.key});
 
   @override
-  State<SplashReyza> createState() => _SplashReyzaState();
+  State<SplashArya> createState() => _SplashAryaState();
 }
 
-class _SplashReyzaState extends State<SplashReyza> {
+class _SplashAryaState extends State<SplashArya> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -20,7 +18,7 @@ class _SplashReyzaState extends State<SplashReyza> {
         Navigator.pushReplacement(
           context,
           PageRouteBuilder(
-            pageBuilder: (context, animation, secondaryAnimation) => const SplashArya(),
+            pageBuilder: (context, animation, secondaryAnimation) => const SplashRio(),
             transitionsBuilder: (context, animation, secondaryAnimation, child) {
               return FadeTransition(
                 opacity: animation,
@@ -32,7 +30,7 @@ class _SplashReyzaState extends State<SplashReyza> {
         );
       },
       child: Container(
-        color: Color(0xFF5B9279),
+        color: Color(0xFFCCFB0F),
         child: Scaffold(
           backgroundColor: Colors.transparent,
           appBar: AppBar(
@@ -46,7 +44,7 @@ class _SplashReyzaState extends State<SplashReyza> {
               child: Column(
                 children: [
                   Lottie.asset(
-                    'assets/animations/Printing.json', 
+                    'assets/animations/Receipt.json', 
                     width: 300,
                     height: 300,
                     fit: BoxFit.contain,
@@ -56,7 +54,6 @@ class _SplashReyzaState extends State<SplashReyza> {
                   ),
                   Text('THERMUL',
                     style: TextStyle(
-                      fontFamily: 'Pixel',
                       fontWeight: FontWeight.bold,
                       fontSize: 30,
                       color: Colors.white,
@@ -65,16 +62,15 @@ class _SplashReyzaState extends State<SplashReyza> {
                   SizedBox(height: 10,),
                   Padding(
                     padding: const EdgeInsets.only(left: 30, right: 30),
-                    child: Text('Nikmati Kemudahan Mencetak Struk Kapan Saja, Di Mana Saja. Tanpa Ribet, Tanpa Batas!',
+                    child: Text('Masa Depan Cetak Struk Ada di Tangan Anda. THERMUL: Solusi Praktis untuk Bisnis Anda',
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        fontFamily: 'Pixel',
                         color: Colors.white,
                       ),
                     ),
                   ),
-                ]
-               ),
+                ],
+              ),
             ),
           ),
         ),

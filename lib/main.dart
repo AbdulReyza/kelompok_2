@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'KELOMPOK 2',
         theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          fontFamily: 'Pixel',
         ),
         debugShowCheckedModeBanner: false,
         initialRoute: SplashGlobal.routeName,
