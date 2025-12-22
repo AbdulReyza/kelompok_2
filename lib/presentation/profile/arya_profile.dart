@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:kelompok_2/presentation/profile/abday_profile.dart';
+
 
 class ProfileArya extends StatefulWidget {
   static const routeName = '/profileArya';
