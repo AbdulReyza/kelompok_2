@@ -38,6 +38,33 @@ class _ProfileReyzaState extends State<ProfileReyza> {
                 radius: 80,
                 backgroundImage: AssetImage('assets/images/reyza.jpg'),
               ),
+              const SizedBox(height: 20),
+            Card(
+              color: const Color.fromARGB(255, 255, 255, 255),
+              elevation: 10,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15),
+              ),
+               child: Container(
+                width: double.infinity,
+                padding: const EdgeInsets.all(20),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: const [
+                    /// NAMA
+                    Text(
+                      'Abdul Reyza Ramadhanu',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xFF12130F),
+                      ),
+                    ),
+                    SizedBox(height: 5),
+                  ],
+            ),
+               ),
+               ),
             ],
             ),
           ),
