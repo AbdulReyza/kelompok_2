@@ -35,7 +35,7 @@ class _ProfileAryaState extends State<ProfileArya> {
                   elevation: 10,
                   margin: EdgeInsets.all(10),
                     child: Container(
-                      height: 150,
+                      height: 300,
                       width: double.infinity,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -64,6 +64,20 @@ class _ProfileAryaState extends State<ProfileArya> {
                                 ), 
                                 Text(' : '),
                                 Text('Coaching, Ms Office , & Coding',),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 15, right: 15),
+                            child: Column(
+                              children: [
+                                Text('Tentang Saya',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Color(0xFF12130F),
+                                    fontWeight: FontWeight.bold
+                                  ),
+                                ),
                               ],
                             ),
                           )
