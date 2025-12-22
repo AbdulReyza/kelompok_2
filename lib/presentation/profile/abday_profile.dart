@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kelompok_2/presentation/profile/arya_profile.dart';
+import 'package:kelompok_2/presentation/profile/reyza_profile.dart';
 
 
 class ProfileAbday extends StatelessWidget {
@@ -24,7 +24,7 @@ class ProfileAbday extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => ProfileArya(), 
+            builder: (context) => ProfileReyza(), 
           ),
         );
       },
