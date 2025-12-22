@@ -12,7 +12,7 @@ class _ProfileAryaState extends State<ProfileArya> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Color(0xFF5B9279),
+      color: Color(0xFF473BFD),
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
@@ -35,7 +35,7 @@ class _ProfileAryaState extends State<ProfileArya> {
                   elevation: 10,
                   margin: EdgeInsets.all(10),
                     child: Container(
-                      height: 300,
+                      height: 320,
                       width: double.infinity,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -70,12 +70,19 @@ class _ProfileAryaState extends State<ProfileArya> {
                           Padding(
                             padding: const EdgeInsets.only(left: 15, right: 15),
                             child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text('Tentang Saya',
                                   style: TextStyle(
                                     fontSize: 20,
                                     color: Color(0xFF12130F),
                                     fontWeight: FontWeight.bold
+                                  ),
+                                ),
+                                SizedBox(height: 5,),
+                                Text('Nama saya Arya Pramudya Akbar , salah satu Mahasiswa aktif semester 5, saya kuliah di Global Institute dan mengambil jurusan Software Engineering, saya lahir di tangerang pada tanggal 27 Oktober 2005, dan saya merupakan anak pertama dari 2 bersaudara',
+                                  style: TextStyle(
+                                    color: Color(0xFF12130F),
                                   ),
                                 ),
                               ],
