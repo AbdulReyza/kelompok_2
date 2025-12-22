@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart'; 
+import 'package:lottie/lottie.dart';
 
 class ProfileAbday extends StatelessWidget {
   static const routeName = '/profileAbday';
@@ -13,71 +13,65 @@ class ProfileAbday extends StatelessWidget {
         title: const Text("Profil Mahasiswa"),
         backgroundColor: const Color(0xFF5B9279),
         elevation: 0,
+        centerTitle: true,
       ),
       body: SingleChildScrollView(
-         padding: const EdgeInsets.all(20), 
-  child: Column(
-  crossAxisAlignment: CrossAxisAlignment.center,
-  children: [
-    CircleAvatar(
-      radius: 80,
-      backgroundImage: AssetImage('assets/images/abdayprofile.jpg'),
-    ),
-    SizedBox(height: 15),
-    Lottie.asset(
-      'assets/animations/Wizard.json',
-      width: 150,
-      height: 150,
-      repeat: true,
-    ),
-    Text(
-      "Muhammad abday abdul hafidz",
-      style: TextStyle(
-        fontFamily: 'Pixel',
-        fontWeight: FontWeight.bold,
-        fontSize: 26,
-        color: Color(0xFFEAE6E5),
+        padding: const EdgeInsets.all(20),
+        child: Center( // <-- tambahin ini
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center, 
+            children: [
+              CircleAvatar(
+                radius: 80,
+                backgroundImage: AssetImage('assets/images/abdayprofile.jpg'),
+              ),
+              const SizedBox(height: 15),
+              
+              const Text(
+                "Muhammad Abday Abdul Hafidz",
+                style: TextStyle(
+                  fontFamily: 'Pixel',
+                  fontWeight: FontWeight.bold,
+                  fontSize: 26,
+                  color: Color(0xFFEAE6E5),
+                ),
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(height: 10),
+              const Text(
+                "NIM: 1123150093 | Kelas: TI-23-SE-1",
+                style: TextStyle(
+                  fontFamily: 'Pixel',
+                  fontSize: 16,
+                  color: Color(0xFFCCFB0F),
+                ),
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(height: 15),
+              const Text(
+                "Keahlian:",
+                style: TextStyle(
+                  fontFamily: 'Pixel',
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18,
+                  color: Color(0xFF473BFD),
+                ),
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(height: 5),
+              const Text(
+                "- Flutter Basic\n- JavaScript\n- HTML & CSS",
+                style: TextStyle(
+                  fontFamily: 'Pixel',
+                  fontSize: 16,
+                  color: Color(0xFFEAE6E5),
+                ),
+                textAlign: TextAlign.center, 
+              ),
+            ],
+          ),
+        ),
       ),
-    ),
-    SizedBox(height: 10),
-    const Text(
-      "NIM: 1123150093 | Kelas: TI-23-SE-1",
-      style: TextStyle(
-        fontFamily: 'Pixel',
-        fontSize: 16,
-        color: Color(0xFFCCFB0F),
-      ),
-      textAlign: TextAlign.center,
-    ),
-    const SizedBox(height: 15),
-     Column(
-  crossAxisAlignment: CrossAxisAlignment.start,
-  children: const [
-    Text(
-      "Keahlian:",
-      style: TextStyle(
-        fontFamily: 'Pixel',
-        fontWeight: FontWeight.bold,
-        fontSize: 18,
-        color: Color(0xFF473BFD),
-      ),
-    ),
-    SizedBox(height: 5),
-    Text(
-      "- Flutter Basic\n- JavaScript\n- HTML & CSS",
-      style: TextStyle(
-        fontFamily: 'Pixel',
-        fontSize: 16,
-        color: Color(0xFFEAE6E5),
-      ),
-    ),
-  ],
-),
-
-  ],
-),
-
-      ), 
     );
   }
 }
