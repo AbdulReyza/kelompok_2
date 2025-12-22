@@ -85,6 +85,24 @@ class _ProfileReyzaState extends State<ProfileReyza> {
                         color: Color(0xFF12130F),
                       ),
                     ),
+                    SizedBox(height: 15),
+                    Divider(color: Color(0xFF12130F)),
+                    Text( 
+                      'Tentang Saya:',
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xFF12130F),
+                      ),
+                    ),
+                     SizedBox(height: 5),
+                    Text(
+                     'Nama Saya Abdul Reyza Ramadhanu, Merupakan salah satu Mahasiswa Global Institute semester 5 dan jurusan saya adalah Software Engineering, saya lahir dan tinggal di tangerang pada tanggal 15 Oktober 2005.',
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: Color(0xFF12130F),
+                      ),
+                    )
                   ],
             ),
                ),
