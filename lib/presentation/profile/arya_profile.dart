@@ -30,9 +30,10 @@ class _ProfileAryaState extends State<ProfileArya> {
                   elevation: 10,
                   margin: EdgeInsets.all(10),
                     child: Container(
-                      height: 500,
+                      height: 100,
                       width: double.infinity,
                       child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Padding(
                             padding: EdgeInsets.only(top: 15),
@@ -45,6 +46,19 @@ class _ProfileAryaState extends State<ProfileArya> {
                                 ),
                               ),
                               subtitle: Text('1123150004 (TI-23-SE 1)'),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 15),
+                            child: Row(
+                              children: [
+                                Text('Keahlian',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(' : Coaching Futsal',),
+                              ],
                             ),
                           )
                         ],
