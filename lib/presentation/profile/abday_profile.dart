@@ -15,7 +15,15 @@ class ProfileAbday extends StatelessWidget {
         backgroundColor: const Color(0xFF5B9279),
         elevation: 0,
       ),
-      body: Container(), // nanti akan kita isi di step berikut
+      body: SingleChildScrollView(
+         padding: const EdgeInsets.all(20), // jarak dari tepi layar
+  child: Column(
+    crossAxisAlignment: CrossAxisAlignment.center,
+    children: [
+      // semua elemen konten nantinya ditaruh di sini
+    ],
+  ),
+      ), // nanti akan kita isi di step berikut
     );
   }
 }
