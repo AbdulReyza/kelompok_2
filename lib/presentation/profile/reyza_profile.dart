@@ -27,10 +27,19 @@ class _ProfileReyzaState extends State<ProfileReyza> {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => (), 
+            builder: (context) => ProfileReyza(), 
                ),
               );
             },
+            child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center, 
+            children: [
+              CircleAvatar(
+                radius: 80,
+                backgroundImage: AssetImage('assets/images/reyza.jpg'),
+              ),
+            ],
+            ),
           ),
         ),
       ),
