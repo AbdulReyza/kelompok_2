@@ -135,7 +135,7 @@ class _ProfilRioState extends State<ProfilRio> {
                                   ),
                                   Column(
                                     children: [
-                                      Text('60++',
+                                      Text('TI SE 23 P1',
                                         style: TextStyle(
                                           fontSize: 22,
                                           color: Color(0xFFCCFB0F),
@@ -143,7 +143,7 @@ class _ProfilRioState extends State<ProfilRio> {
                                         ),
                                       ),
                                       SizedBox(height: 5,),
-                                      Text('Repository',
+                                      Text('Kelas',
                                         style: TextStyle(
                                           fontSize: 18,
                                           color: Color(0xFFCCFB0F),
