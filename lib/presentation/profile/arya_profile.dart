@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:kelompok_2/presentation/profile/abday_profile.dart';
+
+
 
 class ProfileArya extends StatefulWidget {
   static const routeName = '/profileArya';
@@ -23,6 +26,7 @@ class _ProfileAryaState extends State<ProfileArya> {
               color: Color(0xFFEAE6E5)
             ),
           ),
+          
           centerTitle: true,
           automaticallyImplyLeading: false,
         ),

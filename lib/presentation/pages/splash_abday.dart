@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:kelompok_2/presentation/profile/reyza_profile.dart';
+import 'package:kelompok_2/presentation/profile/arya_profile.dart';
+import 'package:kelompok_2/presentation/profile/abday_profile.dart';
 import 'package:lottie/lottie.dart';
 
 
@@ -20,7 +21,7 @@ class _SplashAbdayState extends State<SplashAbday> {
           context,
           PageRouteBuilder(
             pageBuilder: (context, animation, secondaryAnimation) =>
-                const ProfileReyza(),
+                const ProfileAbday(),
             transitionsBuilder:
                 (context, animation, secondaryAnimation, child) {
               return FadeTransition(

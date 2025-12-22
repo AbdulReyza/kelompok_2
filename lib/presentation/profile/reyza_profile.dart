@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 class ProfileReyza extends StatefulWidget {
   static const routeName = '/profileReyza';
   const ProfileReyza({super.key});
@@ -10,20 +11,27 @@ class ProfileReyza extends StatefulWidget {
 class _ProfileReyzaState extends State<ProfileReyza> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Color(0xFF5B9279),
-      child: Scaffold(
-        backgroundColor: Colors.transparent,
-        appBar: AppBar(
-          backgroundColor: Colors.transparent,
-          elevation: 0,
-          title: const Text("PROFIL  REYZA", 
-            style: TextStyle(
-              color: Color(0xFFEAE6E5)
-            ),
+    return Scaffold(
+      backgroundColor: const Color(0xFF5B9279),
+      appBar: AppBar(
+        title: const Text("Profile   Reyza"),
+        backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+        elevation: 0,
+        centerTitle: true,
+      ),
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.all(20),
+        child: Center( 
+          child: GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => (), 
+               ),
+              );
+            },
           ),
-          centerTitle: true,
-          automaticallyImplyLeading: false,
         ),
       ),
     );
