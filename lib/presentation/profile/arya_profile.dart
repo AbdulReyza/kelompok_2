@@ -44,7 +44,7 @@ class _ProfileAryaState extends State<ProfileArya> {
                                   color: Color(0xFF12130F),
                                 ),
                               ),
-                              
+                              subtitle: Text('1123150004 (TI-23-SE 1)'),
                             ),
                           )
                         ],
