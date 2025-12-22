@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:kelompok_2/presentation/pages/splash_arya.dart';
-import 'package:kelompok_2/presentation/pages/splash_global.dart';
-import 'package:kelompok_2/presentation/pages/splash_rio.dart';
 import 'package:lottie/lottie.dart';
 
 class SplashReyza extends StatefulWidget {

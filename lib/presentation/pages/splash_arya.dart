@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:kelompok_2/presentation/pages/splash_abday.dart';
-import 'package:kelompok_2/presentation/pages/splash_rio.dart';
 import 'package:lottie/lottie.dart';
 
 class SplashArya extends StatefulWidget {
