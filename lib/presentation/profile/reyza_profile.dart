@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kelompok_2/presentation/profile/rio_profile.dart';
 
 
 class ProfileReyza extends StatefulWidget {
@@ -27,7 +28,7 @@ class _ProfileReyzaState extends State<ProfileReyza> {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => ProfileReyza(), 
+                builder: (context) => ProfilRio(), 
                   ),
                   );
                 },
