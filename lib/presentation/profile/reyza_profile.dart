@@ -68,11 +68,20 @@ class _ProfileReyzaState extends State<ProfileReyza> {
                       ),
                     ),
                     SizedBox(height: 15),
+                    Divider(color: Color(0xFF12130F)),
                     Text( 
                       'Keahlian:',
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
+                        color: Color(0xFF12130F),
+                      ),
+                    ),
+                    SizedBox(height: 5),
+                    Text(
+                      '- Ms Word\n- Coding\n- Graphic Design',
+                      style: TextStyle(
+                        fontSize: 16,
                         color: Color(0xFF12130F),
                       ),
                     ),
