@@ -50,7 +50,30 @@ class ProfileAbday extends StatelessWidget {
       textAlign: TextAlign.center,
     ),
     const SizedBox(height: 15),
-    // 
+     Column(
+  crossAxisAlignment: CrossAxisAlignment.start,
+  children: const [
+    Text(
+      "Keahlian:",
+      style: TextStyle(
+        fontFamily: 'Pixel',
+        fontWeight: FontWeight.bold,
+        fontSize: 18,
+        color: Color(0xFF473BFD),
+      ),
+    ),
+    SizedBox(height: 5),
+    Text(
+      "- Flutter Basic\n- JavaScript\n- HTML & CSS",
+      style: TextStyle(
+        fontFamily: 'Pixel',
+        fontSize: 16,
+        color: Color(0xFFEAE6E5),
+      ),
+    ),
+  ],
+),
+
   ],
 ),
 
