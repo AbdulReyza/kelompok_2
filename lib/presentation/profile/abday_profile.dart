@@ -25,7 +25,7 @@ class ProfileAbday extends StatelessWidget {
     ),
     SizedBox(height: 15),
     Lottie.asset(
-      'assets/animations/profile_student.json',
+      'assets/animations/Wizard.json',
       width: 150,
       height: 150,
       repeat: true,
@@ -39,6 +39,17 @@ class ProfileAbday extends StatelessWidget {
         color: Color(0xFFEAE6E5),
       ),
     ),
+    SizedBox(height: 10),
+    const Text(
+      "NIM: 1123150093 | Kelas: TI-23-SE-1",
+      style: TextStyle(
+        fontFamily: 'Pixel',
+        fontSize: 16,
+        color: Color(0xFFCCFB0F),
+      ),
+      textAlign: TextAlign.center,
+    ),
+    const SizedBox(height: 15),
     // 
   ],
 ),
