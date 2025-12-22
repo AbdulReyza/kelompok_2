@@ -4,7 +4,7 @@ import 'package:kelompok_2/presentation/pages/splash_arya.dart';
 import 'package:kelompok_2/presentation/pages/splash_global.dart';
 import 'package:kelompok_2/presentation/pages/splash_reyza.dart';
 import 'package:kelompok_2/presentation/pages/splash_rio.dart';
-import 'package:provider/provider.dart';
+// import 'package:provider/provider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,8 +27,8 @@ class MyApp extends StatelessWidget {
           SplashGlobal.routeName: (_) => const SplashGlobal(),
           SplashRio.routeName: (_) => const SplashRio(),
           SplashReyza.routeName: (_) => const SplashReyza(),
-          SplashReyza.routeName: (_) => const SplashArya(),
-          SplashReyza.routeName: (_) => const SplashAbday(),
+          SplashArya.routeName: (_) => const SplashArya(),
+          SplashAbday.routeName: (_) => const SplashAbday(),
         }
       );
   

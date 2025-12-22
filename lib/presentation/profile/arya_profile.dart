@@ -33,6 +33,13 @@ class _ProfileAryaState extends State<ProfileArya> {
                     child: Container(
                       height: 500,
                       width: 500,
+                      child: Column(
+                        children: [
+                          ListTile(
+                            leading: Image.asset('assets/images/arya_profile.jpg'),
+                          )
+                        ],
+                      )
                     ),
                   )
                 )
