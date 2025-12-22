@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
+import 'package:kelompok_2/presentation/profile/arya_profile.dart';
+
 
 class ProfileAbday extends StatelessWidget {
   static const routeName = '/profileAbday';
@@ -17,7 +18,16 @@ class ProfileAbday extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(20),
-        child: Center( // <-- tambahin ini
+        child: Center( 
+          child: GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => ProfileArya(), 
+          ),
+        );
+      },
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center, 
             children: [
@@ -71,6 +81,7 @@ class ProfileAbday extends StatelessWidget {
             ],
           ),
         ),
+      ),
       ),
     );
   }
