@@ -28,20 +28,29 @@ class _ProfileAryaState extends State<ProfileArya> {
                 Card(
                   color: Color(0xFFCCFB0F),
                   elevation: 10,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                  margin: EdgeInsets.all(10),
                     child: Container(
                       height: 500,
-                      width: 500,
+                      width: double.infinity,
                       child: Column(
                         children: [
-                          ListTile(
-                            leading: Image.asset('assets/images/arya_profile.jpg'),
+                          Padding(
+                            padding: EdgeInsets.only(top: 15),
+                            child: ListTile(
+                              leading: Image.asset('assets/images/arya_profile.jpg'),
+                              title: Text('Arya Pramudya Akbar',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0xFF12130F),
+                                ),
+                              ),
+                              
+                            ),
                           )
                         ],
                       )
                     ),
-                  )
+
                 )
               ],
             ),
