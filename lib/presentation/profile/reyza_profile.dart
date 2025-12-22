@@ -51,7 +51,6 @@ class _ProfileReyzaState extends State<ProfileReyza> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: const [
-                    /// NAMA
                     Text(
                       'Abdul Reyza Ramadhanu',
                       style: TextStyle(
@@ -61,6 +60,22 @@ class _ProfileReyzaState extends State<ProfileReyza> {
                       ),
                     ),
                     SizedBox(height: 5),
+                    Text(
+                      'NIM: 1123150072 | Kelas: TI-23-SE-P1',
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: Color(0xFF12130F),
+                      ),
+                    ),
+                    SizedBox(height: 15),
+                    Text( 
+                      'Keahlian:',
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xFF12130F),
+                      ),
+                    ),
                   ],
             ),
                ),
