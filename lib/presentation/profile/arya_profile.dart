@@ -21,10 +21,22 @@ class _ProfileAryaState extends State<ProfileArya> {
           title: const Text(""),
           automaticallyImplyLeading: false,
         ),
-        body: const Center(
+        body: Center(
           child: SingleChildScrollView(
             child: Column(
-              children: [],
+              children: [
+                Card(
+                  color: Color(0xFFCCFB0F),
+                  elevation: 10,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      height: 500,
+                      width: 500,
+                    ),
+                  )
+                )
+              ],
             ),
           ),
         ),
