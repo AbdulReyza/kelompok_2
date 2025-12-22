@@ -18,7 +18,12 @@ class _ProfileAryaState extends State<ProfileArya> {
         appBar: AppBar(
           backgroundColor: Colors.transparent,
           elevation: 0,
-          title: const Text(""),
+          title: const Text("PROFIL  ARYA", 
+            style: TextStyle(
+              color: Color(0xFFEAE6E5)
+            ),
+          ),
+          centerTitle: true,
           automaticallyImplyLeading: false,
         ),
         body: Center(
@@ -30,7 +35,7 @@ class _ProfileAryaState extends State<ProfileArya> {
                   elevation: 10,
                   margin: EdgeInsets.all(10),
                     child: Container(
-                      height: 100,
+                      height: 150,
                       width: double.infinity,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -49,15 +54,16 @@ class _ProfileAryaState extends State<ProfileArya> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.only(left: 15),
+                            padding: const EdgeInsets.all(15),
                             child: Row(
                               children: [
                                 Text('Keahlian',
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                   ),
-                                ),
-                                Text(' : Coaching Futsal',),
+                                ), 
+                                Text(' : '),
+                                Text('Coaching, Ms Office , & Coding',),
                               ],
                             ),
                           )
