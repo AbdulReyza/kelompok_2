@@ -15,12 +15,15 @@ class _DashboardState extends State<Dashboard> {
         title: const Text("Dashboard"),
         actions: const [],
       ),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(10.0),
-        child: Column(
-            children: [],
+      body: Center(
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.all(10.0),
+          child: Column(
+              children: [],
+          ),
         ),
       ),
+
     );
   }
 }
