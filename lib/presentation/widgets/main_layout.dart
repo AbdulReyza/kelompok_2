@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:kelompok_2/presentation/pages/about.dart';
 import 'package:kelompok_2/presentation/pages/dashboard.dart';
+import 'package:kelompok_2/presentation/pages/setting.dart';
 import 'package:kelompok_2/presentation/widgets/navigation_bar.dart';
 
 class MainLayout extends StatefulWidget {
@@ -14,6 +16,8 @@ class _MainLayoutState extends State<MainLayout> {
 
   final pages = [
     Dashboard(),
+    AboutPage(),
+    SettingPage(),
   ];
 
   @override
