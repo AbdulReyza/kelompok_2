@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kelompok_2/presentation/profile/abday_profile.dart';
+import 'package:kelompok_2/presentation/profiles/abday_profile.dart';
 import 'package:lottie/lottie.dart';
 
 
