@@ -4,6 +4,10 @@ import 'package:kelompok_2/presentation/pages/splash_arya.dart';
 import 'package:kelompok_2/presentation/pages/splash_global.dart';
 import 'package:kelompok_2/presentation/pages/splash_reyza.dart';
 import 'package:kelompok_2/presentation/pages/splash_rio.dart';
+import 'package:kelompok_2/presentation/profiles/abday_profile.dart';
+import 'package:kelompok_2/presentation/profiles/arya_profile.dart';
+import 'package:kelompok_2/presentation/profiles/reyza_profile.dart';
+import 'package:kelompok_2/presentation/profiles/rio_profile.dart';
 // import 'package:provider/provider.dart';
 
 void main() {
@@ -29,6 +33,11 @@ class MyApp extends StatelessWidget {
           SplashReyza.routeName: (_) => const SplashReyza(),
           SplashArya.routeName: (_) => const SplashArya(),
           SplashAbday.routeName: (_) => const SplashAbday(),
+
+          ProfileAbday.routeName: (_) => const ProfileAbday(),
+          ProfileReyza.routeName: (_) => const ProfileReyza(),
+          ProfileRio.routeName: (_) => const ProfileRio(),
+          ProfileArya.routeName: (_) => const ProfileArya(),
         }
       );
   
