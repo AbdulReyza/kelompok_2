@@ -24,6 +24,7 @@ class _AboutPageState extends State<AboutPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xFF12130F),
       appBar: myAppBar(),
       body: Center(
           child: ListView.separated(
