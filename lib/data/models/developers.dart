@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kelompok_2/presentation/profiles/reyza_profile.dart';
+import 'package:kelompok_2/presentation/profiles/rio_profile.dart';
 
 class DevelopersModel {
   String name;
@@ -25,5 +26,16 @@ class DevelopersModel {
         iconPath: 'assets/images/reyza.jpg'
       ),
     );
+
+    developers.add(
+      DevelopersModel(
+        name: 'Rio Achyar', 
+        boxColor: Color(0xFF12130F), 
+        route: ProfileRio.routeName, 
+        iconPath: 'assets/images/cungpruy.jpg'
+      ),
+    );
+
+    return developers;
   }
 }
