@@ -26,48 +26,58 @@ class _AboutPageState extends State<AboutPage> {
     return Scaffold(
       appBar: myAppBar(),
       body: Center(
-        child: ListView.separated(
-          itemCount: developers.length,
-          scrollDirection: Axis.vertical,
-          itemBuilder: (context, index) {
-            return Padding(
-              padding: const EdgeInsets.only(left: 15, right: 15),
-              child: Container(
-                height: 100,
-                decoration: BoxDecoration(
-                  color: developers[index].boxColor,
-                  borderRadius: BorderRadius.circular(15),
-                ),
+          child: ListView.separated(
+            itemCount: developers.length,
+            scrollDirection: Axis.vertical,
+            itemBuilder: (context, index) {
+              
+              return InkWell(
+                onTap: () {
+                  Navigator.pushNamed(
+                    context,
+                    developers[index].route
+                  );
+                },
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Row(
-                    children: [
-                      CircleAvatar(
-                        radius: 40,
-                        backgroundImage: AssetImage(developers[index].iconPath),
-                      ),
-                      SizedBox(width: 20,),
-                      Expanded(
-                        child: Text(
-                          textAlign: TextAlign.right,
-                          developers[index].name, 
-                          style: TextStyle(
-                            fontSize: 25,
-                            color: Colors.white,
+                  padding: const EdgeInsets.only(left: 15, right: 15),
+                  child: Container(
+                    height: 150,
+                    decoration: BoxDecoration(
+                      color: developers[index].boxColor,
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(20.0),
+                      child: Row(
+                        children: [
+                          CircleAvatar(
+                            radius: 40,
+                            backgroundImage: AssetImage(developers[index].iconPath),
                           ),
-                        ),
-                      )
-                    ],
+                          SizedBox(width: 20,),
+                          Expanded(
+                            child: Text(
+                              textAlign: TextAlign.center,
+                              developers[index].name, 
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 25,
+                                color: Colors.white,
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  
                   ),
                 ),
-              
-              ),
-            );
-          }, 
-          separatorBuilder: (context, index) {
-            return SizedBox(height: 20);
-          }, 
-        ),
+              );
+            }, 
+            separatorBuilder: (context, index) {
+              return SizedBox(height: 20);
+            }, 
+          ),
       ),
     );
   }
