@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kelompok_2/data/models/developers.dart';
 
 class AboutPage extends StatefulWidget {
   const AboutPage({super.key});
@@ -8,26 +9,63 @@ class AboutPage extends StatefulWidget {
 }
 
 class _AboutPageState extends State<AboutPage> {
+  List<DevelopersModel> developers = [];
+
+  void _getDevelopers() {
+    developers = DevelopersModel.getDevelopers();
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _getDevelopers();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: myAppBar(),
       body: Center(
         child: ListView.separated(
-          itemCount: 4,
+          itemCount: developers.length,
           scrollDirection: Axis.vertical,
           itemBuilder: (context, index) {
-            return Container(
-              height: 60,
-              color: Colors.blue[100],
-              child: Center(child: Text('Item ${index + 1}', style: TextStyle(fontSize: 18))),
-            
+            return Padding(
+              padding: const EdgeInsets.only(left: 15, right: 15),
+              child: Container(
+                height: 100,
+                decoration: BoxDecoration(
+                  color: developers[index].boxColor,
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    children: [
+                      CircleAvatar(
+                        radius: 40,
+                        backgroundImage: AssetImage(developers[index].iconPath),
+                      ),
+                      SizedBox(width: 20,),
+                      Expanded(
+                        child: Text(
+                          textAlign: TextAlign.right,
+                          developers[index].name, 
+                          style: TextStyle(
+                            fontSize: 25,
+                            color: Colors.white,
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              
+              ),
             );
           }, 
           separatorBuilder: (context, index) {
-            return Divider(
-              color: Colors.grey, thickness: 1,
-            );
+            return SizedBox(height: 20);
           }, 
         ),
       ),
@@ -35,21 +73,20 @@ class _AboutPageState extends State<AboutPage> {
   }
 }
 
-class MyAppBar extends StatelessWidget {
-  const MyAppBar({
-    super.key,
-  });
 
   @override
   Widget build(BuildContext context) {
-    return AppBar(
-      title: Text("OUR DEVELOPERS",
-        style: TextStyle(
-          color: Color(0xFFCCFB0F),
-        ),
-      ),
-      centerTitle: true,
-      actions: const [],
-    );
+    return myAppBar();
   }
-}
+
+  AppBar myAppBar() {
+    return AppBar(
+    title: Text("OUR DEVELOPERS",
+      style: TextStyle(
+        color: Color(0xFFCCFB0F),
+      ),
+    ),
+    centerTitle: true,
+    actions: const [],
+  );
+  }

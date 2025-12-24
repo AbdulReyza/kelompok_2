@@ -50,7 +50,7 @@ class DevelopersModel {
     developers.add(
       DevelopersModel(
         name: 'Arya Pramudya Akbar', 
-        boxColor: Color(0xFF5B9279), 
+        boxColor: Color(0xFFCCFB0F), 
         route: ProfileArya.routeName, 
         iconPath: 'assets/images/arya_profile.jpg'
       ),
