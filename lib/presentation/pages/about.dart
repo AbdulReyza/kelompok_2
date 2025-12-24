@@ -131,6 +131,7 @@ class _AboutPageState extends State<AboutPage> {
               "OUR DEVELOPERS",
               style: TextStyle(
                 color: Color(0xFFEAE6E5),
+                fontWeight: FontWeight.bold,
               ),
             ),
           ),
