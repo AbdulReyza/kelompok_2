@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:ui';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({super.key});
@@ -11,10 +12,8 @@ class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Dashboard"),
-        actions: const [],
-      ),
+      backgroundColor: Color(0xFF12130F),
+      appBar: glassAppBar(),
       body: Center(
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(10.0),
@@ -26,4 +25,38 @@ class _DashboardState extends State<Dashboard> {
 
     );
   }
+
+  PreferredSizeWidget glassAppBar() {
+  return PreferredSize(
+    preferredSize: const Size.fromHeight(kToolbarHeight),
+    child: ClipRect(
+      child: BackdropFilter(
+        filter: ImageFilter.blur(sigmaX: 18, sigmaY: 18),
+        child: Container(
+          decoration: BoxDecoration(
+            color: Colors.white.withOpacity(0.15),
+            border: Border(
+              bottom: BorderSide(
+                color: Colors.white.withOpacity(0.2),
+              ),
+            ),
+            borderRadius: BorderRadius.circular(20)
+          ),
+          child: AppBar(
+            backgroundColor: Colors.transparent,
+            elevation: 0,
+            centerTitle: true,
+            title: const Text(
+              "THERMUL",
+              style: TextStyle(
+                color: Color(0xFFEAE6E5),
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+        ),
+      ),
+    ),
+  );
+}
 }
