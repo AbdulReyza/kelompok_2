@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:ui';
 import 'package:kelompok_2/data/models/developers.dart';
 
 class AboutPage extends StatefulWidget {
@@ -25,7 +26,7 @@ class _AboutPageState extends State<AboutPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFF12130F),
-      appBar: myAppBar(),
+      appBar: glassAppBar(),
       body: Center(
           child: myDev(),
       ),
@@ -103,17 +104,38 @@ class _AboutPageState extends State<AboutPage> {
 
   @override
   Widget build(BuildContext context) {
-    return myAppBar();
+    return glassAppBar();
   }
 
-  AppBar myAppBar() {
-    return AppBar(
-    title: Text("OUR DEVELOPERS",
-      style: TextStyle(
-        color: Color(0xFFCCFB0F),
+  PreferredSizeWidget glassAppBar() {
+  return PreferredSize(
+    preferredSize: const Size.fromHeight(kToolbarHeight),
+    child: ClipRect(
+      child: BackdropFilter(
+        filter: ImageFilter.blur(sigmaX: 18, sigmaY: 18),
+        child: Container(
+          decoration: BoxDecoration(
+            color: Colors.white.withOpacity(0.15),
+            border: Border(
+              bottom: BorderSide(
+                color: Colors.white.withOpacity(0.2),
+              ),
+            ),
+            borderRadius: BorderRadius.circular(20)
+          ),
+          child: AppBar(
+            backgroundColor: Colors.transparent,
+            elevation: 0,
+            centerTitle: true,
+            title: const Text(
+              "OUR DEVELOPERS",
+              style: TextStyle(
+                color: Color(0xFFEAE6E5),
+              ),
+            ),
+          ),
+        ),
       ),
     ),
-    centerTitle: true,
-    actions: const [],
   );
-  }
+}
