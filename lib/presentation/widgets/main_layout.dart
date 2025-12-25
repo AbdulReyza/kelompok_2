@@ -23,6 +23,7 @@ class _MainLayoutState extends State<MainLayout> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
       body: pages[_index],
       bottomNavigationBar: AppNavigationBar(
         currentIndex: _index, 

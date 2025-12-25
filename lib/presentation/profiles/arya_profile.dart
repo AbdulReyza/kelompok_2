@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kelompok_2/presentation/profiles/abday_profile.dart';
+import 'package:kelompok_2/presentation/profiles/reyza_profile.dart';
 
 
 
@@ -18,7 +18,7 @@ class _ProfileAryaState extends State<ProfileArya> {
       onTap: (){
         Navigator.pushNamed(
           context,
-          ProfileAbday.routeName
+          ProfileReyza.routeName
         );
       },
       child: Container(
@@ -33,7 +33,12 @@ class _ProfileAryaState extends State<ProfileArya> {
                 color: Color(0xFFEAE6E5)
               ),
             ),
-            
+            leading: IconButton(
+              icon: Icon(Icons.arrow_back, color: Color(0xFFEAE6E5),),
+              onPressed: () {
+                Navigator.popUntil(context, (route) => route.isFirst);
+              },
+            ),
             centerTitle: true,
             automaticallyImplyLeading: false,
           ),

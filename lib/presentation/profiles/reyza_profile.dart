@@ -26,6 +26,12 @@ class _ProfileReyzaState extends State<ProfileReyza> {
           backgroundColor: const Color.fromARGB(255, 255, 255, 255),
           elevation: 0,
           centerTitle: true,
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back),
+            onPressed: () {
+              Navigator.popUntil(context, (route) => route.isFirst);
+            },
+          ),
         ),
         body: Center(
             child: SingleChildScrollView(

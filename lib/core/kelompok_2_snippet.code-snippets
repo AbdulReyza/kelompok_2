@@ -67,7 +67,7 @@
 			"          title: const Text(\"\"),",
 			"          automaticallyImplyLeading: false,",
 			"        ),",
-			"        body: const Center(",
+			"        body: Center(",
 			"          child: SingleChildScrollView(",
 			"            child: Column(",
 			"              children: [],",
