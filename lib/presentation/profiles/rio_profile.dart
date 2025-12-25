@@ -34,6 +34,12 @@ class _ProfileRioState extends State<ProfileRio> {
               ),
             ),
             centerTitle: true,
+            leading: IconButton(
+            icon: Icon(Icons.arrow_back, color: Color(0xFFCCFB0F),),
+            onPressed: () {
+              Navigator.popUntil(context, (route) => route.isFirst);
+            },
+          ),
           ),
           body: Center(
               child: SingleChildScrollView(

@@ -34,7 +34,12 @@ class _ProfileAryaState extends State<ProfileArya> {
                 color: Color(0xFFEAE6E5)
               ),
             ),
-            
+            leading: IconButton(
+              icon: Icon(Icons.arrow_back, color: Color(0xFFEAE6E5),),
+              onPressed: () {
+                Navigator.popUntil(context, (route) => route.isFirst);
+              },
+            ),
             centerTitle: true,
             automaticallyImplyLeading: false,
           ),
