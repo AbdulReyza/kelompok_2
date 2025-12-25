@@ -95,106 +95,11 @@ class _DashboardState extends State<Dashboard> {
                 key: _formKey,
                 child: Column(
                     children: [
-                      TextFormField(
-                        controller: nameController,
-                        onChanged: (value) {
-                          setState(() {
-                            menu = value;
-                          });
-                        },
-                        autofocus: true,
-                        decoration: InputDecoration(
-                          prefixIcon: Icon(
-                            Icons.coffee_outlined,
-                            color: Colors.brown,
-                          ),
-                          label: Text('Nama Menu'),
-                          hintText: 'Americano',
-                          hintStyle: TextStyle(
-                            color: Colors.grey,
-                          ),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(5),
-                          ),
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Color.fromRGBO(244, 149, 33, 1))
-                          ),
-                        ),
-                        validator: (value) {
-                          if (value == null || value.trim().isEmpty) {
-                            return 'Nama menu wajib diisi';
-                          }
-                          return null;
-                        },
-                      ),
+                      stuffName(),
                       SizedBox(height: 20,),
-                      TextFormField(
-                        controller: qtyController,
-                        keyboardType: TextInputType.number,
-                        onChanged: (_) {
-                          updateCalculation();
-                          setState(() {});
-                        },
-                        decoration: InputDecoration(
-                          prefixIcon: Icon(
-                            Icons.shopping_cart_checkout_sharp,
-                            color: Colors.brown,
-                          ),
-                          label: Text('Jumlah Barang'),
-                          hintText: '5',
-                          hintStyle: TextStyle(
-                            color: Colors.grey,
-                          ),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(5),
-                          ),
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Color.fromRGBO(244, 149, 33, 1))
-                          ),
-                        ),
-                        validator: (value) {
-                          if (value == null || value.isEmpty) {
-                            return 'Jumlah barang wajib diisi';
-                          }
-                          if (int.tryParse(value) == null) {
-                            return 'Harus angka';
-                          }
-                          return null;
-                        },
-                      ),
+                      stuffQty(),
                       SizedBox(height: 20,),
-                      TextFormField(
-                        controller: priceController,
-                        keyboardType: TextInputType.number,
-                        onChanged: (value) {
-                          final raw = value.replaceAll('.', '').replaceAll(',', '');
-                          if (raw.isEmpty) {
-                            updateCalculation();
-                            return;
-                          }
-
-                          final number = int.parse(raw);
-                          final formatted = NumberFormat('#,###', 'id_ID').format(number);
-
-                          priceController.value = TextEditingValue(
-                            text: formatted,
-                            selection: TextSelection.collapsed(offset: formatted.length),
-                          );
-
-                          updateCalculation();
-                        },
-                        decoration: InputDecoration(
-                          prefixIcon: Icon(Icons.monetization_on_outlined, color: Colors.brown),
-                          label: Text('Harga Satuan'),
-                          hintText: '15.000',
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(5),
-                          ),
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: Color.fromRGBO(244, 149, 33, 1))
-                          ),
-                        ),
-                      ),
+                      priceStuff(),
 
                       SizedBox(height: 20,),
                       Card(
@@ -350,6 +255,113 @@ class _DashboardState extends State<Dashboard> {
         ),
       ),
     );
+  }
+
+  TextFormField priceStuff() {
+    return TextFormField(
+                      controller: priceController,
+                      keyboardType: TextInputType.number,
+                      onChanged: (value) {
+                        final raw = value.replaceAll('.', '').replaceAll(',', '');
+                        if (raw.isEmpty) {
+                          updateCalculation();
+                          return;
+                        }
+
+                        final number = int.parse(raw);
+                        final formatted = NumberFormat('#,###', 'id_ID').format(number);
+
+                        priceController.value = TextEditingValue(
+                          text: formatted,
+                          selection: TextSelection.collapsed(offset: formatted.length),
+                        );
+
+                        updateCalculation();
+                      },
+                      decoration: InputDecoration(
+                        prefixIcon: Icon(Icons.monetization_on_outlined, color: Colors.brown),
+                        label: Text('Harga Satuan'),
+                        hintText: '15.000',
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(5),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Color.fromRGBO(244, 149, 33, 1))
+                        ),
+                      ),
+                    );
+  }
+
+  TextFormField stuffQty() {
+    return TextFormField(
+                      controller: qtyController,
+                      keyboardType: TextInputType.number,
+                      onChanged: (_) {
+                        updateCalculation();
+                        setState(() {});
+                      },
+                      decoration: InputDecoration(
+                        prefixIcon: Icon(
+                          Icons.shopping_cart_checkout_sharp,
+                          color: Colors.brown,
+                        ),
+                        label: Text('Jumlah Barang'),
+                        hintText: '5',
+                        hintStyle: TextStyle(
+                          color: Colors.grey,
+                        ),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(5),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Color.fromRGBO(244, 149, 33, 1))
+                        ),
+                      ),
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return 'Jumlah barang wajib diisi';
+                        }
+                        if (int.tryParse(value) == null) {
+                          return 'Harus angka';
+                        }
+                        return null;
+                      },
+                    );
+  }
+
+  TextFormField stuffName() {
+    return TextFormField(
+                      controller: nameController,
+                      onChanged: (value) {
+                        setState(() {
+                          menu = value;
+                        });
+                      },
+                      autofocus: true,
+                      decoration: InputDecoration(
+                        prefixIcon: Icon(
+                          Icons.coffee_outlined,
+                          color: Colors.brown,
+                        ),
+                        label: Text('Nama Menu'),
+                        hintText: 'Americano',
+                        hintStyle: TextStyle(
+                          color: Colors.grey,
+                        ),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(5),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Color.fromRGBO(244, 149, 33, 1))
+                        ),
+                      ),
+                      validator: (value) {
+                        if (value == null || value.trim().isEmpty) {
+                          return 'Nama menu wajib diisi';
+                        }
+                        return null;
+                      },
+                    );
   }
 
   PreferredSizeWidget glassAppBar() {
