@@ -18,11 +18,8 @@ class _DashboardState extends State<Dashboard> {
   String timeNow = '';
 
   int parsePrice(String text) {
-    return int.tryParse(
-      text.replaceAll('.', '').replaceAll(',', ''),
-    ) ?? 0;
+    return int.tryParse(text.replaceAll('.', '').replaceAll(',', '')) ?? 0;
   }
-
 
   ReceiptController? receiptController;
 
@@ -31,10 +28,10 @@ class _DashboardState extends State<Dashboard> {
   }
 
   Future<void> _handleRefresh() async {
-  await Future.delayed(const Duration(seconds: 1));
+    await Future.delayed(const Duration(seconds: 1));
 
     setState(() {
-      _updateTime(); 
+      _updateTime();
 
       nameController.clear();
       qtyController.clear();
@@ -46,7 +43,6 @@ class _DashboardState extends State<Dashboard> {
       total = 0;
     });
   }
-
 
   String menu = '';
   int qty = 0;
@@ -63,7 +59,6 @@ class _DashboardState extends State<Dashboard> {
       total = q * p;
     });
   }
-
 
   final NumberFormat currencyFormatter = NumberFormat.currency(
     locale: 'id_ID',
@@ -94,32 +89,31 @@ class _DashboardState extends State<Dashboard> {
               child: Form(
                 key: _formKey,
                 child: Column(
-                    children: [
-                      stuffName(),
+                  children: [
+                    stuffName(),
 
-                      SizedBox(height: 20,),
+                    SizedBox(height: 20),
 
-                      stuffQty(),
+                    stuffQty(),
 
-                      SizedBox(height: 20,),
+                    SizedBox(height: 20),
 
-                      priceStuff(),
+                    priceStuff(),
 
-                      SizedBox(height: 20,),
+                    SizedBox(height: 20),
 
-                      totalPrice(),
+                    totalPrice(),
 
-                      SizedBox(height: 20,),
+                    SizedBox(height: 20),
 
-                      buttonPrint(context),
+                    buttonPrint(context),
 
-                      SizedBox(height: 20,),
-                      
-                      receipt(),
-        
-                    ],
-                  ),
-              )
+                    SizedBox(height: 20),
+
+                    receipt(),
+                  ],
+                ),
+              ),
             ),
           ),
         ),
@@ -129,294 +123,256 @@ class _DashboardState extends State<Dashboard> {
 
   SizedBox receipt() {
     return SizedBox(
-                      child: Receipt(
-                        backgroundColor: Colors.white,
-                        onInitialized: (controller) {
-                          receiptController = controller;
-                        },
-                        builder: (context) {
-                          return Container(
-                            width: 384,
-                            padding: const EdgeInsets.all(8),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Center(
-                                  child: Text(
-                                    'Food.G',
-                                    style: TextStyle(
-                                      fontSize: 30,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(height: 5,),
-                                Text('======================='),
-                                SizedBox(height: 5,),
-                                Center(
-                                  child: Text(
-                                    timeNow,
-                                    style: TextStyle(fontSize: 20),
-                                  ),
-                                ),
-                                SizedBox(height: 5,),
-                                Text('======================='),
-                                SizedBox(height: 5,),
-                                Text('Menu   : $menu'),
-                                Text('Jumlah : $qty'),
-                                Text('Harga  : ${currencyFormatter.format(price)}'),
-                                SizedBox(height: 5,),
-                                Text('======================='),
-                                SizedBox(height: 5,),
-                                SizedBox(
-                                  width: double.infinity,
-                                  child: Text(
-                                    'TOTAL : ${currencyFormatter.format(total)}',
-                                    textAlign: TextAlign.end,
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 25,
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(height:30),
-      
-                                Center(
-                                  child: Text("Terima Kasih :)"),
-                                ),
-                                SizedBox(height: 60),
-                                Text("\n\n"),
-                              ],
-                            ),
-                          );
-                        },
-                      ),
-                    );
+      child: Receipt(
+        backgroundColor: Colors.white,
+        onInitialized: (controller) {
+          receiptController = controller;
+        },
+        builder: (context) {
+          return Container(
+            width: 384,
+            padding: const EdgeInsets.all(8),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Center(
+                  child: Text(
+                    'T H E R M U L',
+                    style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                  ),
+                ),
+                SizedBox(height: 5),
+                Text('======================='),
+                SizedBox(height: 5),
+                Center(child: Text(timeNow, style: TextStyle(fontSize: 20))),
+                SizedBox(height: 5),
+                Text('======================='),
+                SizedBox(height: 5),
+                Text('Menu   : $menu'),
+                Text('Jumlah : $qty'),
+                Text('Harga  : ${currencyFormatter.format(price)}'),
+                SizedBox(height: 5),
+                Text('======================='),
+                SizedBox(height: 5),
+                SizedBox(
+                  width: double.infinity,
+                  child: Text(
+                    'TOTAL : ${currencyFormatter.format(total)}',
+                    textAlign: TextAlign.end,
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+                  ),
+                ),
+                SizedBox(height: 30),
+
+                Center(child: Text("Terima Kasih :)")),
+                SizedBox(height: 10),
+              ],
+            ),
+          );
+        },
+      ),
+    );
   }
 
   SizedBox buttonPrint(BuildContext context) {
     return SizedBox(
-                      height: 50,
-                      width: double.infinity,
-                      child: OutlinedButton.icon(
-                        onPressed: () async {
-                          if (!_formKey.currentState!.validate()) return;
-      
-                          if (receiptController == null) {
-                            debugPrint('ReceiptController belum siap');
-                            return;
-                          }
-      
-                          setState(() {
-                            total = qty * price;
-                          });
-      
-                          final device =
-                              await FlutterBluetoothPrinter.selectDevice(context);
-                          if (device == null) return;
-      
-                          try {
-                            await receiptController!.print(
-                              address: device.address,
-                            );
-                          } catch (e) {
-                            debugPrint('Print error: $e');
-                          }
-                        },
-                        icon: Icon(
-                          Icons.print,
-                          color: Colors.white,
-                        ),
-                        label: Text(
-                          "Cetak Struk",
-                          style: TextStyle(color: Colors.white),
-                        ),
-                        style: OutlinedButton.styleFrom(
-                          backgroundColor: Color.fromRGBO(244, 149, 33, 1),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(30),
-                          ),
-                          side: BorderSide(color: Colors.white),
-                          padding: EdgeInsets.symmetric(horizontal: 12),
-                        ),
-                      ),
-                    );
+      height: 50,
+      width: double.infinity,
+      child: OutlinedButton.icon(
+        onPressed: () async {
+          if (!_formKey.currentState!.validate()) return;
+
+          if (receiptController == null) {
+            debugPrint('ReceiptController belum siap');
+            return;
+          }
+
+          setState(() {
+            total = qty * price;
+          });
+
+          final device = await FlutterBluetoothPrinter.selectDevice(context);
+          if (device == null) return;
+
+          try {
+            await receiptController!.print(address: device.address);
+          } catch (e) {
+            debugPrint('Print error: $e');
+          }
+        },
+        icon: Icon(Icons.print, color: Colors.white),
+        label: Text("Cetak Struk", style: TextStyle(color: Colors.white)),
+        style: OutlinedButton.styleFrom(
+          backgroundColor: Color.fromRGBO(244, 149, 33, 1),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(30),
+          ),
+          side: BorderSide(color: Colors.white),
+          padding: EdgeInsets.symmetric(horizontal: 12),
+        ),
+      ),
+    );
   }
 
   Card totalPrice() {
     return Card(
-                      elevation: 10,
-                      color: Colors.blue[100],
-                      child: Container(
-                        height: 50,
-                        width: double.infinity,
-                        child: Padding(
-                          padding: EdgeInsets.only(right: 10, left: 10),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                'TOTAL :',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black,
-                                  fontSize: 20
-                                ),
-                              ),
-                              Text(
-                                currencyFormatter.format(total),
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  color: Color.fromRGBO(244, 149, 33, 1),
-                                  fontSize: 20
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                    );
+      elevation: 10,
+      color: Colors.blue[100],
+      child: Container(
+        height: 50,
+        width: double.infinity,
+        child: Padding(
+          padding: EdgeInsets.only(right: 10, left: 10),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                'TOTAL :',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                  fontSize: 20,
+                ),
+              ),
+              Text(
+                currencyFormatter.format(total),
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromRGBO(244, 149, 33, 1),
+                  fontSize: 20,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 
   TextFormField priceStuff() {
     return TextFormField(
-                      controller: priceController,
-                      keyboardType: TextInputType.number,
-                      onChanged: (value) {
-                        final raw = value.replaceAll('.', '').replaceAll(',', '');
-                        if (raw.isEmpty) {
-                          updateCalculation();
-                          return;
-                        }
+      controller: priceController,
+      keyboardType: TextInputType.number,
+      onChanged: (value) {
+        final raw = value.replaceAll('.', '').replaceAll(',', '');
+        if (raw.isEmpty) {
+          updateCalculation();
+          return;
+        }
 
-                        final number = int.parse(raw);
-                        final formatted = NumberFormat('#,###', 'id_ID').format(number);
+        final number = int.parse(raw);
+        final formatted = NumberFormat('#,###', 'id_ID').format(number);
 
-                        priceController.value = TextEditingValue(
-                          text: formatted,
-                          selection: TextSelection.collapsed(offset: formatted.length),
-                        );
+        priceController.value = TextEditingValue(
+          text: formatted,
+          selection: TextSelection.collapsed(offset: formatted.length),
+        );
 
-                        updateCalculation();
-                      },
-                      decoration: InputDecoration(
-                        prefixIcon: Icon(Icons.monetization_on_outlined, color: Colors.brown),
-                        label: Text('Harga Satuan'),
-                        hintText: '15.000',
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(5),
-                        ),
-                        enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Color.fromRGBO(244, 149, 33, 1))
-                        ),
-                      ),
-                    );
+        updateCalculation();
+      },
+      decoration: InputDecoration(
+        prefixIcon: Icon(Icons.monetization_on_outlined, color: Colors.brown),
+        label: Text('Harga Satuan'),
+        hintText: '15.000',
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(5)),
+        enabledBorder: OutlineInputBorder(
+          borderSide: BorderSide(color: Color.fromRGBO(244, 149, 33, 1)),
+        ),
+      ),
+    );
   }
 
   TextFormField stuffQty() {
     return TextFormField(
-                      controller: qtyController,
-                      keyboardType: TextInputType.number,
-                      onChanged: (_) {
-                        updateCalculation();
-                        setState(() {});
-                      },
-                      decoration: InputDecoration(
-                        prefixIcon: Icon(
-                          Icons.shopping_cart_checkout_sharp,
-                          color: Colors.brown,
-                        ),
-                        label: Text('Jumlah Barang'),
-                        hintText: '5',
-                        hintStyle: TextStyle(
-                          color: Colors.grey,
-                        ),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(5),
-                        ),
-                        enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Color.fromRGBO(244, 149, 33, 1))
-                        ),
-                      ),
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return 'Jumlah barang wajib diisi';
-                        }
-                        if (int.tryParse(value) == null) {
-                          return 'Harus angka';
-                        }
-                        return null;
-                      },
-                    );
+      controller: qtyController,
+      keyboardType: TextInputType.number,
+      onChanged: (_) {
+        updateCalculation();
+        setState(() {});
+      },
+      decoration: InputDecoration(
+        prefixIcon: Icon(
+          Icons.shopping_cart_checkout_sharp,
+          color: Colors.brown,
+        ),
+        label: Text('Jumlah Barang'),
+        hintText: '5',
+        hintStyle: TextStyle(color: Colors.grey),
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(5)),
+        enabledBorder: OutlineInputBorder(
+          borderSide: BorderSide(color: Color.fromRGBO(244, 149, 33, 1)),
+        ),
+      ),
+      validator: (value) {
+        if (value == null || value.isEmpty) {
+          return 'Jumlah barang wajib diisi';
+        }
+        if (int.tryParse(value) == null) {
+          return 'Harus angka';
+        }
+        return null;
+      },
+    );
   }
 
   TextFormField stuffName() {
     return TextFormField(
-                      controller: nameController,
-                      onChanged: (value) {
-                        setState(() {
-                          menu = value;
-                        });
-                      },
-                      autofocus: true,
-                      decoration: InputDecoration(
-                        prefixIcon: Icon(
-                          Icons.coffee_outlined,
-                          color: Colors.brown,
-                        ),
-                        label: Text('Nama Menu'),
-                        hintText: 'Americano',
-                        hintStyle: TextStyle(
-                          color: Colors.grey,
-                        ),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(5),
-                        ),
-                        enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Color.fromRGBO(244, 149, 33, 1))
-                        ),
-                      ),
-                      validator: (value) {
-                        if (value == null || value.trim().isEmpty) {
-                          return 'Nama menu wajib diisi';
-                        }
-                        return null;
-                      },
-                    );
+      controller: nameController,
+      onChanged: (value) {
+        setState(() {
+          menu = value;
+        });
+      },
+      autofocus: true,
+      decoration: InputDecoration(
+        prefixIcon: Icon(Icons.coffee_outlined, color: Colors.brown),
+        label: Text('Nama Menu'),
+        hintText: 'Americano',
+        hintStyle: TextStyle(color: Colors.grey),
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(5)),
+        enabledBorder: OutlineInputBorder(
+          borderSide: BorderSide(color: Color.fromRGBO(244, 149, 33, 1)),
+        ),
+      ),
+      validator: (value) {
+        if (value == null || value.trim().isEmpty) {
+          return 'Nama menu wajib diisi';
+        }
+        return null;
+      },
+    );
   }
 
   PreferredSizeWidget glassAppBar() {
-  return PreferredSize(
-    preferredSize: const Size.fromHeight(kToolbarHeight),
-    child: ClipRect(
-      child: BackdropFilter(
-        filter: ImageFilter.blur(sigmaX: 18, sigmaY: 18),
-        child: Container(
-          decoration: BoxDecoration(
-            color: Colors.white.withOpacity(0.15),
-            border: Border(
-              bottom: BorderSide(
-                color: Colors.white.withOpacity(0.2),
+    return PreferredSize(
+      preferredSize: const Size.fromHeight(kToolbarHeight),
+      child: ClipRect(
+        child: BackdropFilter(
+          filter: ImageFilter.blur(sigmaX: 18, sigmaY: 18),
+          child: Container(
+            decoration: BoxDecoration(
+              color: Colors.white.withOpacity(0.15),
+              border: Border(
+                bottom: BorderSide(color: Colors.white.withOpacity(0.2)),
               ),
+              borderRadius: BorderRadius.circular(20),
             ),
-            borderRadius: BorderRadius.circular(20)
-          ),
-          child: AppBar(
-            automaticallyImplyLeading: false,
-            backgroundColor: Colors.transparent,
-            elevation: 0,
-            centerTitle: true,
-            title: const Text(
-              "THERMUL",
-              style: TextStyle(
-                color: Color(0xFFEAE6E5),
-                fontWeight: FontWeight.bold,
+            child: AppBar(
+              automaticallyImplyLeading: false,
+              backgroundColor: Colors.transparent,
+              elevation: 0,
+              centerTitle: true,
+              title: const Text(
+                "THERMUL",
+                style: TextStyle(
+                  color: Color(0xFFEAE6E5),
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
           ),
         ),
       ),
-    ),
-  );
-}
+    );
+  }
 }
