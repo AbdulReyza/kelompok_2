@@ -44,6 +44,7 @@ class _DashboardState extends State<Dashboard> {
             borderRadius: BorderRadius.circular(20)
           ),
           child: AppBar(
+            automaticallyImplyLeading: false,
             backgroundColor: Colors.transparent,
             elevation: 0,
             centerTitle: true,

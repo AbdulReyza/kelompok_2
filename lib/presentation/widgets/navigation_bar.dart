@@ -37,15 +37,18 @@ class AppNavigationBar extends StatelessWidget {
             items: const [
               BottomNavigationBarItem(
                 icon: Icon(Icons.print),
-                label: 'Print'
+                label: 'Print',
+                tooltip: 'Print'
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.groups_2),
-                label: 'About'
+                label: 'About',
+                tooltip: 'About'
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.settings),
-                label: 'Setting'
+                label: 'Setting',
+                tooltip: 'Setting'
               ),
             ]
           ),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:kelompok_2/presentation/profiles/abday_profile.dart';
-import 'package:kelompok_2/presentation/profiles/arya_profile.dart';
 
 class ProfileRio extends StatefulWidget {
   static const routeName = '/ProfileRio';
