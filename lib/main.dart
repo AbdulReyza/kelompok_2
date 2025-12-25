@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:kelompok_2/presentation/pages/about.dart';
+import 'package:kelompok_2/presentation/pages/dashboard.dart';
+import 'package:kelompok_2/presentation/pages/setting.dart';
 import 'package:kelompok_2/presentation/pages/splash_abday.dart';
 import 'package:kelompok_2/presentation/pages/splash_arya.dart';
 import 'package:kelompok_2/presentation/pages/splash_global.dart';
@@ -38,6 +41,10 @@ class MyApp extends StatelessWidget {
           ProfileReyza.routeName: (_) => const ProfileReyza(),
           ProfileRio.routeName: (_) => const ProfileRio(),
           ProfileArya.routeName: (_) => const ProfileArya(),
+
+          Dashboard.routeName: (_) => const Dashboard(),
+          AboutPage.routeName: (_) => const AboutPage(),
+          SettingPage.routeName: (_) => const SettingPage(),
         }
       );
   

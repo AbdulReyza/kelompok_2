@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:kelompok_2/data/models/developers.dart';
 
 class AboutPage extends StatefulWidget {
+  static const routeName = '/about';
   const AboutPage({super.key});
 
   @override

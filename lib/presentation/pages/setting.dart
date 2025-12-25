@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:ui';
 
 class SettingPage extends StatefulWidget {
+  static const routeName = '/setting';
   const SettingPage({super.key});
 
   @override

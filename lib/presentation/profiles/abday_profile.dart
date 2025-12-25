@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kelompok_2/presentation/profiles/arya_profile.dart';
 import 'package:kelompok_2/presentation/profiles/reyza_profile.dart';
 
 class ProfileAbday extends StatefulWidget {
@@ -16,7 +17,7 @@ class _ProfileAbdayState extends State<ProfileAbday> {
       onTap: (){
         Navigator.pushNamed(
           context,
-          ProfileReyza.routeName
+          ProfileArya.routeName
         );
       },
       child: Scaffold(
@@ -29,6 +30,12 @@ class _ProfileAbdayState extends State<ProfileAbday> {
           backgroundColor: const Color(0xFFCCFB0F),
           elevation: 0,
           centerTitle: true,
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back),
+            onPressed: () {
+              Navigator.popUntil(context, (route) => route.isFirst);
+            },
+          ),
         ),
         body: Center(
             child: SingleChildScrollView(

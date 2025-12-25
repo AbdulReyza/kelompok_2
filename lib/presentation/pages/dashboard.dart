@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:ui';
 
 class Dashboard extends StatefulWidget {
+  static const routeName = '/dashboard';
   const Dashboard({super.key});
 
   @override

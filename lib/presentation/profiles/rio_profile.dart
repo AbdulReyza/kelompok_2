@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kelompok_2/presentation/profiles/abday_profile.dart';
 import 'package:kelompok_2/presentation/profiles/arya_profile.dart';
 
 class ProfileRio extends StatefulWidget {
@@ -16,7 +17,7 @@ class _ProfileRioState extends State<ProfileRio> {
       onTap: (){
         Navigator.pushNamed(
           context,
-          ProfileArya.routeName
+          ProfileAbday.routeName
         );
       },
       child: Container(
@@ -33,7 +34,6 @@ class _ProfileRioState extends State<ProfileRio> {
               ),
             ),
             centerTitle: true,
-            automaticallyImplyLeading: false,
           ),
           body: Center(
               child: SingleChildScrollView(
