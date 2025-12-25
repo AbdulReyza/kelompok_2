@@ -17,6 +17,7 @@ import 'package:kelompok_2/presentation/profiles/arya_profile.dart';
 import 'package:kelompok_2/presentation/profiles/reyza_profile.dart';
 import 'package:kelompok_2/presentation/profiles/rio_profile.dart';
 import 'package:kelompok_2/presentation/providers/auth_provider.dart';
+import 'package:kelompok_2/presentation/widgets/main_layout.dart';
 import 'package:provider/provider.dart';
 // import 'package:provider/provider.dart';
 
@@ -50,15 +51,16 @@ class MyApp extends StatelessWidget {
             SplashReyza.routeName: (_) => const SplashReyza(),
             SplashArya.routeName: (_) => const SplashArya(),
             SplashAbday.routeName: (_) => const SplashAbday(),
-      
+
+            MainLayout.routeName: (_) => const MainLayout(),
+            Dashboard.routeName: (_) => const Dashboard(),
+            AboutPage.routeName: (_) => const AboutPage(),
+            SettingPage.routeName: (_) => const SettingPage(),
+
             ProfileAbday.routeName: (_) => const ProfileAbday(),
             ProfileReyza.routeName: (_) => const ProfileReyza(),
             ProfileRio.routeName: (_) => const ProfileRio(),
             ProfileArya.routeName: (_) => const ProfileArya(),
-      
-            Dashboard.routeName: (_) => const Dashboard(),
-            AboutPage.routeName: (_) => const AboutPage(),
-            SettingPage.routeName: (_) => const SettingPage(),
           }
         ),
     );
