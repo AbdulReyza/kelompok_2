@@ -86,6 +86,38 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_bluetooth_printer:
+    dependency: "direct main"
+    description:
+      name: flutter_bluetooth_printer
+      sha256: d95a9a9b5371d8ca16e37635447a52804ef2353f9a5c2f7feb2b8d7e6d11a1a4
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.20.0"
+  flutter_bluetooth_printer_macos:
+    dependency: transitive
+    description:
+      name: flutter_bluetooth_printer_macos
+      sha256: "795769a4c6ba8307dcbc4e3d4abed83d544f676330fbea26d53d3bb2d4fc9927"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.3.0"
+  flutter_bluetooth_printer_platform_interface:
+    dependency: transitive
+    description:
+      name: flutter_bluetooth_printer_platform_interface
+      sha256: cd7e13841edd55ce5fe89358baf66f7f7ef0748e9a878d1110c47861e2ebdc85
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.7"
+  flutter_bluetooth_printer_web:
+    dependency: transitive
+    description:
+      name: flutter_bluetooth_printer_web
+      sha256: b259c038051f49fee4b9fbb6e8dfb3f9a168a558dd3bbecc876fee138057ebb1
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.1"
   flutter_lints:
     dependency: "direct dev"
     description:
@@ -96,6 +128,11 @@ packages:
     version: "5.0.0"
   flutter_test:
     dependency: "direct dev"
+    description: flutter
+    source: sdk
+    version: "0.0.0"
+  flutter_web_plugins:
+    dependency: transitive
     description: flutter
     source: sdk
     version: "0.0.0"
@@ -115,6 +152,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.1.2"
+  image:
+    dependency: transitive
+    description:
+      name: image
+      sha256: "492bd52f6c4fbb6ee41f781ff27765ce5f627910e1e0cbecfa3d9add5562604c"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.7.2"
+  intl:
+    dependency: "direct main"
+    description:
+      name: intl
+      sha256: d6f56758b7d3014a48af9701c085700aac781a92a87a62b1333b46d8879661cf
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.19.0"
   leak_tracker:
     dependency: transitive
     description:
@@ -195,6 +248,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.9.1"
+  petitparser:
+    dependency: transitive
+    description:
+      name: petitparser
+      sha256: "1a97266a94f7350d30ae522c0af07890c70b8e62c71e8e3920d1db4d23c057d1"
+      url: "https://pub.dev"
+    source: hosted
+    version: "7.0.1"
+  plugin_platform_interface:
+    dependency: transitive
+    description:
+      name: plugin_platform_interface
+      sha256: "4820fbfdb9478b1ebae27888254d445073732dae3d6ea81f0b7e06d5dedc3f02"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.1.8"
   posix:
     dependency: transitive
     description:
@@ -296,6 +365,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.1.1"
+  xml:
+    dependency: transitive
+    description:
+      name: xml
+      sha256: "971043b3a0d3da28727e40ed3e0b5d18b742fa5a68665cca88e74b7876d5e025"
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.6.1"
 sdks:
   dart: ">=3.9.2 <4.0.0"
   flutter: ">=3.35.0"
