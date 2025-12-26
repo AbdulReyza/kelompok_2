@@ -6,6 +6,7 @@ import 'package:kelompok_2/firebase_options.dart';
 
 import 'package:kelompok_2/presentation/pages/about.dart';
 import 'package:kelompok_2/presentation/pages/dashboard.dart';
+import 'package:kelompok_2/presentation/pages/login.dart';
 import 'package:kelompok_2/presentation/pages/setting.dart';
 import 'package:kelompok_2/presentation/pages/splash_abday.dart';
 import 'package:kelompok_2/presentation/pages/splash_arya.dart';
@@ -51,6 +52,8 @@ class MyApp extends StatelessWidget {
             SplashReyza.routeName: (_) => const SplashReyza(),
             SplashArya.routeName: (_) => const SplashArya(),
             SplashAbday.routeName: (_) => const SplashAbday(),
+
+            LoginPage.routeName: (_) => const LoginPage(),
 
             MainLayout.routeName: (_) => const MainLayout(),
             Dashboard.routeName: (_) => const Dashboard(),
