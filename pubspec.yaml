@@ -39,6 +39,8 @@ dependencies:
   lottie: ^3.1.0
   intl: ^0.19.0
   flutter_bluetooth_printer: ^2.20.0
+  firebase_core: ^4.2.1
+  firebase_auth: ^6.1.2
 
 dev_dependencies:
   flutter_test:
