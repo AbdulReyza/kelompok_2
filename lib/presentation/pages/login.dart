@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:kelompok_2/presentation/pages/dashboard.dart';
 import 'package:kelompok_2/presentation/widgets/main_layout.dart';
 import 'package:provider/provider.dart';
 import 'package:kelompok_2/presentation/providers/auth_provider.dart'; 
@@ -43,7 +42,6 @@ class _LoginPageState extends State<LoginPage> {
               Text('Masuk', style: Theme.of(context).textTheme.headlineMedium),
               const SizedBox(height: 24),
 
-              // Form Input
               TextField(
                 controller: _email,
                 keyboardType: TextInputType.emailAddress,
