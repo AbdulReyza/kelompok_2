@@ -32,21 +32,21 @@ class AppNavigationBar extends StatelessWidget {
             backgroundColor: Colors.transparent,
             elevation: 0,
             type: BottomNavigationBarType.fixed,
-            selectedItemColor: Colors.white,
-            unselectedItemColor: Colors.white54,
+            selectedItemColor: Colors.grey,
+            unselectedItemColor: Colors.grey,
             items: const [
               BottomNavigationBarItem(
-                icon: Icon(Icons.print),
+                icon: Icon(Icons.print, color: Colors.grey,),
                 label: 'Print',
                 tooltip: 'Print'
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.groups_2),
+                icon: Icon(Icons.groups_2, color: Colors.grey,),
                 label: 'About',
                 tooltip: 'About'
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.settings),
+                icon: Icon(Icons.settings, color: Colors.grey,),
                 label: 'Setting',
                 tooltip: 'Setting'
               ),
