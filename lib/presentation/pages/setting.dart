@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'dart:ui';
+import 'package:provider/provider.dart';
+
+import 'package:kelompok_2/presentation/providers/auth_provider.dart';
 
 class SettingPage extends StatefulWidget {
   static const routeName = '/setting';
@@ -12,6 +15,7 @@ class SettingPage extends StatefulWidget {
 class _SettingPageState extends State<SettingPage> {
   @override
   Widget build(BuildContext context) {
+    final auth = context.watch<AuthProvider>();
     return Scaffold(
       backgroundColor: Color(0xFF12130F),
       appBar: glassAppBar(),
@@ -25,8 +29,30 @@ class _SettingPageState extends State<SettingPage> {
                       height: 40,
                       width: 100,
                       child: ElevatedButton(
-                        onPressed: (){
-                        }, 
+                        onPressed: () {
+                          showDialog(
+                            context: context,
+                            builder: (context) => AlertDialog(
+                              title: const Text("Logout"),
+                              content: const Text("Apakah Anda yakin ingin keluar?"),
+                              actions: [
+                                TextButton(
+                                  onPressed: () => Navigator.pop(context),
+                                  child: const Text("Batal"),
+                                ),
+                                TextButton(
+                                  onPressed: () async {
+                                    await auth.signOut();
+                                    if (context.mounted) {
+                                      Navigator.of(context).pushNamedAndRemoveUntil('/login', (route) => false);
+                                    }
+                                  },
+                                  child: const Text("Ya, Keluar", style: TextStyle(color: Colors.red)),
+                                ),
+                              ],
+                            ),
+                          );
+                        },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.red,
                         ),
