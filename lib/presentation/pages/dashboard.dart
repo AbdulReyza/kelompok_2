@@ -245,7 +245,7 @@ class _DashboardState extends State<Dashboard> {
                 'TOTAL :',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  color: Color(0xFF12130F),
+                  color: Color(0xFFCCFB0F),
                   fontSize: 20,
                 ),
               ),
@@ -253,7 +253,7 @@ class _DashboardState extends State<Dashboard> {
                 currencyFormatter.format(total),
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  color: Color(0xFF12130F),
+                  color: Color(0xFFCCFB0F),
                   fontSize: 20,
                 ),
               ),
@@ -267,6 +267,9 @@ class _DashboardState extends State<Dashboard> {
   // HARGA SATUAN
   TextFormField priceStuff() {
     return TextFormField(
+      style: TextStyle(
+        color: Color(0xFFEAE6E5)
+      ),
       controller: priceController,
       keyboardType: TextInputType.number,
       onChanged: (value) {
@@ -287,13 +290,23 @@ class _DashboardState extends State<Dashboard> {
         updateCalculation();
       },
       decoration: InputDecoration(
-        prefixIcon: Icon(Icons.monetization_on_outlined, color: Colors.brown),
-        label: Text('Harga Satuan'),
+        prefixIcon: Icon(Icons.monetization_on_outlined, color: Color(0xFFEAE6E5)),
+        label: Text('Harga Satuan',
+          style: TextStyle(
+            color: Color(0xFFEAE6E5)
+          ),
+        ),
         hintText: '15.000',
+        hintStyle: TextStyle(color: Color(0xFFEAE6E5)),
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(5)),
         enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Color.fromRGBO(244, 149, 33, 1)),
+          borderSide: BorderSide(color: Color(0xFFCCFB0F)),
         ),
+        focusedBorder: OutlineInputBorder(
+          borderSide: BorderSide(
+            color: Color(0xFF473BFD)
+          )
+        )
       ),
     );
   }
@@ -320,7 +333,7 @@ class _DashboardState extends State<Dashboard> {
             color: Color(0xFFEAE6E5)
           ),
         ),
-        hintText: '5',
+        hintText: '3',
         hintStyle: TextStyle(color: Color(0xFFEAE6E5)),
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(5)),
         enabledBorder: OutlineInputBorder(
