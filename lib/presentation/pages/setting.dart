@@ -51,97 +51,104 @@ class _SettingPageState extends State<SettingPage> {
                         showDialog(
                           context: context,
                           builder: (context) {
-  return Dialog(
-    backgroundColor: Colors.transparent,
-    insetPadding: const EdgeInsets.all(24),
-    child: ClipRRect(
-      borderRadius: BorderRadius.circular(24),
-      child: BackdropFilter(
-        filter: ImageFilter.blur(sigmaX: 18, sigmaY: 18),
-        child: Container(
-          padding: const EdgeInsets.all(20),
-          decoration: BoxDecoration(
-            color: Colors.white.withOpacity(0.18),
-            borderRadius: BorderRadius.circular(24),
-            border: Border.all(
-              color: Colors.white.withOpacity(0.25),
-            ),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black.withOpacity(0.35),
-                blurRadius: 20,
-                offset: const Offset(0, 10),
-              ),
-            ],
-          ),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              const Icon(
-                Icons.power_settings_new,
-                color: Colors.redAccent,
-                size: 36,
-              ),
-              const SizedBox(height: 16),
-              const Text(
-                "Logout",
-                style: TextStyle(
-                  color: Color(0xFFEAE6E5),
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              const SizedBox(height: 12),
-              const Text(
-                "Apakah Anda yakin ingin keluar?",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Color(0xFFEAE6E5),
-                  fontSize: 14,
-                ),
-              ),
-              const SizedBox(height: 24),
-              Row(
-                children: [
-                  Expanded(
-                    child: TextButton(
-                      onPressed: () => Navigator.pop(context),
-                      child: const Text(
-                        "Batal",
-                        style: TextStyle(color: Colors.white70),
-                      ),
-                    ),
-                  ),
-                  Expanded(
-                    child: TextButton(
-                      onPressed: () async {
-                        await auth.signOut();
-                        if (context.mounted) {
-                          Navigator.of(context).pushNamedAndRemoveUntil(
-                            '/login',
-                            (route) => false,
-                          );
-                        }
-                      },
-                      child: const Text(
-                        "Keluar",
-                        style: TextStyle(
-                          color: Colors.redAccent,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ),
-      ),
-    ),
-  );
-},
-
+                            return Dialog(
+                              backgroundColor: Colors.transparent,
+                              insetPadding: const EdgeInsets.all(24),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(24),
+                                child: BackdropFilter(
+                                  filter: ImageFilter.blur(
+                                    sigmaX: 18,
+                                    sigmaY: 18,
+                                  ),
+                                  child: Container(
+                                    padding: const EdgeInsets.all(20),
+                                    decoration: BoxDecoration(
+                                      color: Colors.white.withOpacity(0.18),
+                                      borderRadius: BorderRadius.circular(24),
+                                      border: Border.all(
+                                        color: Colors.white.withOpacity(0.25),
+                                      ),
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: Colors.black.withOpacity(0.35),
+                                          blurRadius: 20,
+                                          offset: const Offset(0, 10),
+                                        ),
+                                      ],
+                                    ),
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: [
+                                        const Icon(
+                                          Icons.power_settings_new,
+                                          color: Colors.redAccent,
+                                          size: 36,
+                                        ),
+                                        const SizedBox(height: 16),
+                                        const Text(
+                                          "Logout",
+                                          style: TextStyle(
+                                            color: Color(0xFFEAE6E5),
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                        const SizedBox(height: 12),
+                                        const Text(
+                                          "Apakah Anda yakin ingin keluar?",
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            color: Color(0xFFEAE6E5),
+                                            fontSize: 14,
+                                          ),
+                                        ),
+                                        const SizedBox(height: 24),
+                                        Row(
+                                          children: [
+                                            Expanded(
+                                              child: TextButton(
+                                                onPressed: () =>
+                                                    Navigator.pop(context),
+                                                child: const Text(
+                                                  "Batal",
+                                                  style: TextStyle(
+                                                    color: Colors.white70,
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                            Expanded(
+                                              child: TextButton(
+                                                onPressed: () async {
+                                                  await auth.signOut();
+                                                  if (context.mounted) {
+                                                    Navigator.of(
+                                                      context,
+                                                    ).pushNamedAndRemoveUntil(
+                                                      '/login',
+                                                      (route) => false,
+                                                    );
+                                                  }
+                                                },
+                                                child: const Text(
+                                                  "Keluar",
+                                                  style: TextStyle(
+                                                    color: Colors.redAccent,
+                                                    fontWeight: FontWeight.bold,
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            );
+                          },
                         );
                       },
                     ),
