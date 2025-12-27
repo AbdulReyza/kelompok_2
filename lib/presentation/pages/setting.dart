@@ -24,13 +24,33 @@ class _SettingPageState extends State<SettingPage> {
           padding: EdgeInsets.all(10.0),
           child: Column(
               children: [
-                Container(
-                    child: SizedBox(
-                      height: 40,
-                      width: 100,
-                      child: ElevatedButton(
-                        onPressed: () {
-                          showDialog(
+                ClipOval(
+  child: BackdropFilter(
+    filter: ImageFilter.blur(sigmaX: 15, sigmaY: 15),
+    child: Container(
+      width: 56,
+      height: 56,
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        color: Colors.white.withOpacity(0.15),
+        border: Border.all(
+          color: Colors.white.withOpacity(0.25),
+        ),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.25),
+            blurRadius: 10,
+            offset: Offset(0, 6),
+          ),
+        ],
+      ),
+      child: IconButton(
+        icon: const Icon(
+          Icons.power_settings_new,
+          color: Colors.grey,
+        ),
+        onPressed: () {
+          showDialog(
                             context: context,
                             builder: (context) => AlertDialog(
                               title: const Text("Logout"),
@@ -52,18 +72,13 @@ class _SettingPageState extends State<SettingPage> {
                               ],
                             ),
                           );
-                        },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.red,
-                        ),
-                        child: Text('LOGOUT',
-                        style: TextStyle(
-                          color: Colors.white
-                        ),),
-                        
-                      ),
-                    ),
-                  ),
+        },
+      ),
+    ),
+  ),
+)
+
+
               ],
           ),
         ),
