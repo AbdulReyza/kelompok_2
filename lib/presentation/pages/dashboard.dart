@@ -301,6 +301,9 @@ class _DashboardState extends State<Dashboard> {
   // JUMLAH BARANG
   TextFormField stuffQty() {
     return TextFormField(
+      style: TextStyle(
+        color: Color(0xFFEAE6E5)
+      ),
       controller: qtyController,
       keyboardType: TextInputType.number,
       onChanged: (_) {
@@ -310,15 +313,24 @@ class _DashboardState extends State<Dashboard> {
       decoration: InputDecoration(
         prefixIcon: Icon(
           Icons.shopping_cart_checkout_sharp,
-          color: Colors.brown,
+          color: Color(0xFFEAE6E5),
         ),
-        label: Text('Jumlah Barang'),
+        label: Text('Jumlah Barang',
+          style: TextStyle(
+            color: Color(0xFFEAE6E5)
+          ),
+        ),
         hintText: '5',
-        hintStyle: TextStyle(color: Colors.grey),
+        hintStyle: TextStyle(color: Color(0xFFEAE6E5)),
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(5)),
         enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Color.fromRGBO(244, 149, 33, 1)),
+          borderSide: BorderSide(color: Color(0xFFCCFB0F)),
         ),
+        focusedBorder: OutlineInputBorder(
+          borderSide: BorderSide(
+            color: Color(0xFF473BFD)
+          )
+        )
       ),
       validator: (value) {
         if (value == null || value.isEmpty) {
