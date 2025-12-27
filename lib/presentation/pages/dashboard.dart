@@ -335,6 +335,9 @@ class _DashboardState extends State<Dashboard> {
   // NAMA BARANG
   TextFormField stuffName() {
     return TextFormField(
+      style: TextStyle(
+        color: Color(0xFFEAE6E5)
+      ),
       controller: nameController,
       onChanged: (value) {
         setState(() {
@@ -344,17 +347,26 @@ class _DashboardState extends State<Dashboard> {
       autofocus: true,
       decoration: InputDecoration(
         prefixIcon: Icon(Icons.shopping_bag, color: Color(0xFFEAE6E5)),
-        label: Text('Nama Barang'),
-        hintText: 'Americano',
-        hintStyle: TextStyle(color: Colors.grey),
+        label: Text('Nama Barang',
+          style: TextStyle(
+            color: Color(0xFFEAE6E5),
+          ),
+        ),
+        hintText: 'Martabak',
+        hintStyle: TextStyle(color: Color(0xFFEAE6E5)),
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(5)),
         enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Color.fromRGBO(244, 149, 33, 1)),
+          borderSide: BorderSide(color: Color(0xFFCCFB0F)),
         ),
+        focusedBorder: OutlineInputBorder(
+          borderSide: BorderSide(
+            color: Color(0xFF473BFD)
+          )
+        )
       ),
       validator: (value) {
         if (value == null || value.trim().isEmpty) {
-          return 'Nama menu wajib diisi';
+          return 'Nama barang wajib diisi';
         }
         return null;
       },
