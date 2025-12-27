@@ -121,8 +121,11 @@ class _DashboardState extends State<Dashboard> {
     );
   }
 
-  SizedBox receipt() {
-    return SizedBox(
+  // STRUK
+
+  Widget receipt() {
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(20),
       child: Receipt(
         backgroundColor: Colors.white,
         onInitialized: (controller) {
@@ -138,13 +141,21 @@ class _DashboardState extends State<Dashboard> {
                 Center(
                   child: Text(
                     'T H E R M U L',
-                    style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
                 SizedBox(height: 5),
                 Text('======================='),
                 SizedBox(height: 5),
-                Center(child: Text(timeNow, style: TextStyle(fontSize: 20))),
+                Center(
+                  child: Text(
+                    timeNow,
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ),
                 SizedBox(height: 5),
                 Text('======================='),
                 SizedBox(height: 5),
@@ -159,12 +170,14 @@ class _DashboardState extends State<Dashboard> {
                   child: Text(
                     'TOTAL : ${currencyFormatter.format(total)}',
                     textAlign: TextAlign.end,
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 25,
+                    ),
                   ),
                 ),
                 SizedBox(height: 30),
-
-                Center(child: Text("Terima Kasih :)")),
+                Center(child: Text('Terima Kasih :)')),
                 SizedBox(height: 10),
               ],
             ),
@@ -174,6 +187,7 @@ class _DashboardState extends State<Dashboard> {
     );
   }
 
+  // BUTTON CETAK
   SizedBox buttonPrint(BuildContext context) {
     return SizedBox(
       height: 50,
@@ -214,6 +228,7 @@ class _DashboardState extends State<Dashboard> {
     );
   }
 
+  // TOTAL HARGA
   Card totalPrice() {
     return Card(
       elevation: 10,
@@ -249,6 +264,7 @@ class _DashboardState extends State<Dashboard> {
     );
   }
 
+  // HARGA SATUAN
   TextFormField priceStuff() {
     return TextFormField(
       controller: priceController,
@@ -282,6 +298,7 @@ class _DashboardState extends State<Dashboard> {
     );
   }
 
+  // JUMLAH BARANG
   TextFormField stuffQty() {
     return TextFormField(
       controller: qtyController,
@@ -315,6 +332,7 @@ class _DashboardState extends State<Dashboard> {
     );
   }
 
+  // NAMA BARANG
   TextFormField stuffName() {
     return TextFormField(
       controller: nameController,
@@ -343,6 +361,7 @@ class _DashboardState extends State<Dashboard> {
     );
   }
 
+  // APPBAR
   PreferredSizeWidget glassAppBar() {
     return PreferredSize(
       preferredSize: const Size.fromHeight(kToolbarHeight),
