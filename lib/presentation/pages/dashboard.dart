@@ -214,14 +214,14 @@ class _DashboardState extends State<Dashboard> {
             debugPrint('Print error: $e');
           }
         },
-        icon: Icon(Icons.print, color: Colors.white),
-        label: Text("Cetak Struk", style: TextStyle(color: Colors.white)),
+        icon: Icon(Icons.print, color: Color(0xFF12130F)),
+        label: Text("Cetak Struk", style: TextStyle(color: Color(0xFF12130F))),
         style: OutlinedButton.styleFrom(
-          backgroundColor: Color.fromRGBO(244, 149, 33, 1),
+          backgroundColor: Color(0xFFCCFB0F),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(30),
           ),
-          side: BorderSide(color: Colors.white),
+          // side: BorderSide(color: Colors.white),
           padding: EdgeInsets.symmetric(horizontal: 12),
         ),
       ),
@@ -232,7 +232,7 @@ class _DashboardState extends State<Dashboard> {
   Card totalPrice() {
     return Card(
       elevation: 10,
-      color: Colors.blue[100],
+      color: Color(0xFF473BFD),
       child: Container(
         height: 50,
         width: double.infinity,
@@ -245,7 +245,7 @@ class _DashboardState extends State<Dashboard> {
                 'TOTAL :',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  color: Colors.black,
+                  color: Color(0xFF12130F),
                   fontSize: 20,
                 ),
               ),
@@ -253,7 +253,7 @@ class _DashboardState extends State<Dashboard> {
                 currencyFormatter.format(total),
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  color: Color.fromRGBO(244, 149, 33, 1),
+                  color: Color(0xFF12130F),
                   fontSize: 20,
                 ),
               ),
@@ -343,8 +343,8 @@ class _DashboardState extends State<Dashboard> {
       },
       autofocus: true,
       decoration: InputDecoration(
-        prefixIcon: Icon(Icons.coffee_outlined, color: Colors.brown),
-        label: Text('Nama Menu'),
+        prefixIcon: Icon(Icons.shopping_bag, color: Color(0xFFEAE6E5)),
+        label: Text('Nama Barang'),
         hintText: 'Americano',
         hintStyle: TextStyle(color: Colors.grey),
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(5)),
