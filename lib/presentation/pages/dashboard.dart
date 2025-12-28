@@ -369,7 +369,6 @@ class _DashboardState extends State<Dashboard> {
           menu = value;
         });
       },
-      autofocus: true,
       decoration: InputDecoration(
         prefixIcon: Icon(Icons.shopping_bag, color: Color(0xFFEAE6E5)),
         label: Text('Nama Barang',
