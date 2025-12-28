@@ -62,7 +62,7 @@ class _LoginPageState extends State<LoginPage> {
                         TextField(
                           controller: _email,
                           keyboardType: TextInputType.emailAddress,
-                          style: const TextStyle(color: Colors.white),
+                          style: const TextStyle(color: Color(0xFF12130F)),
                           decoration: InputDecoration(
                             labelText: 'Email',
                             labelStyle: const TextStyle(color: Colors.grey),
@@ -71,6 +71,18 @@ class _LoginPageState extends State<LoginPage> {
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(12),
                             ),
+                            enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Color(0xFFEAE6E5)
+                              ),
+                              borderRadius: BorderRadius.circular(12)
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Color(0xFF12130F)
+                              ),
+                              borderRadius: BorderRadius.circular(12)
+                            )
                           ),
                         ),
                         const SizedBox(height: 16),
