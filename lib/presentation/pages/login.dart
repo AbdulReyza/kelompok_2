@@ -113,35 +113,39 @@ class _LoginPageState extends State<LoginPage> {
                             )
                           ),
                         ),
-                        const SizedBox(height: 24),
+                        const SizedBox(height: 18),
 
-                        ElevatedButton(
-                          onPressed: auth.loading
-                              ? null
-                              : () async {
-                                  final nav = Navigator.of(context);
-                                  await auth.signIn(
-                                    _email.text.trim(),
-                                    _password.text,
-                                  );
-                                  if (auth.uid != null) {
-                                    nav.pushReplacementNamed(
-                                      MainLayout.routeName,
+                        SizedBox(
+                          height: 40,
+                          width: double.infinity,
+                          child: ElevatedButton(
+                            onPressed: auth.loading
+                                ? null
+                                : () async {
+                                    final nav = Navigator.of(context);
+                                    await auth.signIn(
+                                      _email.text.trim(),
+                                      _password.text,
                                     );
-                                  }
-                                },
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.white.withOpacity(0.85),
-                            foregroundColor: Colors.black,
-                          ),
-                          child: auth.loading
-                              ? const CircularProgressIndicator()
-                              : const Text(
-                                'Login',
-                                style: TextStyle(
-                                  color: Colors.grey,
+                                    if (auth.uid != null) {
+                                      nav.pushReplacementNamed(
+                                        MainLayout.routeName,
+                                      );
+                                    }
+                                  },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.white.withOpacity(0.85),
+                              foregroundColor: Colors.black,
+                            ),
+                            child: auth.loading
+                                ? const CircularProgressIndicator()
+                                : const Text(
+                                  'Login',
+                                  style: TextStyle(
+                                    color: Color(0xFF473BFD),
+                                  ),
                                 ),
-                              ),
+                          ),
                         ),
 
                         if (auth.error != null) ...[
