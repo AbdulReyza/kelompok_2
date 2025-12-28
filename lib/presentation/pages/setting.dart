@@ -45,7 +45,7 @@ class _SettingPageState extends State<SettingPage> {
                     child: IconButton(
                       icon: const Icon(
                         Icons.power_settings_new,
-                        color: Colors.grey,
+                        color: Color(0xFFEAE6E5),
                       ),
                       onPressed: () {
                         showDialog(
