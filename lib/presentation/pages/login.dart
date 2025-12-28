@@ -52,7 +52,7 @@ class _LoginPageState extends State<LoginPage> {
                         const SizedBox(height: 16),
 
                         Text(
-                          'Masuk',
+                          'Login',
                           style: Theme.of(context).textTheme.headlineMedium
                               ?.copyWith(color: Colors.grey),
                           textAlign: TextAlign.center,
@@ -90,7 +90,7 @@ class _LoginPageState extends State<LoginPage> {
                         TextField(
                           controller: _password,
                           obscureText: true,
-                          style: const TextStyle(color: Colors.white),
+                          style: const TextStyle(color: Color(0xFF12130F)),
                           decoration: InputDecoration(
                             labelText: 'Password',
                             labelStyle: const TextStyle(color: Colors.grey),
@@ -99,6 +99,18 @@ class _LoginPageState extends State<LoginPage> {
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(12),
                             ),
+                            enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Color(0xFFEAE6E5),
+                              ),
+                              borderRadius: BorderRadius.circular(12)
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Color(0xFF12130F),
+                              ),
+                              borderRadius: BorderRadius.circular(12)
+                            )
                           ),
                         ),
                         const SizedBox(height: 24),
