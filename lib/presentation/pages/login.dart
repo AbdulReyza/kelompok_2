@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kelompok_2/presentation/widgets/main_layout.dart';
 import 'package:provider/provider.dart';
 import 'package:kelompok_2/presentation/providers/auth_provider.dart';
+import 'dart:ui';
 
 class LoginPage extends StatefulWidget {
   static const routeName = '/login';
@@ -30,66 +31,102 @@ class _LoginPageState extends State<LoginPage> {
       body: Stack(
         fit: StackFit.expand,
         children: [
-          Image.asset(
-            'assets/images/lime_background.jpg',
-            fit: BoxFit.cover,
-          ),
+          Image.asset('assets/images/lime_background.jpg', fit: BoxFit.cover),
           Center(
             child: SingleChildScrollView(
-              padding: const EdgeInsets.all(24.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  const SizedBox(height: 32),
-
-                  Text(
-                    'Masuk',
-                    style: Theme.of(context).textTheme.headlineMedium,
-                  ),
-                  const SizedBox(height: 24),
-
-                  TextField(
-                    controller: _email,
-                    keyboardType: TextInputType.emailAddress,
-                    decoration: const InputDecoration(labelText: 'Email'),
-                  ),
-                  const SizedBox(height: 16),
-                  TextField(
-                    controller: _password,
-                    decoration: const InputDecoration(labelText: 'Password'),
-                    obscureText: true,
-                  ),
-                  const SizedBox(height: 24),
-
-                  ElevatedButton(
-                    onPressed: auth.loading
-                        ? null
-                        : () async {
-                            final nav = Navigator.of(context);
-                            await auth.signIn(
-                              _email.text.trim(),
-                              _password.text,
-                            );
-                            if (auth.uid != null) {
-                              nav.pushReplacementNamed(MainLayout.routeName);
-                            }
-                          },
-                    child: auth.loading
-                        ? const CircularProgressIndicator()
-                        : const Text('Masuk'),
-                  ),
-
-                  if (auth.error != null) ...[
-                    const SizedBox(height: 12),
-                    Text(
-                      auth.error!,
-                      style: const TextStyle(color: Colors.red),
-                      textAlign: TextAlign.center,
+              padding: const EdgeInsets.all(24),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(24),
+                child: BackdropFilter(
+                  filter: ImageFilter.blur(sigmaX: 12, sigmaY: 12),
+                  child: Container(
+                    padding: const EdgeInsets.all(24),
+                    decoration: BoxDecoration(
+                      color: Colors.white.withOpacity(0.15),
+                      borderRadius: BorderRadius.circular(24),
+                      border: Border.all(color: Colors.white.withOpacity(0.3)),
                     ),
-                  ],
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        const SizedBox(height: 16),
 
-                  const SizedBox(height: 16),
-                ],
+                        Text(
+                          'Masuk',
+                          style: Theme.of(context).textTheme.headlineMedium
+                              ?.copyWith(color: Colors.white),
+                          textAlign: TextAlign.center,
+                        ),
+                        const SizedBox(height: 24),
+
+                        TextField(
+                          controller: _email,
+                          keyboardType: TextInputType.emailAddress,
+                          style: const TextStyle(color: Colors.white),
+                          decoration: InputDecoration(
+                            labelText: 'Email',
+                            labelStyle: const TextStyle(color: Colors.white70),
+                            filled: true,
+                            fillColor: Colors.white.withOpacity(0.1),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 16),
+
+                        TextField(
+                          controller: _password,
+                          obscureText: true,
+                          style: const TextStyle(color: Colors.white),
+                          decoration: InputDecoration(
+                            labelText: 'Password',
+                            labelStyle: const TextStyle(color: Colors.white70),
+                            filled: true,
+                            fillColor: Colors.white.withOpacity(0.1),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 24),
+
+                        ElevatedButton(
+                          onPressed: auth.loading
+                              ? null
+                              : () async {
+                                  final nav = Navigator.of(context);
+                                  await auth.signIn(
+                                    _email.text.trim(),
+                                    _password.text,
+                                  );
+                                  if (auth.uid != null) {
+                                    nav.pushReplacementNamed(
+                                      MainLayout.routeName,
+                                    );
+                                  }
+                                },
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.white.withOpacity(0.85),
+                            foregroundColor: Colors.black,
+                          ),
+                          child: auth.loading
+                              ? const CircularProgressIndicator()
+                              : const Text('Masuk'),
+                        ),
+
+                        if (auth.error != null) ...[
+                          const SizedBox(height: 12),
+                          Text(
+                            auth.error!,
+                            style: const TextStyle(color: Colors.redAccent),
+                            textAlign: TextAlign.center,
+                          ),
+                        ],
+                      ],
+                    ),
+                  ),
+                ),
               ),
             ),
           ),
