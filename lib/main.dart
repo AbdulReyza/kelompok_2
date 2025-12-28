@@ -20,7 +20,6 @@ import 'package:kelompok_2/presentation/profiles/rio_profile.dart';
 import 'package:kelompok_2/presentation/providers/auth_provider.dart';
 import 'package:kelompok_2/presentation/widgets/main_layout.dart';
 import 'package:provider/provider.dart';
-// import 'package:provider/provider.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

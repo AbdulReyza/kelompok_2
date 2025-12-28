@@ -121,8 +121,11 @@ class _DashboardState extends State<Dashboard> {
     );
   }
 
-  SizedBox receipt() {
-    return SizedBox(
+  // STRUK
+
+  Widget receipt() {
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(20),
       child: Receipt(
         backgroundColor: Colors.white,
         onInitialized: (controller) {
@@ -138,13 +141,21 @@ class _DashboardState extends State<Dashboard> {
                 Center(
                   child: Text(
                     'T H E R M U L',
-                    style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
                 SizedBox(height: 5),
                 Text('======================='),
                 SizedBox(height: 5),
-                Center(child: Text(timeNow, style: TextStyle(fontSize: 20))),
+                Center(
+                  child: Text(
+                    timeNow,
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ),
                 SizedBox(height: 5),
                 Text('======================='),
                 SizedBox(height: 5),
@@ -159,12 +170,14 @@ class _DashboardState extends State<Dashboard> {
                   child: Text(
                     'TOTAL : ${currencyFormatter.format(total)}',
                     textAlign: TextAlign.end,
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 25,
+                    ),
                   ),
                 ),
                 SizedBox(height: 30),
-
-                Center(child: Text("Terima Kasih :)")),
+                Center(child: Text('Terima Kasih :)')),
                 SizedBox(height: 10),
               ],
             ),
@@ -174,6 +187,7 @@ class _DashboardState extends State<Dashboard> {
     );
   }
 
+  // BUTTON CETAK
   SizedBox buttonPrint(BuildContext context) {
     return SizedBox(
       height: 50,
@@ -200,24 +214,25 @@ class _DashboardState extends State<Dashboard> {
             debugPrint('Print error: $e');
           }
         },
-        icon: Icon(Icons.print, color: Colors.white),
-        label: Text("Cetak Struk", style: TextStyle(color: Colors.white)),
+        icon: Icon(Icons.print, color: Color(0xFF12130F)),
+        label: Text("Cetak Struk", style: TextStyle(color: Color(0xFF12130F))),
         style: OutlinedButton.styleFrom(
-          backgroundColor: Color.fromRGBO(244, 149, 33, 1),
+          backgroundColor: Color(0xFFCCFB0F),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(30),
           ),
-          side: BorderSide(color: Colors.white),
+          // side: BorderSide(color: Colors.white),
           padding: EdgeInsets.symmetric(horizontal: 12),
         ),
       ),
     );
   }
 
+  // TOTAL HARGA
   Card totalPrice() {
     return Card(
       elevation: 10,
-      color: Colors.blue[100],
+      color: Color(0xFF473BFD),
       child: Container(
         height: 50,
         width: double.infinity,
@@ -230,7 +245,7 @@ class _DashboardState extends State<Dashboard> {
                 'TOTAL :',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  color: Colors.black,
+                  color: Color(0xFFCCFB0F),
                   fontSize: 20,
                 ),
               ),
@@ -238,7 +253,7 @@ class _DashboardState extends State<Dashboard> {
                 currencyFormatter.format(total),
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  color: Color.fromRGBO(244, 149, 33, 1),
+                  color: Color(0xFFCCFB0F),
                   fontSize: 20,
                 ),
               ),
@@ -249,8 +264,12 @@ class _DashboardState extends State<Dashboard> {
     );
   }
 
+  // HARGA SATUAN
   TextFormField priceStuff() {
     return TextFormField(
+      style: TextStyle(
+        color: Color(0xFFEAE6E5)
+      ),
       controller: priceController,
       keyboardType: TextInputType.number,
       onChanged: (value) {
@@ -271,19 +290,33 @@ class _DashboardState extends State<Dashboard> {
         updateCalculation();
       },
       decoration: InputDecoration(
-        prefixIcon: Icon(Icons.monetization_on_outlined, color: Colors.brown),
-        label: Text('Harga Satuan'),
+        prefixIcon: Icon(Icons.monetization_on_outlined, color: Color(0xFFEAE6E5)),
+        label: Text('Harga Satuan',
+          style: TextStyle(
+            color: Color(0xFFEAE6E5)
+          ),
+        ),
         hintText: '15.000',
+        hintStyle: TextStyle(color: Color(0xFFEAE6E5)),
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(5)),
         enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Color.fromRGBO(244, 149, 33, 1)),
+          borderSide: BorderSide(color: Color(0xFFCCFB0F)),
         ),
+        focusedBorder: OutlineInputBorder(
+          borderSide: BorderSide(
+            color: Color(0xFF473BFD)
+          )
+        )
       ),
     );
   }
 
+  // JUMLAH BARANG
   TextFormField stuffQty() {
     return TextFormField(
+      style: TextStyle(
+        color: Color(0xFFEAE6E5)
+      ),
       controller: qtyController,
       keyboardType: TextInputType.number,
       onChanged: (_) {
@@ -293,15 +326,24 @@ class _DashboardState extends State<Dashboard> {
       decoration: InputDecoration(
         prefixIcon: Icon(
           Icons.shopping_cart_checkout_sharp,
-          color: Colors.brown,
+          color: Color(0xFFEAE6E5),
         ),
-        label: Text('Jumlah Barang'),
-        hintText: '5',
-        hintStyle: TextStyle(color: Colors.grey),
+        label: Text('Jumlah Barang',
+          style: TextStyle(
+            color: Color(0xFFEAE6E5)
+          ),
+        ),
+        hintText: '3',
+        hintStyle: TextStyle(color: Color(0xFFEAE6E5)),
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(5)),
         enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Color.fromRGBO(244, 149, 33, 1)),
+          borderSide: BorderSide(color: Color(0xFFCCFB0F)),
         ),
+        focusedBorder: OutlineInputBorder(
+          borderSide: BorderSide(
+            color: Color(0xFF473BFD)
+          )
+        )
       ),
       validator: (value) {
         if (value == null || value.isEmpty) {
@@ -315,8 +357,12 @@ class _DashboardState extends State<Dashboard> {
     );
   }
 
+  // NAMA BARANG
   TextFormField stuffName() {
     return TextFormField(
+      style: TextStyle(
+        color: Color(0xFFEAE6E5)
+      ),
       controller: nameController,
       onChanged: (value) {
         setState(() {
@@ -325,24 +371,34 @@ class _DashboardState extends State<Dashboard> {
       },
       autofocus: true,
       decoration: InputDecoration(
-        prefixIcon: Icon(Icons.coffee_outlined, color: Colors.brown),
-        label: Text('Nama Menu'),
-        hintText: 'Americano',
-        hintStyle: TextStyle(color: Colors.grey),
+        prefixIcon: Icon(Icons.shopping_bag, color: Color(0xFFEAE6E5)),
+        label: Text('Nama Barang',
+          style: TextStyle(
+            color: Color(0xFFEAE6E5),
+          ),
+        ),
+        hintText: 'Martabak',
+        hintStyle: TextStyle(color: Color(0xFFEAE6E5)),
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(5)),
         enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Color.fromRGBO(244, 149, 33, 1)),
+          borderSide: BorderSide(color: Color(0xFFCCFB0F)),
         ),
+        focusedBorder: OutlineInputBorder(
+          borderSide: BorderSide(
+            color: Color(0xFF473BFD)
+          )
+        )
       ),
       validator: (value) {
         if (value == null || value.trim().isEmpty) {
-          return 'Nama menu wajib diisi';
+          return 'Nama barang wajib diisi';
         }
         return null;
       },
     );
   }
 
+  // APPBAR
   PreferredSizeWidget glassAppBar() {
     return PreferredSize(
       preferredSize: const Size.fromHeight(kToolbarHeight),
