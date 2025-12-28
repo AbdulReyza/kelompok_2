@@ -54,7 +54,7 @@ class _LoginPageState extends State<LoginPage> {
                         Text(
                           'Masuk',
                           style: Theme.of(context).textTheme.headlineMedium
-                              ?.copyWith(color: Colors.white),
+                              ?.copyWith(color: Colors.grey),
                           textAlign: TextAlign.center,
                         ),
                         const SizedBox(height: 24),
@@ -65,7 +65,7 @@ class _LoginPageState extends State<LoginPage> {
                           style: const TextStyle(color: Colors.white),
                           decoration: InputDecoration(
                             labelText: 'Email',
-                            labelStyle: const TextStyle(color: Colors.white70),
+                            labelStyle: const TextStyle(color: Colors.grey),
                             filled: true,
                             fillColor: Colors.white.withOpacity(0.1),
                             border: OutlineInputBorder(
@@ -81,7 +81,7 @@ class _LoginPageState extends State<LoginPage> {
                           style: const TextStyle(color: Colors.white),
                           decoration: InputDecoration(
                             labelText: 'Password',
-                            labelStyle: const TextStyle(color: Colors.white70),
+                            labelStyle: const TextStyle(color: Colors.grey),
                             filled: true,
                             fillColor: Colors.white.withOpacity(0.1),
                             border: OutlineInputBorder(
@@ -112,7 +112,12 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                           child: auth.loading
                               ? const CircularProgressIndicator()
-                              : const Text('Masuk'),
+                              : const Text(
+                                'Login',
+                                style: TextStyle(
+                                  color: Colors.grey,
+                                ),
+                              ),
                         ),
 
                         if (auth.error != null) ...[
