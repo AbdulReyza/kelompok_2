@@ -18,6 +18,8 @@ dependencies:
   flutter_bluetooth_printer: ^2.20.0
   firebase_core: ^4.2.1
   firebase_auth: ^6.1.2
+  shared_preferences: ^2.2.2
+
 
 dev_dependencies:
   flutter_test:
