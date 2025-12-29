@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:kelompok_2/presentation/pages/login.dart';
+import 'package:kelompok_2/presentation/widgets/main_layout.dart';
 import 'dart:async';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'package:kelompok_2/presentation/pages/splash_rio.dart';
+import 'package:kelompok_2/presentation/providers/auth_provider.dart';
+import 'package:provider/provider.dart';
 
 class SplashGlobal extends StatefulWidget {
   static const routeName = '/splashGlobal';
@@ -12,40 +17,46 @@ class SplashGlobal extends StatefulWidget {
 }
 
 class _SplashGlobalState extends State<SplashGlobal> {
-  Timer? _timer;
-
-
   @override
   void initState() {
     super.initState();
-    _timer = Timer(const Duration(seconds: 2), () {
-      if (mounted) {
-        Navigator.of(context).pushReplacement(
-          PageRouteBuilder(
-            pageBuilder: (context, animation, secondaryAnimation) => const SplashRio(),
-            transitionsBuilder: (context, animation, secondaryAnimation, child) {
-              return FadeTransition(
-                opacity: animation,
-                child: child,
-              );
-            },
-            transitionDuration: const Duration(milliseconds: 800),
-          ),
-        );
-      }
-    });
+    _handleNavigation();
+  }
+
+  Future<void> _handleNavigation() async {
+    await Future.delayed(const Duration(seconds: 2));
+    if (!mounted) return;
+
+    final prefs = await SharedPreferences.getInstance();
+    final bool isFirstOpen = !(prefs.getBool('onboarding_done') ?? false);
+
+    final auth = context.read<AuthProvider>();
+
+    while (!auth.isAuthReady) {
+      await Future.delayed(const Duration(milliseconds: 100));
+    }
+
+    if (isFirstOpen) {
+      await prefs.setBool('onboarding_done', true);
+      Navigator.pushReplacementNamed(context, SplashRio.routeName);
+      return;
+    }
+
+    if (auth.uid == null) {
+      Navigator.pushReplacementNamed(context, LoginPage.routeName);
+    } else {
+      Navigator.pushReplacementNamed(context, MainLayout.routeName);
+    }
   }
 
   @override
   void dispose() {
-    _timer?.cancel();
     super.dispose();
   }
 
-
   Widget build(BuildContext context) {
     return Container(
-        decoration: const BoxDecoration(
+      decoration: const BoxDecoration(
         gradient: LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
@@ -71,14 +82,12 @@ class _SplashGlobalState extends State<SplashGlobal> {
                   height: 200,
                   width: 200,
                   decoration: BoxDecoration(
-                    image: 
-                    DecorationImage(
-                      image: AssetImage("assets/images/logo_global.jpeg")
-                    )
-                  ),
-                  
+                      image: DecorationImage(
+                          image: AssetImage("assets/images/logo_global.jpeg"))),
                 ),
-                SizedBox(height: 30,),
+                SizedBox(
+                  height: 30,
+                ),
                 Text(
                   'Think Smartly & Globally',
                   style: TextStyle(
