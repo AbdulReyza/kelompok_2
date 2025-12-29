@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "129823554244",
+    "project_id": "kelompok2-5b5f7",
+    "storage_bucket": "kelompok2-5b5f7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:129823554244:android:ca6433f65fcb56c1c16791",
+        "android_client_info": {
+          "package_name": "com.example.kelompok_2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuwDTIgu8o1yuzSi_vnikOeXGxZONTa2M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:129823554244:android:271a1d99e2cc11d2c16791",
+        "android_client_info": {
+          "package_name": "com.kelompok2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuwDTIgu8o1yuzSi_vnikOeXGxZONTa2M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,93 @@
+{
+  // COLOR SNIPPET
+	"kuning lime": {
+		"prefix": "kuning",
+		"body": [
+			"Color(0xFFCCFB0F)"
+		], 
+		"description": "untuk warna kuning"
+	},
+
+	"biru": {
+		"prefix": "biru",
+		"body": [
+			"Color(0xFF473BFD)"
+		],
+		"description": "untuk warna biru"
+	},
+
+	"hitam": {
+		"prefix": "hitam",
+		"body": [
+			"Color(0xFF12130F)"
+		],
+		"description": "untuk warna hitam"
+	},
+
+	"hijau": {
+		"prefix": "hijau",
+		"body": [
+			"Color(0xFF5B9279)"
+		],
+		"description": "untuk warna hijau"
+	},
+
+	"putih": {
+		"prefix": "putih",
+		"body": [
+			"Color(0xFFEAE6E5)"
+		],
+		"description": "untuk warna putih"
+	},
+
+	// TEMPLATE SPLASH SCREEN
+	"splash": {
+		"prefix": "splash",
+		"body": [
+			"import 'package:flutter/material.dart';",
+			"",
+			"class SplashTemp extends StatefulWidget {",
+			"  static const routeName = '/splashTemp';",
+			"  const SplashTemp({super.key});",
+			"",
+			"  @override",
+			"  State<SplashTemp> createState() => _SplashTempState();",
+			"}",
+			"",
+			"class _SplashTempState extends State<SplashTemp> {",
+			"  @override",
+			"  Widget build(BuildContext context) {",
+			"    return Container(",
+			"      color: Color(0xFFCCFB0F),",
+			"      child: Scaffold(",
+			"        backgroundColor: Colors.transparent,",
+			"        appBar: AppBar(",
+			"          backgroundColor: Colors.transparent,",
+			"          elevation: 0,",
+			"          title: const Text(\"\"),",
+			"          automaticallyImplyLeading: false,",
+			"        ),",
+			"        body: Center(",
+			"          child: SingleChildScrollView(",
+			"            child: Column(",
+			"              children: [],",
+			"            ),",
+			"          ),",
+			"        ),",
+			"      ),",
+			"    );",
+			"  }",
+			"}",
+			""
+		],
+		"description": "template splash screen"
+	},
+
+	"pixel font": {
+		"prefix": "pixel",
+		"body": [
+			"fontFamily: 'Pixel',"
+		],
+		"description": "pixel font"
+	},
+}
