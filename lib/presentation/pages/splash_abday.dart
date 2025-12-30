@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kelompok_2/presentation/pages/login.dart';
+import 'package:kelompok_2/presentation/profile/abday_profile.dart';
 import 'package:lottie/lottie.dart';
 
 
@@ -19,7 +19,8 @@ class _SplashAbdayState extends State<SplashAbday> {
         Navigator.pushReplacement(
           context,
           PageRouteBuilder(
-            pageBuilder: (context, animation, secondaryAnimation) => LoginPage(),
+            pageBuilder: (context, animation, secondaryAnimation) =>
+                const ProfileAbday(),
             transitionsBuilder:
                 (context, animation, secondaryAnimation, child) {
               return FadeTransition(
