@@ -82,24 +82,35 @@ Menjadi Perguruan Tinggi pada tahun 2032 yang memiliki kompetensi dan kualitas u
 ## LinkedIn & Skill
 
 ### Abdul Reyza Ramadhanu
-- LinkedIn: -
+- LinkedIn: https://www.linkedin.com/in/abdul-reyza-260bbb2a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
 - Skill:
-  - 
-  - 
-  - 
-  - 
+  - Ms Word
+  - Coding
+  - Graphic Design
 
 ### Rio Achyar
-- LinkedIn: -
-- Skill: -
+- LinkedIn: https://www.linkedin.com/in/rio-achyar-b233362a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
+- Skill:
+  - Dart
+  - Flutter
+  - Laravel
+  - PHP
+  - HTML, CSS & JavaScript
+  - MySQL
 
 ### Muhammad Abday Abdul Hafidz
-- LinkedIn: -
-- Skill: -
+- LinkedIn: https://www.linkedin.com/in/muhammad-abday-abdul-hafidz-41a3352a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
+- Skill:
+  - Flutter Basic
+  - JavaScript
+  - HTML & CSS
 
 ### Arya Pramudya Akbar
-- LinkedIn: -
-- Skill: -
+- LinkedIn: https://www.linkedin.com/in/arya-pramudya-a463402a5?trk=blended-typeahead
+- Skill:
+  - Coaching
+  - Ms Office
+  - Coding
 
 ---
 
