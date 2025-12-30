@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:kelompok_2/presentation/profile/reyza_profile.dart';
 import 'package:kelompok_2/presentation/profiles/arya_profile.dart';
 
 class ProfileAbday extends StatefulWidget {
