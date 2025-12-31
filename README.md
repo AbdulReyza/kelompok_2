@@ -65,7 +65,7 @@ Menjadi Perguruan Tinggi pada tahun 2032 yang memiliki kompetensi dan kualitas u
 - Membuat Splash Screen 1 & 2
 - Membuat Fitur Thermal Printer
 - Membuat Profil Pribadi
-- Styling Ui
+- Styling UI
 - Bug Fixing
 
 ### Muhammad Abday Abdul Hafidz
