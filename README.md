@@ -125,11 +125,40 @@ Menjadi Perguruan Tinggi pada tahun 2032 yang memiliki kompetensi dan kualitas u
   <img src="https://github.com/user-attachments/assets/fcab2d3b-d7e7-4bb6-9f07-27b6734b9ced" width="200"/>
 </p>
 
+  ### Login Page
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/f022ac0d-e45e-4ac1-b214-37e969aee324" width="200"/>
+</p>
+
+  ### Dashboard
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/6dd77e4d-488d-465d-9034-c3b0e55cced2" width="200"/>
+</p>
+
+  ### Our Developers
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/ad79f12d-3577-4d62-91ea-b507fdd37f55" width="200"/>
+</br>
+  <img src="https://github.com/user-attachments/assets/eda6b696-2c4d-4878-aaf0-1e3b7d49c33f" width="200"/>
+  <img src="https://github.com/user-attachments/assets/5cd5363c-8b2d-4bfc-9e67-956c3203ec49" width="200"/>
+  <img src="https://github.com/user-attachments/assets/968a6664-ae47-448b-8330-5182e4fadd11" width="200"/>
+  <img src="https://github.com/user-attachments/assets/71bd8dab-edb4-4d3e-bf7b-ffea054c8c21" width="200"/>
+
+</p>
+
+  ### Logout
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/22bebbdf-8277-43b9-84a4-cd7b2a78f27a" width="200"/>
+  <img src="https://github.com/user-attachments/assets/37e67acf-51be-4a04-b48e-4e1843d913dc" width="200"/>
+
+</p>
+
+
 ---
 
 ## Video Presentasi
 **YouTube**:  
-https://www.youtube.com/watch?v=LINK_VIDEO_DI_SINI
+https://youtu.be/xvFZjo5PgG0
 
 ---
 
