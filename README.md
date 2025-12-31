@@ -48,34 +48,36 @@ Menjadi Perguruan Tinggi pada tahun 2032 yang memiliki kompetensi dan kualitas u
 | Nama | NIM | Peran |
 |-----|-----|------|
 | Abdul Reyza Ramadhanu | 1123150072 | Ketua Kelompok |
-| Rio Achyar | 1123150059 | - |
-| Muhammad Abday Abdul Hafidz | 1123150093 | - |
-| Arya Pramudya Akbar | 1123150004 | - |
+| Rio Achyar | 1123150059 | Full Stack Developer |
+| Muhammad Abday Abdul Hafidz | 1123150093 | UI/UX Designer |
+| Arya Pramudya Akbar | 1123150004 | Software Tester |
 
 ---
 
 ## Daftar Pekerjaan Masing-Masing Anggota
 
 ### Abdul Reyza Ramadhanu
-- 
-- 
-- 
-- 
+- Membuat Splash Screen 3
+- Membuat Fitur Login
+- Membuat Profil Pribadi
 
 ### Rio Achyar
-- 
-- 
-- 
+- Membuat Splash Screen 1 & 2
+- Membuat Fitur Thermal Printer
+- Membuat Profil Pribadi
+- Styling Ui
+- Bug Fixing
 
 ### Muhammad Abday Abdul Hafidz
-- 
-- 
-- 
+- Membuat Splash Screen 5
+- Mengumpulkan Asset
+- Menentukan Collor Palette Aplikasi
+- Membuat Profil Pribadi
 
 ### Arya Pramudya Akbar
-- 
-- 
-- 
+- Membuat Splash Screen 4
+- Membuat Profil Pribadi
+- Testing Aplikasi & Mencari Bug
 
 ---
 
