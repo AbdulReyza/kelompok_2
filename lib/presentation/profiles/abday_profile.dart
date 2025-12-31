@@ -13,7 +13,7 @@ class _ProfileAbdayState extends State<ProfileAbday> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-       onTap: (){
+      onTap: (){
         Navigator.pushNamed(
           context,
           ProfileArya.routeName
@@ -23,7 +23,7 @@ class _ProfileAbdayState extends State<ProfileAbday> {
         backgroundColor: const Color(0xFF12130F),
         appBar: AppBar(
           title: const Text(
-            "PROFIL MAHASISWA",
+            "PROFIL ABDAY",
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
           backgroundColor: const Color(0xFFCCFB0F),

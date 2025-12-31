@@ -50,7 +50,7 @@ class _ProfileReyzaState extends State<ProfileReyza> {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15),
                     ),
-                     child: Container(
+                      child: Container(
                       width: double.infinity,
                       padding: const EdgeInsets.all(20),
                       child: Column(
