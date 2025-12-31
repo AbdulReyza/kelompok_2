@@ -121,6 +121,7 @@ Menjadi Perguruan Tinggi pada tahun 2032 yang memiliki kompetensi dan kualitas u
   ### Splash Screen
 <p align="center">
   <img src="https://github.com/user-attachments/assets/a85a1ffd-aed7-4641-bb82-000a7b5d625b" width="200"/>
+</br>
   <img src="https://github.com/user-attachments/assets/4630e25b-c174-4dc5-a6c9-d00e1261cc04" width="200"/>
   <img src="https://github.com/user-attachments/assets/aaa57523-0dc8-4445-aa40-447e45cf607e" width="200"/>
   <img src="https://github.com/user-attachments/assets/1c6435b8-408b-476d-9f6f-521b1d230356" width="200"/>
@@ -175,29 +176,52 @@ https://youtu.be/xvFZjo5PgG0
 ## Catatan
 Project ini dibuat untuk memenuhi tugas mata kuliah **Aplikasi Mobile** dan dikembangkan secara kolaboratif oleh tim.
 
+---
+
+# How to Run
+
+## Requirements
+
+Pastikan tools berikut sudah terpasang:
+
+- Flutter SDK (minimal versi 3.x.x)
+- Dart SDK (included with Flutter)
+- Android Studio / VS Code
+- Android Emulator atau Physical Device
+- Git
+
+Verifikasi environment:
+```bash
+flutter doctor
+```
+
+# Installation
+
+### Clone repository:
+
+```bash
+git clone https://github.com/AbdulReyza/kelompok_2.git
+cd kelompok_2
+```
+
+### Install dependency:
+
+```bash
+flutter pub get
+```
+
+# Run Application
+
+### Jalankan aplikasi di emulator atau device:
+
+```bash
+flutter run
+```
+---
+
+# LINK APLIKASI ANDROID
+
+https://drive.google.com/drive/u/6/folders/1S309kux33fwypvzE5x-Cy85vYXpXDIII
 
 
 
-## ATURAN MEMBUAT BRANCH
-
-- git branch -M nama_lu/fitur_yg_lu_ kerjain
-
-contoh: 
-- git branch -M rio/login
-
-
-## PREFIX
-- feat = nambah fitur
-- refactor = ubah code yang udah ada
-- style = styling ui
-- fix = benerin bug
-
-## ATURAN COMMIT 
-
-- git commit -m "(prefix): lu ngapain"
-
-contoh : 
-- git commit -m "feat: nambah fitur login"
-- git commit -m "fix: benerin bug login"
-- git commit -m "style: nambah card/styling card"
-- git commit -m "refactor: ubah logic login"
