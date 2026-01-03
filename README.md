@@ -125,11 +125,11 @@ Menjadi Perguruan Tinggi di tahun 2032 yang memiliki kompetensi, kualitas unggul
 
   ### Splash Screen
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/a85a1ffd-aed7-4641-bb82-000a7b5d625b" width="180"/>
-  <img src="https://github.com/user-attachments/assets/4630e25b-c174-4dc5-a6c9-d00e1261cc04" width="180"/>
-  <img src="https://github.com/user-attachments/assets/aaa57523-0dc8-4445-aa40-447e45cf607e" width="180"/>
-  <img src="https://github.com/user-attachments/assets/1c6435b8-408b-476d-9f6f-521b1d230356" width="180"/>
-  <img src="https://github.com/user-attachments/assets/fcab2d3b-d7e7-4bb6-9f07-27b6734b9ced" width="180"/>
+  <img src="https://github.com/user-attachments/assets/a85a1ffd-aed7-4641-bb82-000a7b5d625b" width="160"/>
+  <img src="https://github.com/user-attachments/assets/4630e25b-c174-4dc5-a6c9-d00e1261cc04" width="160"/>
+  <img src="https://github.com/user-attachments/assets/aaa57523-0dc8-4445-aa40-447e45cf607e" width="160"/>
+  <img src="https://github.com/user-attachments/assets/1c6435b8-408b-476d-9f6f-521b1d230356" width="160"/>
+  <img src="https://github.com/user-attachments/assets/fcab2d3b-d7e7-4bb6-9f07-27b6734b9ced" width="160"/>
 </p>
 
   ### Login Page
