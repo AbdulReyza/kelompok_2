@@ -1,10 +1,49 @@
-# Thermul (Thermal Utility)
+<table align="center">
+  <tr>
+    <td width="260" align="center">
+      <img
+        src="https://github.com/user-attachments/assets/c7f93808-5a67-41d1-9e00-4fbc31b2dea5"
+        width="220"
+        alt="Thermul Animation"
+      />
+    </td>
+    <td align="left" style="padding-left:16px;">
+      <h1 style="margin:0;">Thermul — Thermal Utility</h1>
+      <p style="margin:4px 0 0 0;">
+        <strong>Mobile Application (Flutter)</strong><br>
+        <em>Global Institute</em>
+      </p>
+    </td>
+  </tr>
+</table>
 
-## Global Institute
+<br>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/9f9c727d-45bf-46f8-a9c5-3893028a0651" width="280" alt="Global Institute Logo">
+</p>
 
 <p align="center">
-  <img alt="Logo Kampus" width="200" src="https://github.com/user-attachments/assets/9f9c727d-45bf-46f8-a9c5-3893028a0651" />
+  <strong>Aplikasi utilitas thermal printer berbasis Flutter</strong><br>
+  Dikembangkan untuk memenuhi tugas Mata Kuliah <strong>Aplikasi Mobile</strong>
 </p>
+
+---
+
+## Table of Contents
+- Tentang Proyek
+- Informasi Kampus & Mata Kuliah
+- Tim Pengembang
+- Pembagian Tugas
+- Preview Aplikasi
+- Video Presentasi
+- Teknologi
+- Cara Menjalankan Aplikasi
+- Link Download Aplikasi
+
+---
+
+## Tentang Proyek
+**Thermul (Thermal Utility)** adalah aplikasi mobile berbasis Flutter yang dirancang untuk membantu proses pencetakan menggunakan thermal printer. Aplikasi ini mengimplementasikan autentikasi pengguna, antarmuka terstruktur, serta fitur pendukung untuk kebutuhan aplikasi kasir atau utilitas cetak.
 
 ---
 
@@ -13,28 +52,28 @@
 ### Global Institute
 
 **Visi**  
-Menjadi Perguruan Tinggi pada tahun 2032 yang memiliki kompetensi dan kualitas unggul, mampu bersaing di tingkat Nasional dan Internasional, serta memiliki akhlak yang mulia.
+Menjadi Perguruan Tinggi di tahun 2032 yang memiliki kompetensi, kualitas unggul dan mampu bersaing di Tingkat Nasional dan Internasional serta memiliki akhlak yang mulia.
 
 **Misi**
-1. Menjalankan Tridharma Perguruan Tinggi.
-2. Meningkatkan kompetensi sumber daya manusia dalam menghadapi perkembangan ilmu pengetahuan dan teknologi.
-3. Menghasilkan lulusan yang berkualitas nasional dan internasional, produktif, berjiwa wirausaha, untuk mencetak sarjana mandiri, profesional, dan berakhlak mulia.
-4. Mengembangkan sinergi dan kerja sama dengan perguruan tinggi serta perusahaan, baik dalam maupun luar negeri.
-5. Menyelenggarakan perguruan tinggi dengan prinsip nirlaba, akuntabilitas, transparansi, dan keadilan akses, melalui sistem penjaminan mutu serta sistem online berbasis teknologi.
+1. Menjalankan Tridharma Perguruan Tinggi  
+2. Meningkatkan kompetensi sumber daya manusia dalam menghadapi perkembangan ilmu pengetahuan dan teknologi.  
+3. Menghasilkan lulusan yang berkualitas nasional dan internasional, produktif, berjiwa wirausaha untuk mencetak sarjana mandiri, professional dan memiliki akhlak mulia.
+4. Mengembangkan sinergi dan kerjasama dengan perguruan tinggi dan perusahaan baik dalam ataupun luar negeri.
+5. Menyelenggarakan perguruan tinggi dengan nirlaba, akuntabilitas, transparansi, akses keadilan dengan sistem penjamin mutu dan memiliki sistem online berbasis teknologi.
 
 **Tujuan**
-1. Menjadi kampus yang mampu mengembangkan pendidikan berstandar nasional serta menjadi pusat penelitian yang bermanfaat bagi masyarakat.
-2. Memiliki sumber daya manusia berwawasan global dan siap melakukan perubahan menyeluruh untuk mewujudkan perguruan tinggi yang unggul.
-3. Menghasilkan lulusan yang profesional, beretika, dan memiliki kompetensi di bidang teknologi informasi serta kewirausahaan.
-4. Mewujudkan kerja sama dan sinergi antar perguruan tinggi dalam pengembangan IPTEK, serta koordinasi dengan dunia industri untuk menyesuaikan kebutuhan dunia kerja.
-5. Menerapkan tata kelola perguruan tinggi yang akuntabel dan transparan dengan standar mutu yang baik serta sistem informasi berbasis online, meliputi sistem akademik, e-learning, jurnal, repository, dan perpustakaan.
+1. Menjadi kampus yang mampu mengembangkan pendidikan berstandar nasional dan menjadi pusat penelitian dan bermanfaat bagi masyarakat.
+2. Memiliki sumber daya manusia yang berwawasan global dan siap melakukan perubahan menyeluruh untuk mewujudkan perguruan tinggi yang unggul.
+3. Menghasilkan lulusan yang memiliki sikap profesional serta etika yang baik, dengan ditunjang pengetahuan di bidang teknologi informasi, dan entrepreneurship.
+4. Terwujudnya kerjasama dan sinergitas antar perguruan tinggi dalam mengembangkan IPTEK, serta adanya koordinasi dengan perusahaan untuk menyesuaikan kebutuhan dunia kerja.
+5. Terlaksananya kriteria perguruan tinggi yang akuntabilitas, transparan dengan standarisasi mutu yang baik serta mengaplikasikan sistem informasi berbasis online, baik sistem informasi akademik, e-learning, jurnal, repository, perpustakaan dan sebagainya.
 
 ---
 
 ### Mata Kuliah
-- **Mata Kuliah**: Aplikasi Mobile  
+- **Nama**: Aplikasi Mobile  
 - **Fokus**: Pengembangan aplikasi mobile menggunakan Flutter  
-- **Cakupan Materi**:
+- **Materi Utama**:
   - UI/UX Mobile
   - State Management (Provider)
   - Firebase Authentication
@@ -43,10 +82,10 @@ Menjadi Perguruan Tinggi pada tahun 2032 yang memiliki kompetensi dan kualitas u
 
 ---
 
-## Anggota Tim & Peran
+## Tim Pengembang
 
 | Nama | NIM | Peran |
-|-----|-----|------|
+|------|-----|------|
 | Abdul Reyza Ramadhanu | 1123150072 | Ketua Kelompok |
 | Rio Achyar | 1123150059 | Full Stack Developer |
 | Muhammad Abday Abdul Hafidz | 1123150093 | UI/UX Designer |
@@ -54,65 +93,31 @@ Menjadi Perguruan Tinggi pada tahun 2032 yang memiliki kompetensi dan kualitas u
 
 ---
 
-## Daftar Pekerjaan Masing-Masing Anggota
+## Pembagian Tugas
 
 ### Abdul Reyza Ramadhanu
-- Membuat Splash Screen 3
-- Membuat Fitur Login
-- Membuat Profil Pribadi
+- Splash Screen 3  
+- Fitur Login  
+- Profil Pribadi  
 
 ### Rio Achyar
-- Membuat Splash Screen 1 & 2
-- Membuat Fitur Thermal Printer
-- Membuat Profil Pribadi
-- Styling UI
-- Bug Fixing
+- Splash Screen 1 & 2  
+- Fitur Thermal Printer  
+- Styling UI  
+- Bug Fixing  
+- Profil Pribadi  
 
 ### Muhammad Abday Abdul Hafidz
-- Membuat Splash Screen 5
-- Mengumpulkan Asset
-- Menentukan Collor Palette Aplikasi
-- Membuat Profil Pribadi
+- Splash Screen 5  
+- Asset Management  
+- Color Palette Aplikasi  
+- Profil Pribadi  
 
 ### Arya Pramudya Akbar
-- Membuat Splash Screen 4
-- Membuat Profil Pribadi
-- Testing Aplikasi & Mencari Bug
-
----
-
-## LinkedIn & Skill
-
-### Abdul Reyza Ramadhanu
-- LinkedIn: https://www.linkedin.com/in/abdul-reyza-260bbb2a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
-- Skill:
-  - Ms Word
-  - Coding
-  - Graphic Design
-
-### Rio Achyar
-- LinkedIn: https://www.linkedin.com/in/rio-achyar-b233362a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
-- Skill:
-  - Dart
-  - Flutter
-  - Laravel
-  - PHP
-  - HTML, CSS & JavaScript
-  - MySQL
-
-### Muhammad Abday Abdul Hafidz
-- LinkedIn: https://www.linkedin.com/in/muhammad-abday-abdul-hafidz-41a3352a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
-- Skill:
-  - Flutter Basic
-  - JavaScript
-  - HTML & CSS
-
-### Arya Pramudya Akbar
-- LinkedIn: https://www.linkedin.com/in/arya-pramudya-a463402a5?trk=blended-typeahead
-- Skill:
-  - Coaching
-  - Ms Office
-  - Coding
+- Splash Screen 4  
+- Testing Aplikasi  
+- Bug Reporting  
+- Profil Pribadi  
 
 ---
 
@@ -120,12 +125,11 @@ Menjadi Perguruan Tinggi pada tahun 2032 yang memiliki kompetensi dan kualitas u
 
   ### Splash Screen
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/a85a1ffd-aed7-4641-bb82-000a7b5d625b" width="200"/>
-</br>
-  <img src="https://github.com/user-attachments/assets/4630e25b-c174-4dc5-a6c9-d00e1261cc04" width="200"/>
-  <img src="https://github.com/user-attachments/assets/aaa57523-0dc8-4445-aa40-447e45cf607e" width="200"/>
-  <img src="https://github.com/user-attachments/assets/1c6435b8-408b-476d-9f6f-521b1d230356" width="200"/>
-  <img src="https://github.com/user-attachments/assets/fcab2d3b-d7e7-4bb6-9f07-27b6734b9ced" width="200"/>
+  <img src="https://github.com/user-attachments/assets/a85a1ffd-aed7-4641-bb82-000a7b5d625b" width="180"/>
+  <img src="https://github.com/user-attachments/assets/4630e25b-c174-4dc5-a6c9-d00e1261cc04" width="180"/>
+  <img src="https://github.com/user-attachments/assets/aaa57523-0dc8-4445-aa40-447e45cf607e" width="180"/>
+  <img src="https://github.com/user-attachments/assets/1c6435b8-408b-476d-9f6f-521b1d230356" width="180"/>
+  <img src="https://github.com/user-attachments/assets/fcab2d3b-d7e7-4bb6-9f07-27b6734b9ced" width="180"/>
 </p>
 
   ### Login Page
@@ -140,12 +144,11 @@ Menjadi Perguruan Tinggi pada tahun 2032 yang memiliki kompetensi dan kualitas u
 
   ### Our Developers
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/ad79f12d-3577-4d62-91ea-b507fdd37f55" width="200"/>
-</br>
-  <img src="https://github.com/user-attachments/assets/eda6b696-2c4d-4878-aaf0-1e3b7d49c33f" width="200"/>
-  <img src="https://github.com/user-attachments/assets/5cd5363c-8b2d-4bfc-9e67-956c3203ec49" width="200"/>
-  <img src="https://github.com/user-attachments/assets/968a6664-ae47-448b-8330-5182e4fadd11" width="200"/>
-  <img src="https://github.com/user-attachments/assets/71bd8dab-edb4-4d3e-bf7b-ffea054c8c21" width="200"/>
+  <img src="https://github.com/user-attachments/assets/ad79f12d-3577-4d62-91ea-b507fdd37f55" width="180"/>
+  <img src="https://github.com/user-attachments/assets/eda6b696-2c4d-4878-aaf0-1e3b7d49c33f" width="180"/>
+  <img src="https://github.com/user-attachments/assets/5cd5363c-8b2d-4bfc-9e67-956c3203ec49" width="180"/>
+  <img src="https://github.com/user-attachments/assets/968a6664-ae47-448b-8330-5182e4fadd11" width="180"/>
+  <img src="https://github.com/user-attachments/assets/71bd8dab-edb4-4d3e-bf7b-ffea054c8c21" width="180"/>
 
 </p>
 
@@ -160,35 +163,25 @@ Menjadi Perguruan Tinggi pada tahun 2032 yang memiliki kompetensi dan kualitas u
 ---
 
 ## Video Presentasi
-**YouTube**:  
 https://youtu.be/xvFZjo5PgG0
 
 ---
 
-## Teknologi yang Digunakan
-- Flutter
-- Dart
-- Firebase Authentication
-- Git
+## Teknologi
+- Flutter  
+- Dart  
+- Firebase Authentication  
+- Git  
 
 ---
 
-## Catatan
-Project ini dibuat untuk memenuhi tugas mata kuliah **Aplikasi Mobile** dan dikembangkan secara kolaboratif oleh tim.
+## Cara Menjalankan Aplikasi
 
----
-
-# How to Run
-
-## Requirements
-
-Pastikan tools berikut sudah terpasang:
-
-- Flutter SDK (minimal versi 3.x.x)
-- Dart SDK (included with Flutter)
-- Android Studio / VS Code
-- Android Emulator atau Physical Device
-- Git
+### Requirements
+- Flutter SDK >= 3.x  
+- Android Studio / VS Code  
+- Emulator atau Physical Device  
+- Git  
 
 Verifikasi environment:
 ```bash
@@ -219,7 +212,7 @@ flutter run
 ```
 ---
 
-# LINK APLIKASI ANDROID
+# Link Download Aplikasi
 
 https://drive.google.com/drive/u/6/folders/1S309kux33fwypvzE5x-Cy85vYXpXDIII
 
