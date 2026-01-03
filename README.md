@@ -144,11 +144,11 @@ Menjadi Perguruan Tinggi di tahun 2032 yang memiliki kompetensi, kualitas unggul
 
   ### Our Developers
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/ad79f12d-3577-4d62-91ea-b507fdd37f55" width="180"/>
-  <img src="https://github.com/user-attachments/assets/eda6b696-2c4d-4878-aaf0-1e3b7d49c33f" width="180"/>
-  <img src="https://github.com/user-attachments/assets/5cd5363c-8b2d-4bfc-9e67-956c3203ec49" width="180"/>
-  <img src="https://github.com/user-attachments/assets/968a6664-ae47-448b-8330-5182e4fadd11" width="180"/>
-  <img src="https://github.com/user-attachments/assets/71bd8dab-edb4-4d3e-bf7b-ffea054c8c21" width="180"/>
+  <img src="https://github.com/user-attachments/assets/ad79f12d-3577-4d62-91ea-b507fdd37f55" width="160"/>
+  <img src="https://github.com/user-attachments/assets/eda6b696-2c4d-4878-aaf0-1e3b7d49c33f" width="160"/>
+  <img src="https://github.com/user-attachments/assets/5cd5363c-8b2d-4bfc-9e67-956c3203ec49" width="160"/>
+  <img src="https://github.com/user-attachments/assets/968a6664-ae47-448b-8330-5182e4fadd11" width="160"/>
+  <img src="https://github.com/user-attachments/assets/71bd8dab-edb4-4d3e-bf7b-ffea054c8c21" width="160"/>
 
 </p>
 
