@@ -3,13 +3,16 @@ import 'package:kelompok_2/domain/repositories/auth_repositories.dart';
 
 class AuthProvider extends ChangeNotifier {
   final AuthRepository _repo;
+
   String? uid;
+  bool isAuthReady = false;
   bool loading = false;
   String? error;
 
   AuthProvider(this._repo) {
     _repo.authStateChanges().listen((u) {
       uid = u;
+      isAuthReady = true;
       notifyListeners();
     });
   }

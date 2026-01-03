@@ -35,8 +35,6 @@ class _DashboardState extends State<Dashboard> {
 
       nameController.clear();
       qtyController.clear();
-      priceController.clear();
-
       menu = '';
       qty = 0;
       price = 0;
@@ -91,25 +89,15 @@ class _DashboardState extends State<Dashboard> {
                 child: Column(
                   children: [
                     stuffName(),
-
                     SizedBox(height: 20),
-
                     stuffQty(),
-
                     SizedBox(height: 20),
-
                     priceStuff(),
-
                     SizedBox(height: 20),
-
                     totalPrice(),
-
                     SizedBox(height: 20),
-
                     buttonPrint(context),
-
                     SizedBox(height: 20),
-
                     receipt(),
                   ],
                 ),
@@ -159,7 +147,7 @@ class _DashboardState extends State<Dashboard> {
                 SizedBox(height: 5),
                 Text('======================='),
                 SizedBox(height: 5),
-                Text('Menu   : $menu'),
+                Text('Nama   : $menu'),
                 Text('Jumlah : $qty'),
                 Text('Harga  : ${currencyFormatter.format(price)}'),
                 SizedBox(height: 5),
@@ -178,7 +166,8 @@ class _DashboardState extends State<Dashboard> {
                 ),
                 SizedBox(height: 30),
                 Center(child: Text('Terima Kasih :)')),
-                SizedBox(height: 10),
+                SizedBox(height: 60),
+                Text("\n\n"),
               ],
             ),
           );
@@ -267,9 +256,7 @@ class _DashboardState extends State<Dashboard> {
   // HARGA SATUAN
   TextFormField priceStuff() {
     return TextFormField(
-      style: TextStyle(
-        color: Color(0xFFEAE6E5)
-      ),
+      style: TextStyle(color: Color(0xFFEAE6E5)),
       controller: priceController,
       keyboardType: TextInputType.number,
       onChanged: (value) {
@@ -290,33 +277,27 @@ class _DashboardState extends State<Dashboard> {
         updateCalculation();
       },
       decoration: InputDecoration(
-        prefixIcon: Icon(Icons.monetization_on_outlined, color: Color(0xFFEAE6E5)),
-        label: Text('Harga Satuan',
-          style: TextStyle(
-            color: Color(0xFFEAE6E5)
+          prefixIcon:
+              Icon(Icons.monetization_on_outlined, color: Color(0xFFEAE6E5)),
+          label: Text(
+            'Harga Satuan',
+            style: TextStyle(color: Color(0xFFEAE6E5)),
           ),
-        ),
-        hintText: '15.000',
-        hintStyle: TextStyle(color: Color(0xFFEAE6E5)),
-        border: OutlineInputBorder(borderRadius: BorderRadius.circular(5)),
-        enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Color(0xFFCCFB0F)),
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderSide: BorderSide(
-            color: Color(0xFF473BFD)
-          )
-        )
-      ),
+          hintText: '15.000',
+          hintStyle: TextStyle(color: Color(0xFFEAE6E5)),
+          border: OutlineInputBorder(borderRadius: BorderRadius.circular(5)),
+          enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: Color(0xFFCCFB0F)),
+          ),
+          focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: Color(0xFF473BFD)))),
     );
   }
 
   // JUMLAH BARANG
   TextFormField stuffQty() {
     return TextFormField(
-      style: TextStyle(
-        color: Color(0xFFEAE6E5)
-      ),
+      style: TextStyle(color: Color(0xFFEAE6E5)),
       controller: qtyController,
       keyboardType: TextInputType.number,
       onChanged: (_) {
@@ -324,27 +305,22 @@ class _DashboardState extends State<Dashboard> {
         setState(() {});
       },
       decoration: InputDecoration(
-        prefixIcon: Icon(
-          Icons.shopping_cart_checkout_sharp,
-          color: Color(0xFFEAE6E5),
-        ),
-        label: Text('Jumlah Barang',
-          style: TextStyle(
-            color: Color(0xFFEAE6E5)
+          prefixIcon: Icon(
+            Icons.shopping_cart_checkout_sharp,
+            color: Color(0xFFEAE6E5),
           ),
-        ),
-        hintText: '3',
-        hintStyle: TextStyle(color: Color(0xFFEAE6E5)),
-        border: OutlineInputBorder(borderRadius: BorderRadius.circular(5)),
-        enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Color(0xFFCCFB0F)),
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderSide: BorderSide(
-            color: Color(0xFF473BFD)
-          )
-        )
-      ),
+          label: Text(
+            'Jumlah Barang',
+            style: TextStyle(color: Color(0xFFEAE6E5)),
+          ),
+          hintText: '3',
+          hintStyle: TextStyle(color: Color(0xFFEAE6E5)),
+          border: OutlineInputBorder(borderRadius: BorderRadius.circular(5)),
+          enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: Color(0xFFCCFB0F)),
+          ),
+          focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: Color(0xFF473BFD)))),
       validator: (value) {
         if (value == null || value.isEmpty) {
           return 'Jumlah barang wajib diisi';
@@ -360,9 +336,7 @@ class _DashboardState extends State<Dashboard> {
   // NAMA BARANG
   TextFormField stuffName() {
     return TextFormField(
-      style: TextStyle(
-        color: Color(0xFFEAE6E5)
-      ),
+      style: TextStyle(color: Color(0xFFEAE6E5)),
       controller: nameController,
       onChanged: (value) {
         setState(() {
@@ -370,24 +344,21 @@ class _DashboardState extends State<Dashboard> {
         });
       },
       decoration: InputDecoration(
-        prefixIcon: Icon(Icons.shopping_bag, color: Color(0xFFEAE6E5)),
-        label: Text('Nama Barang',
-          style: TextStyle(
-            color: Color(0xFFEAE6E5),
+          prefixIcon: Icon(Icons.shopping_bag, color: Color(0xFFEAE6E5)),
+          label: Text(
+            'Nama Barang',
+            style: TextStyle(
+              color: Color(0xFFEAE6E5),
+            ),
           ),
-        ),
-        hintText: 'Martabak',
-        hintStyle: TextStyle(color: Color(0xFFEAE6E5)),
-        border: OutlineInputBorder(borderRadius: BorderRadius.circular(5)),
-        enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Color(0xFFCCFB0F)),
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderSide: BorderSide(
-            color: Color(0xFF473BFD)
-          )
-        )
-      ),
+          hintText: 'Martabak',
+          hintStyle: TextStyle(color: Color(0xFFEAE6E5)),
+          border: OutlineInputBorder(borderRadius: BorderRadius.circular(5)),
+          enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: Color(0xFFCCFB0F)),
+          ),
+          focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: Color(0xFF473BFD)))),
       validator: (value) {
         if (value == null || value.trim().isEmpty) {
           return 'Nama barang wajib diisi';
