@@ -13,7 +13,7 @@ class _NotificationPageState extends State<NotificationPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Dashboard"),
+        title: const Text("Notification"),
         actions: const [],
       ),
       body: SingleChildScrollView(
