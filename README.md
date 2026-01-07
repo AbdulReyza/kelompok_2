@@ -216,5 +216,7 @@ flutter run
 
 https://drive.google.com/drive/u/6/folders/1S309kux33fwypvzE5x-Cy85vYXpXDIII
 
+---
 
-
+## License
+This project is licensed under the GNU General Public License v3.0.
