@@ -55,6 +55,21 @@ Future<void> main() async {
   FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
   await flutterLocalNotificationsPlugin.resolvePlatformSpecificImplementation<AndroidFlutterLocalNotificationsPlugin>()?.createNotificationChannel(channel);
 
+  const AndroidInitializationSettings initializationSettingsAndroid = AndroidInitializationSettings(
+    '@mipmap/ic_launcher'
+  );
+
+  
+  const DarwinInitializationSettings initializationSettingsDarwin = DarwinInitializationSettings();
+  const InitializationSettings initializationSettings = InitializationSettings(
+    android: initializationSettingsAndroid,
+    iOS: initializationSettingsDarwin,
+  );
+
+  await flutterLocalNotificationsPlugin.initialize(initializationSettings,onDidReceiveNotificationResponse: (NotificationResponse notificationResponse) {
+    print("Notification Tap: ${notificationResponse.payload}");
+  },
+  );
   runApp(const MyApp());
 }
 
