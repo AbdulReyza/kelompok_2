@@ -101,7 +101,7 @@ class _NotificationPageState extends State<NotificationPage> {
       if (message != null && message.notification != null) {
       print("App dibuka dari Notification");
         setState(() {
-        _message = "${message.notification!.title}\n\n${message.notification!.body}";
+        _message = "${message.notification!.title} - ${message.notification!.body}";
         });
     }
   }
