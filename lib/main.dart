@@ -31,6 +31,14 @@ import 'package:kelompok_2/presentation/widgets/main_layout.dart';
 import 'package:provider/provider.dart';
 
 final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
+
+const AndroidNotificationChannel channel = AndroidNotificationChannel(
+  'high_importance_channel',
+  'High Importance Notifications',
+  description: ' ',
+  importance: Importance.max
+);
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
