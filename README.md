@@ -177,7 +177,7 @@ lib/
 
 | Name | Role | Contributions |
 |------|------|---------------|
-| ** ** |  | - <br>- <br>- <br>-  |
+| **Muhammad Abday Abdul Hafidz** | UI/UX Designer | -Profile screen <br>-Splash screen <br>-Asset Management <br>-Color Palette  |
 | **Arya Pramudya Akbar** | Mobile Developer & Application Tester | -Profile Screen<br>-Splash Screen<br>-Notification <br>-Logout |
 | **Rio Achyar** | Full Stack Developer | - Splash screen<br>- Thermal Printer<br>- Profile Screen |
 | ** ** | | - <br>-  <br>- <br>-  |
