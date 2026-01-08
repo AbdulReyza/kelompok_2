@@ -2,7 +2,7 @@
 
 <div align="center">
 <url>
-  <img src="https://lms.global.ac.id/lms/pluginfile.php/1/theme_klass/footerlogo/1745232397/logo-global-institute-stroke.png" alt="Institut Teknologi dan Bisnis Bina Sarana Global" width="200"/>
+  <img src="https://github.com/user-attachments/assets/3110a45c-d9a9-4514-bbb1-bc5849f83894" alt="Institut Teknologi dan Bisnis Bina Sarana Global" width="200"/>
   </div>
 <div align="center">
 Institut Teknologi dan Bisnis Bina Sarana Global <br>
