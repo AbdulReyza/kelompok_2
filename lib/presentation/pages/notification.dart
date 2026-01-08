@@ -87,6 +87,14 @@ class _NotificationPageState extends State<NotificationPage> {
       }
     });
 
+    FirebaseMessaging.onMessageOpenedApp.listen((RemoteMessage message) {
+    print("Click Notification");
+    if (!mounted) return;
+        setState(() {
+        _message = "${message.notification!.title}: ${message.notification!.body}";
+      });
+    });
+
   }
 
 
