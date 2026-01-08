@@ -109,6 +109,7 @@ class _NotificationPageState extends State<NotificationPage> {
 
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: glassAppBar(),
       body: Center(
         child: SingleChildScrollView(
           padding: EdgeInsets.all(10.0),
@@ -130,6 +131,12 @@ class _NotificationPageState extends State<NotificationPage> {
           ),
         ),
       ),
+    );
+  }
+
+  AppBar glassAppBar() {
+    return AppBar(
+      
     );
   }
 }
