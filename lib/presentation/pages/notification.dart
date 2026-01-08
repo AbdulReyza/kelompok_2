@@ -9,12 +9,15 @@ class NotificationPage extends StatefulWidget {
 }
 
 class _NotificationPageState extends State<NotificationPage> {
+  String _message = "Tidak ada Notif";
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: SingleChildScrollView(
-          padding: const EdgeInsets.all(10.0),
+          padding: EdgeInsets.all(10.0),
           child: Column(
               children: [],
           ),
