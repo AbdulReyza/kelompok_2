@@ -1,222 +1,206 @@
-<table align="center">
-  <tr>
-    <td width="260" align="center">
-      <img
-        src="https://github.com/user-attachments/assets/c7f93808-5a67-41d1-9e00-4fbc31b2dea5"
-        width="220"
-        alt="Thermul Animation"
-      />
-    </td>
-    <td align="left" style="padding-left:16px;">
-      <h1 style="margin:0;">Thermul — Thermal Utility</h1>
-      <p style="margin:4px 0 0 0;">
-        <strong>Mobile Application (Flutter)</strong><br>
-        <em>Global Institute</em>
-      </p>
-    </td>
-  </tr>
-</table>
+# Thermul - Flutter Application
 
+<div align="center">
+<url>
+  <img src="https://lms.global.ac.id/lms/pluginfile.php/1/theme_klass/footerlogo/1745232397/logo-global-institute-stroke.png" alt="Institut Teknologi dan Bisnis Bina Sarana Global" width="200"/>
+  </div>
+<div align="center">
+Institut Teknologi dan Bisnis Bina Sarana Global <br>
+FAKULTAS TEKNOLOGI INFORMASI & KOMUNIKASI 
 <br>
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/9f9c727d-45bf-46f8-a9c5-3893028a0651" width="280" alt="Global Institute Logo">
-</p>
+https://global.ac.id/
+  </div>
 
-<p align="center">
-  <strong>Aplikasi utilitas thermal printer berbasis Flutter</strong><br>
-  Dikembangkan untuk memenuhi tugas Mata Kuliah <strong>Aplikasi Mobile</strong>
-</p>
+  ##  Project UAS
+  - Mata Kuliah : Aplikasi Mobile
+  - Kelas : TI 23 SE 1 
+  - Semester : GANJIL 
+  - Tahun Akademik: 2025 - 2026 
+  
+  
 
----
+## About The Project
 
-## Table of Contents
-- Tentang Proyek
-- Informasi Kampus & Mata Kuliah
-- Tim Pengembang
-- Pembagian Tugas
-- Preview Aplikasi
-- Video Presentasi
-- Teknologi
-- Cara Menjalankan Aplikasi
-- Link Download Aplikasi
+Thermul (Thermal Utility) adalah aplikasi mobile berbasis Flutter yang dirancang untuk membantu proses pencetakan menggunakan thermal printer. Aplikasi ini mengimplementasikan autentikasi pengguna, antarmuka terstruktur, serta fitur pendukung untuk kebutuhan aplikasi kasir atau utilitas cetak.
 
----
+### Key Features
 
-## Tentang Proyek
-**Thermul (Thermal Utility)** adalah aplikasi mobile berbasis Flutter yang dirancang untuk membantu proses pencetakan menggunakan thermal printer. Aplikasi ini mengimplementasikan autentikasi pengguna, antarmuka terstruktur, serta fitur pendukung untuk kebutuhan aplikasi kasir atau utilitas cetak.
+- **Modern & Liquid Glass UI/UX Design** - Antarmuka yang clean dan user-friendly
+- **Login**
+- **Logout**
+- **Print Receipt** - Cetak Struk
+- **Notification** - Pemberitahuan
 
----
+## Screenshots
 
-## Informasi Kampus & Mata Kuliah
+<div align="center">
+  <img src="screenshots/splash_screen.png" alt="Splash Screen" width="200"/>
+  <img src="screenshots/login_screen.png" alt="Login" width="200"/>
+  <img src="screenshots/home_screen.png" alt="Home" width="200"/>
+  <img src="screenshots/profile_screen.png" alt="Profile" width="200"/>
+</div>
 
-### Global Institute
+<div align="center">
+  <img src="screenshots/note_detail.png" alt="Note Detail" width="200"/>
+  <img src="screenshots/search.png" alt="Search" width="200"/>
+  <img src="screenshots/category.png" alt="Category" width="200"/>
+  <img src="screenshots/settings.png" alt="Settings" width="200"/>
+</div>
 
-**Visi**  
-Menjadi Perguruan Tinggi di tahun 2032 yang memiliki kompetensi, kualitas unggul dan mampu bersaing di Tingkat Nasional dan Internasional serta memiliki akhlak yang mulia.
+## Demo Video
 
-**Misi**
-1. Menjalankan Tridharma Perguruan Tinggi  
-2. Meningkatkan kompetensi sumber daya manusia dalam menghadapi perkembangan ilmu pengetahuan dan teknologi.  
-3. Menghasilkan lulusan yang berkualitas nasional dan internasional, produktif, berjiwa wirausaha untuk mencetak sarjana mandiri, professional dan memiliki akhlak mulia.
-4. Mengembangkan sinergi dan kerjasama dengan perguruan tinggi dan perusahaan baik dalam ataupun luar negeri.
-5. Menyelenggarakan perguruan tinggi dengan nirlaba, akuntabilitas, transparansi, akses keadilan dengan sistem penjamin mutu dan memiliki sistem online berbasis teknologi.
+Lihat video demo aplikasi kami untuk melihat semua fitur dalam aksi!
 
-**Tujuan**
-1. Menjadi kampus yang mampu mengembangkan pendidikan berstandar nasional dan menjadi pusat penelitian dan bermanfaat bagi masyarakat.
-2. Memiliki sumber daya manusia yang berwawasan global dan siap melakukan perubahan menyeluruh untuk mewujudkan perguruan tinggi yang unggul.
-3. Menghasilkan lulusan yang memiliki sikap profesional serta etika yang baik, dengan ditunjang pengetahuan di bidang teknologi informasi, dan entrepreneurship.
-4. Terwujudnya kerjasama dan sinergitas antar perguruan tinggi dalam mengembangkan IPTEK, serta adanya koordinasi dengan perusahaan untuk menyesuaikan kebutuhan dunia kerja.
-5. Terlaksananya kriteria perguruan tinggi yang akuntabilitas, transparan dengan standarisasi mutu yang baik serta mengaplikasikan sistem informasi berbasis online, baik sistem informasi akademik, e-learning, jurnal, repository, perpustakaan dan sebagainya.
+**[Watch Full Demo on YouTube](https://youtube.com/watch?v=dQw4w9WgXcQ)**
 
----
+Alternative link: **[Google Drive Demo](https://drive.google.com/file/d/1234567890/view)**
 
-### Mata Kuliah
-- **Nama**: Aplikasi Mobile  
-- **Fokus**: Pengembangan aplikasi mobile menggunakan Flutter  
-- **Materi Utama**:
-  - UI/UX Mobile
-  - State Management (Provider)
-  - Firebase Authentication
-  - Routing & Navigation
-  - Deployment Android & Web
+## Download APK
 
----
+Download versi terbaru aplikasi Notes App:
 
-## Tim Pengembang
-
-| Nama | NIM | Peran |
-|------|-----|------|
-| Abdul Reyza Ramadhanu | 1123150072 | Ketua Kelompok |
-| Rio Achyar | 1123150059 | Full Stack Developer |
-| Muhammad Abday Abdul Hafidz | 1123150093 | UI/UX Designer |
-| Arya Pramudya Akbar | 1123150004 | Software Tester |
-
----
-
-## Pembagian Tugas
-
-### Abdul Reyza Ramadhanu
-- Splash Screen 3  
-- Fitur Login  
-- Profil Pribadi  
-
-### Rio Achyar
-- Splash Screen 1 & 2  
-- Fitur Thermal Printer  
-- Styling UI  
-- Bug Fixing  
-- Profil Pribadi  
-
-### Muhammad Abday Abdul Hafidz
-- Splash Screen 5  
-- Asset Management  
-- Color Palette Aplikasi  
-- Profil Pribadi  
-
-### Arya Pramudya Akbar
-- Splash Screen 4  
-- Testing Aplikasi  
-- Bug Reporting  
-- Profil Pribadi  
-
----
-
-## Preview Aplikasi
-
-  ### Splash Screen
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/a85a1ffd-aed7-4641-bb82-000a7b5d625b" width="160"/>
-  <img src="https://github.com/user-attachments/assets/4630e25b-c174-4dc5-a6c9-d00e1261cc04" width="160"/>
-  <img src="https://github.com/user-attachments/assets/aaa57523-0dc8-4445-aa40-447e45cf607e" width="160"/>
-  <img src="https://github.com/user-attachments/assets/1c6435b8-408b-476d-9f6f-521b1d230356" width="160"/>
-  <img src="https://github.com/user-attachments/assets/fcab2d3b-d7e7-4bb6-9f07-27b6734b9ced" width="160"/>
-</p>
-
-  ### Login Page
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/f022ac0d-e45e-4ac1-b214-37e969aee324" width="200"/>
-</p>
-
-  ### Dashboard
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/6dd77e4d-488d-465d-9034-c3b0e55cced2" width="200"/>
-</p>
-
-  ### Our Developers
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/ad79f12d-3577-4d62-91ea-b507fdd37f55" width="160"/>
-  <img src="https://github.com/user-attachments/assets/eda6b696-2c4d-4878-aaf0-1e3b7d49c33f" width="160"/>
-  <img src="https://github.com/user-attachments/assets/5cd5363c-8b2d-4bfc-9e67-956c3203ec49" width="160"/>
-  <img src="https://github.com/user-attachments/assets/968a6664-ae47-448b-8330-5182e4fadd11" width="160"/>
-  <img src="https://github.com/user-attachments/assets/71bd8dab-edb4-4d3e-bf7b-ffea054c8c21" width="160"/>
-
-</p>
-
-  ### Logout
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/22bebbdf-8277-43b9-84a4-cd7b2a78f27a" width="200"/>
-  <img src="https://github.com/user-attachments/assets/37e67acf-51be-4a04-b48e-4e1843d913dc" width="200"/>
-
-</p>
+### Latest Release
+- [**Download APK (15.2 MB)**](https://github.com/yourusername/notes-app/releases/download/v1.0.0/notes-app-v1.0.0.apk)
 
 
----
+**Minimum Requirements:**
+- Android 6.0 (API level 23) or higher
+- ~20MB free storage space
 
-## Video Presentasi
-https://youtu.be/xvFZjo5PgG0
+## Built With
 
----
+- **[Flutter](https://flutter.dev/)** - UI Framework
+- **[Dart](https://dart.dev/)** - Programming Language
+- **[Firebase](https://firebase.google.com/)** - Backend & Authentication
+- **[SQLite](https://www.sqlite.org/)** - Local Database
+- **[Provider](https://pub.dev/packages/provider)** - State Management
 
-## Teknologi
-- Flutter  
-- Dart  
-- Firebase Authentication  
-- Git  
 
----
+## Getting Started
 
-## Cara Menjalankan Aplikasi
+### Prerequisites
 
-### Requirements
-- Flutter SDK >= 3.x  
-- Android Studio / VS Code  
-- Emulator atau Physical Device  
-- Git  
+Pastikan Anda sudah menginstall:
+- Flutter SDK (3.16.0 or higher)
+- Dart SDK (3.2.0 or higher)
+- Android Studio / VS Code
+- Git
 
-Verifikasi environment:
-```bash
-flutter doctor
-```
+### Installation
 
-# Installation
-
-### Clone repository:
-
+1. Clone repository
 ```bash
 git clone https://github.com/AbdulReyza/kelompok_2.git
 cd kelompok_2
 ```
 
-### Install dependency:
-
+2. Install dependencies
 ```bash
 flutter pub get
 ```
 
-# Run Application
+3. Setup Firebase
+```bash
+# Download google-services.json dari Firebase Console
+# Place in android/app/
+cp path/to/google-services.json android/app/
+```
 
-### Jalankan aplikasi di emulator atau device:
-
+4. Run aplikasi
 ```bash
 flutter run
 ```
----
 
-# Link Download Aplikasi
+### Build APK
 
-https://drive.google.com/drive/u/6/folders/1S309kux33fwypvzE5x-Cy85vYXpXDIII
+```bash
+# Debug APK
+flutter build apk --debug
 
----
+# Release APK
+flutter build apk --release
+
+# Split APK by ABI
+flutter build apk --split-per-abi
+```
+
+## Project Structure
+
+```
+lib/
+├── main.dart                 # Entry point
+├── app/
+│   ├── routes/              # App routing
+│   └── themes/              # App themes
+├── models/                   # Data models
+│   ├── user.dart
+│   └── category.dart
+├── screens/                  # UI Screens
+│   ├── splash/
+│   ├── auth/
+│   │   ├── login_screen.dart
+│   │   └── register_screen.dart
+│   ├── home/
+│   ├── profile/
+│   └── settings/
+├── widgets/                  # Reusable widgets
+├── services/                 # Business logic
+│   ├── auth_service.dart
+│   ├── database_service.dart
+│   └── notification_service.dart
+└── utils/                    # Utilities & helpers
+```
+
+## Authentication Flow
+
+```
+1. Splash Screen (Auto-login check)
+   ↓
+2. Login Screen / Register Screen
+   ↓
+3. Home Screen (Dashboard)
+   ↓
+4. Profile, Notification & Settings
+```
+
+### Development Workflow
+
+1. Fork repository
+2. Create feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit changes (`git commit -m 'prefix: Add some AmazingFeature'`)
+4. Push to branch (`git push origin feature/AmazingFeature`)
+5. Open Pull Request
+
+## Team Members & Contributions
+
+### Development Team
+
+| Name | Role | Contributions |
+|------|------|---------------|
+| ** ** |  | - <br>- <br>- <br>-  |
+| ** ** |  | - <br>- <br>- <br>-  |
+| **Rio Achyar** | Full Stack Developer | - Splash screen<br>- Thermal Printer<br>- Profile Screen |
+| ** ** | Mobile Developer | - <br>-  <br>- <br>-  |
+
 
 ## License
-This project is licensed under the GNU General Public License v3.0.
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+
+
+## Acknowledgments
+
+- [Flutter Community](https://flutter.dev/community) - For amazing packages
+- [Firebase](https://firebase.google.com/) - For backend services
+- [Flaticon](https://www.flaticon.com/) - For app icons
+- [Coolors](https://coolors.co/) - For Generate Color Pallete
+
+
+
+---
+
+<div align="center">
+  <p>Made with by Thermul Team</p>
+  <p>© 2026 Thermul. All rights reserved.</p>
+</div>
