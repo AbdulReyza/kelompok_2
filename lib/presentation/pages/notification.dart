@@ -144,11 +144,21 @@ class _NotificationPageState extends State<NotificationPage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
+                'THERMUL NOTIFICATION',
+                style: TextStyle(
+                  color: Color(0xFFEAE6E5),
+                  fontSize: 20,
+                  letterSpacing: 1.2,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              SizedBox(height: 16),
+              Text(
                 _message,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 20,
+                  fontSize: 14,
                   fontWeight: FontWeight.w500,
                   height: 1.4,
                 ),
