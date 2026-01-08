@@ -21,7 +21,7 @@ class _NotificationPageState extends State<NotificationPage> {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
     SetupFCM();
-    // handleInitialMessage();
+    handleInitialMessage();
     });
   }
 
