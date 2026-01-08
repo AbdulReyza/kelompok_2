@@ -48,6 +48,9 @@ class _NotificationPageState extends State<NotificationPage> {
       return;
     }
 
+    String? token = await messaging.getToken();
+    print('Token Saya: $token');
+
   }
 
 
