@@ -13,6 +13,16 @@ class _NotificationPageState extends State<NotificationPage> {
 
 
   @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+    // setupFCM();
+    // handleInitialMessage();
+    });
+  }
+
+
+
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
