@@ -97,6 +97,15 @@ class _NotificationPageState extends State<NotificationPage> {
 
   }
 
+  Future<void> handleInitialMessage() async {
+    RemoteMessage? message = await FirebaseMessaging.instance.getInitialMessage();
+      if (message != null && message.notification != null) {
+      print("App dibuka dari Notification");
+        setState(() {
+        _message = "${message.notification!.title}: ${message.notification!.body}";
+        });
+    }
+  }
 
 
   Widget build(BuildContext context) {
