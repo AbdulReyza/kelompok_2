@@ -1,12 +1,22 @@
+/*
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+*/
+
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:kelompok_2/data/services/auth_services.dart';
 import 'package:kelompok_2/domain/repositories/auth_repositories.dart';
 import 'package:kelompok_2/firebase_options.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 
 import 'package:kelompok_2/presentation/pages/about.dart';
 import 'package:kelompok_2/presentation/pages/dashboard.dart';
 import 'package:kelompok_2/presentation/pages/login.dart';
+import 'package:kelompok_2/presentation/pages/notification.dart';
 import 'package:kelompok_2/presentation/pages/setting.dart';
 import 'package:kelompok_2/presentation/pages/splash_abday.dart';
 import 'package:kelompok_2/presentation/pages/splash_arya.dart';
@@ -21,9 +31,45 @@ import 'package:kelompok_2/presentation/providers/auth_provider.dart';
 import 'package:kelompok_2/presentation/widgets/main_layout.dart';
 import 'package:provider/provider.dart';
 
+final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
+
+const AndroidNotificationChannel channel = AndroidNotificationChannel(
+  'high_importance_channel',
+  'High Importance Notifications',
+  description: 'Thermul Notification',
+  importance: Importance.max
+);
+
+@pragma('vm:entry-point')
+Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform
+  );
+  print("Pesan: ${message.messageId}");
+}
+
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
+  await flutterLocalNotificationsPlugin.resolvePlatformSpecificImplementation<AndroidFlutterLocalNotificationsPlugin>()?.createNotificationChannel(channel);
+
+  const AndroidInitializationSettings initializationSettingsAndroid = AndroidInitializationSettings(
+    '@mipmap/ic_launcher'
+  );
+
+  
+  const DarwinInitializationSettings initializationSettingsDarwin = DarwinInitializationSettings();
+  const InitializationSettings initializationSettings = InitializationSettings(
+    android: initializationSettingsAndroid,
+    iOS: initializationSettingsDarwin,
+  );
+
+  await flutterLocalNotificationsPlugin.initialize(initializationSettings,onDidReceiveNotificationResponse: (NotificationResponse notificationResponse) {
+    print("Notification Tap: ${notificationResponse.payload}");
+  },
+  );
   runApp(const MyApp());
 }
 
@@ -57,6 +103,7 @@ class MyApp extends StatelessWidget {
             MainLayout.routeName: (_) => const MainLayout(),
             Dashboard.routeName: (_) => const Dashboard(),
             AboutPage.routeName: (_) => const AboutPage(),
+            NotificationPage.routeName: (_) => const NotificationPage(),
             SettingPage.routeName: (_) => const SettingPage(),
 
             ProfileAbday.routeName: (_) => const ProfileAbday(),

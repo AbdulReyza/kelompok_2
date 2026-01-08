@@ -46,6 +46,11 @@ class AppNavigationBar extends StatelessWidget {
                 tooltip: 'About'
               ),
               BottomNavigationBarItem(
+                icon: Icon(Icons.notifications_active_sharp, color: Colors.grey,),
+                label: 'Notification',
+                tooltip: 'Notification'
+              ),
+              BottomNavigationBarItem(
                 icon: Icon(Icons.settings, color: Colors.grey,),
                 label: 'Setting',
                 tooltip: 'Setting'

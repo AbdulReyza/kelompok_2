@@ -125,11 +125,11 @@ Menjadi Perguruan Tinggi di tahun 2032 yang memiliki kompetensi, kualitas unggul
 
   ### Splash Screen
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/a85a1ffd-aed7-4641-bb82-000a7b5d625b" width="180"/>
-  <img src="https://github.com/user-attachments/assets/4630e25b-c174-4dc5-a6c9-d00e1261cc04" width="180"/>
-  <img src="https://github.com/user-attachments/assets/aaa57523-0dc8-4445-aa40-447e45cf607e" width="180"/>
-  <img src="https://github.com/user-attachments/assets/1c6435b8-408b-476d-9f6f-521b1d230356" width="180"/>
-  <img src="https://github.com/user-attachments/assets/fcab2d3b-d7e7-4bb6-9f07-27b6734b9ced" width="180"/>
+  <img src="https://github.com/user-attachments/assets/a85a1ffd-aed7-4641-bb82-000a7b5d625b" width="160"/>
+  <img src="https://github.com/user-attachments/assets/4630e25b-c174-4dc5-a6c9-d00e1261cc04" width="160"/>
+  <img src="https://github.com/user-attachments/assets/aaa57523-0dc8-4445-aa40-447e45cf607e" width="160"/>
+  <img src="https://github.com/user-attachments/assets/1c6435b8-408b-476d-9f6f-521b1d230356" width="160"/>
+  <img src="https://github.com/user-attachments/assets/fcab2d3b-d7e7-4bb6-9f07-27b6734b9ced" width="160"/>
 </p>
 
   ### Login Page
@@ -144,11 +144,11 @@ Menjadi Perguruan Tinggi di tahun 2032 yang memiliki kompetensi, kualitas unggul
 
   ### Our Developers
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/ad79f12d-3577-4d62-91ea-b507fdd37f55" width="180"/>
-  <img src="https://github.com/user-attachments/assets/eda6b696-2c4d-4878-aaf0-1e3b7d49c33f" width="180"/>
-  <img src="https://github.com/user-attachments/assets/5cd5363c-8b2d-4bfc-9e67-956c3203ec49" width="180"/>
-  <img src="https://github.com/user-attachments/assets/968a6664-ae47-448b-8330-5182e4fadd11" width="180"/>
-  <img src="https://github.com/user-attachments/assets/71bd8dab-edb4-4d3e-bf7b-ffea054c8c21" width="180"/>
+  <img src="https://github.com/user-attachments/assets/ad79f12d-3577-4d62-91ea-b507fdd37f55" width="160"/>
+  <img src="https://github.com/user-attachments/assets/eda6b696-2c4d-4878-aaf0-1e3b7d49c33f" width="160"/>
+  <img src="https://github.com/user-attachments/assets/5cd5363c-8b2d-4bfc-9e67-956c3203ec49" width="160"/>
+  <img src="https://github.com/user-attachments/assets/968a6664-ae47-448b-8330-5182e4fadd11" width="160"/>
+  <img src="https://github.com/user-attachments/assets/71bd8dab-edb4-4d3e-bf7b-ffea054c8c21" width="160"/>
 
 </p>
 
@@ -216,5 +216,7 @@ flutter run
 
 https://drive.google.com/drive/u/6/folders/1S309kux33fwypvzE5x-Cy85vYXpXDIII
 
+---
 
-
+## License
+This project is licensed under the GNU General Public License v3.0.
