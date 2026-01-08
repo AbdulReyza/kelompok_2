@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:kelompok_2/main.dart';
+import 'package:kelompok_2/main.dart';
 
 
 class NotificationPage extends StatefulWidget {
@@ -50,6 +52,40 @@ class _NotificationPageState extends State<NotificationPage> {
 
     String? token = await messaging.getToken();
     print('Token Saya: $token');
+
+    FirebaseMessaging.onMessage.listen((RemoteMessage message){
+      print("Pesan Foreground: ${message.messageId}");
+      RemoteNotification? notification = message.notification;
+      AndroidNotification? android = message.notification?.android;
+
+      if (message.notification != null) {
+        setState(() {
+          _message = "${message.notification!.title}: ${message.notification!.body}";
+        });
+
+        try {
+          FlutterLocalNotificationsPlugin.show(
+            notification!.hashCode,
+            notification.title,
+            notification.body,
+            NotificationDetails(
+              android: AndroidNotificationDetails(
+                channel.id, 
+                channel.name,
+                channelDescription: channel.description,
+                icon: android?.smallIcon ?? '@mipmap/ic_launcher',
+                importance: Importance.max,
+                priority: Priority.max,
+                showWhen: true
+              )
+            )
+          );
+          print("Notifkasi Background: ${notification.title}");
+        } catch (e) {
+          print("Error Notififikasi Background: $e");
+        }
+      }
+    });
 
   }
 
