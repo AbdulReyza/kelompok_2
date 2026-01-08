@@ -36,7 +36,7 @@ final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin = FlutterL
 const AndroidNotificationChannel channel = AndroidNotificationChannel(
   'high_importance_channel',
   'High Importance Notifications',
-  description: ' ',
+  description: 'Thermul Notification',
   importance: Importance.max
 );
 

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:kelompok_2/main.dart';
-import 'package:kelompok_2/main.dart';
 
 
 class NotificationPage extends StatefulWidget {
@@ -64,21 +63,21 @@ class _NotificationPageState extends State<NotificationPage> {
         });
 
         try {
-          FlutterLocalNotificationsPlugin.show(
+          flutterLocalNotificationsPlugin.show(
             notification!.hashCode,
             notification.title,
             notification.body,
             NotificationDetails(
               android: AndroidNotificationDetails(
-                channel.id, 
+                channel.id,
                 channel.name,
                 channelDescription: channel.description,
                 icon: android?.smallIcon ?? '@mipmap/ic_launcher',
                 importance: Importance.max,
                 priority: Priority.max,
-                showWhen: true
-              )
-            )
+                showWhen: true,
+              ),
+            ),
           );
           print("Notifkasi Background: ${notification.title}");
         } catch (e) {
@@ -114,7 +113,20 @@ class _NotificationPageState extends State<NotificationPage> {
         child: SingleChildScrollView(
           padding: EdgeInsets.all(10.0),
           child: Column(
-              children: [],
+              children: [
+                Text(
+                    'Cek Notif',
+                    style: TextStyle(
+                      fontSize: 25
+                    ),
+                  ),
+                  SizedBox(height: 20,),
+                  Text(_message,
+                    style: TextStyle(
+                      fontSize: 25
+                    ),
+                  )
+              ],
           ),
         ),
       ),
