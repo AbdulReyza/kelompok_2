@@ -101,7 +101,7 @@ class _NotificationPageState extends State<NotificationPage> {
       if (message != null && message.notification != null) {
       print("App dibuka dari Notification");
         setState(() {
-        _message = "${message.notification!.title} ${message.notification!.body}";
+        _message = "${message.notification!.title}\n\n${message.notification!.body}";
         });
     }
   }
@@ -141,18 +141,8 @@ class _NotificationPageState extends State<NotificationPage> {
           ),
           child: Column(
             mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                textAlign: TextAlign.start,
-                'NOTIFICATION MESSAGE',
-                style: TextStyle(
-                  color: Color(0xFFEAE6E5),
-                  fontSize: 14,
-                  letterSpacing: 1.2,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-              SizedBox(height: 16),
               Text(
                 _message,
                 textAlign: TextAlign.center,
