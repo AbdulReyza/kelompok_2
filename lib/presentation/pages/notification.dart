@@ -37,6 +37,17 @@ class _NotificationPageState extends State<NotificationPage> {
       provisional: false,
       sound: true
     );
+
+    print("Status: ${settings.authorizationStatus}");
+
+    if(settings.authorizationStatus == AuthorizationStatus.denied){
+      print("User Menolak");
+      setState(() {
+        _message = 'Permission denied, Please allowed in setting.';
+      });
+      return;
+    }
+
   }
 
 
