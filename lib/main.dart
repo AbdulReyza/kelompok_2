@@ -11,6 +11,7 @@ import 'package:kelompok_2/data/services/auth_services.dart';
 import 'package:kelompok_2/domain/repositories/auth_repositories.dart';
 import 'package:kelompok_2/firebase_options.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 
 import 'package:kelompok_2/presentation/pages/about.dart';
 import 'package:kelompok_2/presentation/pages/dashboard.dart';
@@ -38,6 +39,15 @@ const AndroidNotificationChannel channel = AndroidNotificationChannel(
   description: ' ',
   importance: Importance.max
 );
+
+@pragma('vm:entry-point')
+Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform
+  );
+  print("Pesan: ${message.messageId}");
+}
+
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
