@@ -73,4 +73,5 @@ class DefaultFirebaseOptions {
     storageBucket: 'kelompok2-5b5f7.firebasestorage.app',
     measurementId: 'G-NWZMZXWJHH',
   );
+
 }
