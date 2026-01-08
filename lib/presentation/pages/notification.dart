@@ -101,7 +101,7 @@ class _NotificationPageState extends State<NotificationPage> {
       if (message != null && message.notification != null) {
       print("App dibuka dari Notification");
         setState(() {
-        _message = "${message.notification!.title}: ${message.notification!.body}";
+        _message = "${message.notification!.title} ${message.notification!.body}";
         });
     }
   }
@@ -112,25 +112,63 @@ class _NotificationPageState extends State<NotificationPage> {
       backgroundColor: Color(0xFF12130F),
       appBar: glassAppBar(),
       body: Center(
-        child: SingleChildScrollView(
-          padding: EdgeInsets.all(10.0),
+        child: Padding(
+    padding: EdgeInsets.all(16),
+    child: ClipRRect(
+      borderRadius: BorderRadius.circular(24),
+      child: BackdropFilter(
+        filter: ImageFilter.blur(sigmaX: 20, sigmaY: 20),
+        child: Container(
+          width: double.infinity,
+          padding: EdgeInsets.symmetric(
+            vertical: 24,
+            horizontal: 20,
+          ),
+          decoration: BoxDecoration(
+            color: Colors.white.withOpacity(0.12),
+            borderRadius: BorderRadius.circular(24),
+            border: Border.all(
+              color: Colors.white.withOpacity(0.25),
+              width: 1,
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.white.withOpacity(0.08),
+                blurRadius: 30,
+                spreadRadius: 5,
+              ),
+            ],
+          ),
           child: Column(
-              children: [
-                Text(
-                    'Cek Notif',
-                    style: TextStyle(
-                      fontSize: 25
-                    ),
-                  ),
-                  SizedBox(height: 20,),
-                  Text(_message,
-                    style: TextStyle(
-                      fontSize: 25
-                    ),
-                  )
-              ],
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(
+                textAlign: TextAlign.start,
+                'NOTIFICATION MESSAGE',
+                style: TextStyle(
+                  color: Color(0xFFEAE6E5),
+                  fontSize: 14,
+                  letterSpacing: 1.2,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              SizedBox(height: 16),
+              Text(
+                _message,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                  fontWeight: FontWeight.w500,
+                  height: 1.4,
+                ),
+              ),
+            ],
           ),
         ),
+      ),
+    ),
+  ),
       ),
     );
   }
