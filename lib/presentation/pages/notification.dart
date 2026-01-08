@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+
 
 class NotificationPage extends StatefulWidget {
   static const routeName = '/notification';
@@ -16,13 +19,24 @@ class _NotificationPageState extends State<NotificationPage> {
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
-    setupFCM();
+    SetupFCM();
     // handleInitialMessage();
     });
   }
 
   Future<void> SetupFCM() async {
+    print('Setup FCM');
+    final messaging = FirebaseMessaging.instance;
 
+    NotificationSettings settings = await messaging.requestPermission(
+      alert: true,
+      announcement: false,
+      badge: true,
+      carPlay: false,
+      criticalAlert: true,
+      provisional: false,
+      sound: true
+    );
   }
 
 
