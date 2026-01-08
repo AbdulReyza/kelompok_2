@@ -178,9 +178,9 @@ lib/
 | Name | Role | Contributions |
 |------|------|---------------|
 | ** ** |  | - <br>- <br>- <br>-  |
-| ** ** |  | - <br>- <br>- <br>-  |
+| **Arya Pramudya Akbar** | Mobile Developer & Application Tester | -Profile Screen<br>-Splash Screen<br>-Notification <br>-Logout |
 | **Rio Achyar** | Full Stack Developer | - Splash screen<br>- Thermal Printer<br>- Profile Screen |
-| ** ** | Mobile Developer | - <br>-  <br>- <br>-  |
+| ** ** | | - <br>-  <br>- <br>-  |
 
 
 ## License
