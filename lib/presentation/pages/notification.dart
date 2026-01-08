@@ -109,6 +109,7 @@ class _NotificationPageState extends State<NotificationPage> {
 
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xFF12130F),
       appBar: glassAppBar(),
       body: Center(
         child: SingleChildScrollView(
