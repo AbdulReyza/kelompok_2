@@ -201,12 +201,13 @@ lib/
 
 ### Development Team
 
-| Name | Role | Contributions |
-|------|------|---------------|
-| **Muhammad Abday Abdul Hafidz** | UI/UX Designer | -Profile screen <br>-Splash screen <br>-Asset Management <br>-Color Palette  |
-| **Arya Pramudya Akbar** | Mobile Developer & Application Tester | -Profile Screen<br>-Splash Screen<br>-Notification <br>-Logout |
-| **Rio Achyar** | Full Stack Developer | - Splash screen<br>- Thermal Printer<br>- Profile Screen |
-| **Abdul Reyza Ramadhanu** | Project lead & Mobile Developer | - Splash screen<br>- Thermal Printer<br>- Profile Screen<br>- Login |<br>- <br>-  <br>- <br>-  |
+| Name | NIM | Role | Contributions |
+|------|-----|------|---------------|
+| **Abdul Reyza Ramadhanu** | 1123150072 | Project Lead & Mobile Developer | - Splash screen <br>- Thermal Printer <br>- Profile Screen <br>- Login<br>- Video Editing |
+| **Muhammad Abday Abdul Hafidz** | 1123150093 | UI/UX Designer | - Profile screen <br>- Splash screen <br>- Asset Management <br>- Color Palette<br>- Video Editing |
+| **Arya Pramudya Akbar** | 1123150004 | Mobile Developer & Application Tester | - Profile Screen <br>- Splash Screen <br>- Notification <br>- Logout |
+| **Rio Achyar** | 1123150059 | Full Stack Developer | - Splash screen <br>- Thermal Printer <br>- Profile Screen |
+
 
 ## License
 
