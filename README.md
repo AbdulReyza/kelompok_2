@@ -158,21 +158,17 @@ lib/
 │   ├── routes/              # App routing
 │   └── themes/              # App themes
 ├── models/                   # Data models
-│   ├── user.dart
-│   └── category.dart
+│   ├── developers.dart
 ├── screens/                  # UI Screens
 │   ├── splash/
 │   ├── auth/
 │   │   ├── login_screen.dart
-│   │   └── register_screen.dart
 │   ├── home/
 │   ├── profile/
 │   └── settings/
 ├── widgets/                  # Reusable widgets
 ├── services/                 # Business logic
 │   ├── auth_service.dart
-│   ├── database_service.dart
-│   └── notification_service.dart
 └── utils/                    # Utilities & helpers
 ```
 
