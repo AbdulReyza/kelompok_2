@@ -65,6 +65,7 @@ Thermul (Thermal Utility) adalah aplikasi mobile berbasis Flutter yang dirancang
   ### Notification
 <p align="center">
   <img src="https://github.com/user-attachments/assets/1ef45620-c7d3-46ca-b3dd-ebabc1d3f100" width="200"/>
+  <img src="https://github.com/user-attachments/assets/2d0278f6-adb1-4d22-a06c-fc6b8d9ca233" width="200"/>
   <img src="https://github.com/user-attachments/assets/af6d5e7e-d236-4be6-ae47-184c50eb0046" width="200"/>
 </p>
 
@@ -97,13 +98,17 @@ Download versi terbaru aplikasi Thermul:
 
 - **[Flutter](https://flutter.dev/)** - UI Framework
 - **[Dart](https://dart.dev/)** - Programming Language
-- **[Firebase](https://firebase.google.com/)** - Backend & Authentication
+- **[Firebase](https://firebase.google.com/)** - Authentication & Firebase Cloud Message
 - **[Provider](https://pub.dev/packages/provider)** - State Management
+- **[Bluetooth Thermal Printer](https://pub.dev/packages/flutter_bluetooth_printer)** - Flutter Bluetooth Thermal Printer Dependency
 
 
 ## Getting Started
 
 ### Prerequisites
+
+Pastikan Anda Memiliki Device:
+- Bluetooth Thermal Printer 58MM
 
 Pastikan Anda sudah menginstall:
 - Flutter SDK (3.16.0 or higher)
@@ -158,38 +163,36 @@ lib/
 │   ├── routes/              # App routing
 │   └── themes/              # App themes
 ├── models/                   # Data models
-│   ├── user.dart
-│   └── category.dart
+│   ├── developers.dart
 ├── screens/                  # UI Screens
 │   ├── splash/
 │   ├── auth/
 │   │   ├── login_screen.dart
-│   │   └── register_screen.dart
 │   ├── home/
 │   ├── profile/
 │   └── settings/
 ├── widgets/                  # Reusable widgets
 ├── services/                 # Business logic
 │   ├── auth_service.dart
-│   ├── database_service.dart
-│   └── notification_service.dart
 └── utils/                    # Utilities & helpers
 ```
 
 ## App Architecture
 
-<img width="1920" height="1080" alt="Screenshot (1)" src="https://github.com/user-attachments/assets/027e98ee-8e42-4e9a-bd98-37225899944f" />
+<p align="center">
+  <img width="1920" height="1080" alt="Screenshot (1)" src="https://github.com/user-attachments/assets/027e98ee-8e42-4e9a-bd98-37225899944f" />
+</p>
 
 ## Authentication Flow
 
 ```
 1. Splash Screen (Auto-login check)
    ↓
-2. Login Screen / Register Screen
+2. Login Screen
    ↓
-3. Home Screen (Dashboard)
+3. Home Screen (Dashboard Print Receipt)
    ↓
-4. Profile, Notification & Settings
+4. Profile, Notification & Setting
 ```
 
 ### Development Workflow
@@ -204,12 +207,13 @@ lib/
 
 ### Development Team
 
-| Name | Role | Contributions |
-|------|------|---------------|
-| **Muhammad Abday Abdul Hafidz** | UI/UX Designer | -Profile screen <br>-Splash screen <br>-Asset Management <br>-Color Palette  |
-| **Arya Pramudya Akbar** | Mobile Developer & Application Tester | -Profile Screen<br>-Splash Screen<br>-Notification <br>-Logout |
-| **Rio Achyar** | Full Stack Developer | - Splash screen<br>- Thermal Printer<br>- Profile Screen |
-| **Abdul Reyza Ramadhanu** | Project lead & Mobile Developer | - Splash screen<br>- Thermal Printer<br>- Profile Screen<br>- Login |<br>- <br>-  <br>- <br>-  |
+| Name | NIM | Role | Contributions |
+|------|-----|------|---------------|
+| **Abdul Reyza Ramadhanu** | 1123150072 | Project Lead & Mobile Developer | - Splash screen <br>- Thermal Printer <br>- Profile Screen <br>- Login<br>- Video Editing |
+| **Muhammad Abday Abdul Hafidz** | 1123150093 | UI/UX Designer | - Profile screen <br>- Splash screen <br>- Asset Management <br>- Color Palette<br>- Video Editing |
+| **Arya Pramudya Akbar** | 1123150004 | Mobile Developer & Application Tester | - Profile Screen <br>- Splash Screen <br>- Notification <br>- Logout |
+| **Rio Achyar** | 1123150059 | Full Stack Developer | - Splash screen <br>- Thermal Printer <br>- Profile Screen<br>- Bug Fixing |
+
 
 ## License
 
@@ -217,10 +221,11 @@ This project is licensed under the GNU General Public License v3.0.
 
 ## Acknowledgments
 
-- [Flutter Community](https://flutter.dev/community) - For amazing packages
-- [Firebase](https://firebase.google.com/) - For backend services
-- [Lottie](https://lottiefiles.com/) - For animations assets
-- [Coolors](https://coolors.co/) - For generate color pallete
+- [Flutter Community](https://flutter.dev/community) - For learning flutter
+- [Pub Dev](https://pub.dev) - For amazing packages/library
+- [Firebase](https://firebase.google.com) - For backend services
+- [Lottie](https://lottiefiles.com) - For animations assets
+- [Coolors](https://coolors.co) - For generate color pallete
 
 
 
