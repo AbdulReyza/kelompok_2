@@ -99,6 +99,7 @@ Download versi terbaru aplikasi Thermul:
 - **[Dart](https://dart.dev/)** - Programming Language
 - **[Firebase](https://firebase.google.com/)** - Backend & Authentication
 - **[Provider](https://pub.dev/packages/provider)** - State Management
+- **[Bluetooth Thermal Printer](https://pub.dev/packages/flutter_bluetooth_printer)** - Flutter Bluetooth Thermal Printer Dependency
 
 
 ## Getting Started
