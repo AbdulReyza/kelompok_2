@@ -65,6 +65,7 @@ Thermul (Thermal Utility) adalah aplikasi mobile berbasis Flutter yang dirancang
   ### Notification
 <p align="center">
   <img src="https://github.com/user-attachments/assets/1ef45620-c7d3-46ca-b3dd-ebabc1d3f100" width="200"/>
+  <img src="https://github.com/user-attachments/assets/2d0278f6-adb1-4d22-a06c-fc6b8d9ca233" width="200"/>
   <img src="https://github.com/user-attachments/assets/af6d5e7e-d236-4be6-ae47-184c50eb0046" width="200"/>
 </p>
 
@@ -97,7 +98,7 @@ Download versi terbaru aplikasi Thermul:
 
 - **[Flutter](https://flutter.dev/)** - UI Framework
 - **[Dart](https://dart.dev/)** - Programming Language
-- **[Firebase](https://firebase.google.com/)** - Backend & Authentication
+- **[Firebase](https://firebase.google.com/)** - Authentication & Firebase Cloud Message
 - **[Provider](https://pub.dev/packages/provider)** - State Management
 - **[Bluetooth Thermal Printer](https://pub.dev/packages/flutter_bluetooth_printer)** - Flutter Bluetooth Thermal Printer Dependency
 
@@ -105,6 +106,9 @@ Download versi terbaru aplikasi Thermul:
 ## Getting Started
 
 ### Prerequisites
+
+Pastikan Anda Memiliki Device:
+- Bluetooth Thermal Printer 58MM
 
 Pastikan Anda sudah menginstall:
 - Flutter SDK (3.16.0 or higher)
@@ -175,7 +179,9 @@ lib/
 
 ## App Architecture
 
-<img width="1920" height="1080" alt="Screenshot (1)" src="https://github.com/user-attachments/assets/027e98ee-8e42-4e9a-bd98-37225899944f" />
+<p align="center">
+  <img width="1920" height="1080" alt="Screenshot (1)" src="https://github.com/user-attachments/assets/027e98ee-8e42-4e9a-bd98-37225899944f" />
+</p>
 
 ## Authentication Flow
 
