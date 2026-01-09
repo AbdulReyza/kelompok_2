@@ -81,19 +81,17 @@ Lihat video demo aplikasi kami untuk melihat semua fitur dalam aksi!
 
 **[Watch Full Demo on YouTube](https://youtu.be/C9uUSYWmhbY?si=Z9qHWDLsEk6JOZpe)**
 
-Alternative link: **[Google Drive Demo](https://drive.google.com/file/d/1234567890/view)**
-
 ## Download APK
 
 Download versi terbaru aplikasi Thermul:
 
 ### Latest Release
-- [**Download APK (15.2 MB)**](https://github.com/yourusername/notes-app/releases/download/v1.0.0/notes-app-v1.0.0.apk)
+- [**Download APK (48.8 MB)**](https://drive.google.com/drive/u/2/folders/1S309kux33fwypvzE5x-Cy85vYXpXDIII)
 
 
 **Minimum Requirements:**
 - Android 6.0 (API level 23) or higher
-- ~20MB free storage space
+- ~50MB free storage space
 
 ## Built With
 
@@ -147,8 +145,8 @@ flutter build apk --debug
 # Release APK
 flutter build apk --release
 
-# Split APK by ABI
-flutter build apk --split-per-abi
+# Split APK
+flutter build apk --release --obfuscate --split-debug-info=./symbols
 ```
 
 ## Project Structure
@@ -209,19 +207,16 @@ lib/
 | **Rio Achyar** | Full Stack Developer | - Splash screen<br>- Thermal Printer<br>- Profile Screen |
 | **Abdul Reyza Ramadhanu** | Project lead & Mobile Developer | - Splash screen<br>- Thermal Printer<br>- Profile Screen<br>- Login |<br>- <br>-  <br>- <br>-  |
 
-
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-
+This project is licensed under the GNU General Public License v3.0.
 
 ## Acknowledgments
 
 - [Flutter Community](https://flutter.dev/community) - For amazing packages
 - [Firebase](https://firebase.google.com/) - For backend services
 - [Lottie](https://lottiefiles.com/) - For animations assets
-- [Coolors](https://coolors.co/) - For Generate Color Pallete
+- [Coolors](https://coolors.co/) - For generate color pallete
 
 
 
