@@ -176,6 +176,10 @@ lib/
 └── utils/                    # Utilities & helpers
 ```
 
+## App Architecture
+
+<img width="1920" height="1080" alt="Screenshot (1)" src="https://github.com/user-attachments/assets/027e98ee-8e42-4e9a-bd98-37225899944f" />
+
 ## Authentication Flow
 
 ```
