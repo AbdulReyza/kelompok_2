@@ -8,7 +8,7 @@
 Institut Teknologi dan Bisnis Bina Sarana Global <br>
 FAKULTAS TEKNOLOGI INFORMASI & KOMUNIKASI 
 <br>
-global.ac.id
+https://global.ac.id
   </div>
 
   ##  Project UAS
