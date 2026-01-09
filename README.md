@@ -33,31 +33,59 @@ Thermul (Thermal Utility) adalah aplikasi mobile berbasis Flutter yang dirancang
 
 ## Screenshots
 
+  ### Splash Screen
 <div align="center">
-  <img src="screenshots/splash_screen.png" alt="Splash Screen" width="200"/>
-  <img src="screenshots/login_screen.png" alt="Login" width="200"/>
-  <img src="screenshots/home_screen.png" alt="Home" width="200"/>
-  <img src="screenshots/profile_screen.png" alt="Profile" width="200"/>
+  <img src="https://github.com/user-attachments/assets/21e8b06e-24a1-439e-a997-8809aa29f83f" alt="Splash Global" width="160"/>
+  <img src="https://github.com/user-attachments/assets/f74c7abc-a99a-4b2a-82e4-50511f2a1595" alt="Splash Rio" width="160"/>
+  <img src="https://github.com/user-attachments/assets/d3d3d197-db9e-4abe-8fa4-244d0f83e2d6" alt="Splash Reyza" width="160"/>
+  <img src="https://github.com/user-attachments/assets/2496d1d1-b87f-4863-96b2-31c429444d4a" alt="Splash Arya" width="160"/>
+  <img src="https://github.com/user-attachments/assets/f1394e21-3059-4612-838d-a6b9cf2dd7d6" alt="Splash Abday" width="160"/>  
 </div>
 
+### Login Page
 <div align="center">
-  <img src="screenshots/note_detail.png" alt="Note Detail" width="200"/>
-  <img src="screenshots/search.png" alt="Search" width="200"/>
-  <img src="screenshots/category.png" alt="Category" width="200"/>
-  <img src="screenshots/settings.png" alt="Settings" width="200"/>
+  <img src="https://github.com/user-attachments/assets/28d52d0f-4333-469c-8120-ab3f5fed84d4" width="200"/>
 </div>
+
+### Dashboard/Thermal Printer
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/aab58f03-87cb-4e5d-832e-8b144c49baae" width="200"/>
+  <img src="https://github.com/user-attachments/assets/6d89c090-75e4-44a8-8bd1-2cfbd74a8b6e" width="200"/>
+</div>
+
+### About/Our Developers
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/4f3a1ca7-c187-43f6-b41b-de58ed33aa02" width="160"/>
+  <img src="https://github.com/user-attachments/assets/644313b0-317f-43dd-bebd-8b0450024f22" width="160"/>
+  <img src="https://github.com/user-attachments/assets/bea1cbf3-f629-447c-8e10-f07247923e12" width="160"/>
+  <img src="https://github.com/user-attachments/assets/849d0166-1171-4a75-a475-bc54269783bf" width="160"/>
+  <img src="https://github.com/user-attachments/assets/b13905a3-6f1c-47df-8ceb-c936188c5507" width="160"/>
+</div>
+
+  ### Notification
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/1ef45620-c7d3-46ca-b3dd-ebabc1d3f100" width="200"/>
+  <img src="https://github.com/user-attachments/assets/af6d5e7e-d236-4be6-ae47-184c50eb0046" width="200"/>
+</p>
+
+  ### Logout
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/49ea458a-6689-4d9e-9a54-214d0830a8a1" width="200"/>
+  <img src="https://github.com/user-attachments/assets/403e2f21-0567-495e-9712-b448ab715cad" width="200"/>
+</p>
+
 
 ## Demo Video
 
 Lihat video demo aplikasi kami untuk melihat semua fitur dalam aksi!
 
-**[Watch Full Demo on YouTube](https://youtube.com/watch?v=dQw4w9WgXcQ)**
+**[Watch Full Demo on YouTube](https://youtu.be/C9uUSYWmhbY?si=Z9qHWDLsEk6JOZpe)**
 
 Alternative link: **[Google Drive Demo](https://drive.google.com/file/d/1234567890/view)**
 
 ## Download APK
 
-Download versi terbaru aplikasi Notes App:
+Download versi terbaru aplikasi Thermul:
 
 ### Latest Release
 - [**Download APK (15.2 MB)**](https://github.com/yourusername/notes-app/releases/download/v1.0.0/notes-app-v1.0.0.apk)
@@ -72,7 +100,6 @@ Download versi terbaru aplikasi Notes App:
 - **[Flutter](https://flutter.dev/)** - UI Framework
 - **[Dart](https://dart.dev/)** - Programming Language
 - **[Firebase](https://firebase.google.com/)** - Backend & Authentication
-- **[SQLite](https://www.sqlite.org/)** - Local Database
 - **[Provider](https://pub.dev/packages/provider)** - State Management
 
 
@@ -193,7 +220,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - [Flutter Community](https://flutter.dev/community) - For amazing packages
 - [Firebase](https://firebase.google.com/) - For backend services
-- [Flaticon](https://www.flaticon.com/) - For app icons
+- [Lottie](https://lottiefiles.com/) - For animations assets
 - [Coolors](https://coolors.co/) - For Generate Color Pallete
 
 
