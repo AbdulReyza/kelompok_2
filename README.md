@@ -188,11 +188,11 @@ lib/
 ```
 1. Splash Screen (Auto-login check)
    ↓
-2. Login Screen / Register Screen
+2. Login Screen
    ↓
-3. Home Screen (Dashboard)
+3. Home Screen (Dashboard Print Receipt)
    ↓
-4. Profile, Notification & Settings
+4. Profile, Notification & Setting
 ```
 
 ### Development Workflow
@@ -212,7 +212,7 @@ lib/
 | **Abdul Reyza Ramadhanu** | 1123150072 | Project Lead & Mobile Developer | - Splash screen <br>- Thermal Printer <br>- Profile Screen <br>- Login<br>- Video Editing |
 | **Muhammad Abday Abdul Hafidz** | 1123150093 | UI/UX Designer | - Profile screen <br>- Splash screen <br>- Asset Management <br>- Color Palette<br>- Video Editing |
 | **Arya Pramudya Akbar** | 1123150004 | Mobile Developer & Application Tester | - Profile Screen <br>- Splash Screen <br>- Notification <br>- Logout |
-| **Rio Achyar** | 1123150059 | Full Stack Developer | - Splash screen <br>- Thermal Printer <br>- Profile Screen |
+| **Rio Achyar** | 1123150059 | Full Stack Developer | - Splash screen <br>- Thermal Printer <br>- Profile Screen<br>- Bug Fixing |
 
 
 ## License
@@ -221,10 +221,11 @@ This project is licensed under the GNU General Public License v3.0.
 
 ## Acknowledgments
 
-- [Flutter Community](https://flutter.dev/community) - For amazing packages
-- [Firebase](https://firebase.google.com/) - For backend services
-- [Lottie](https://lottiefiles.com/) - For animations assets
-- [Coolors](https://coolors.co/) - For generate color pallete
+- [Flutter Community](https://flutter.dev/community) - For learning flutter
+- [Pub Dev](https://pub.dev) - For amazing packages/library
+- [Firebase](https://firebase.google.com) - For backend services
+- [Lottie](https://lottiefiles.com) - For animations assets
+- [Coolors](https://coolors.co) - For generate color pallete
 
 
 
